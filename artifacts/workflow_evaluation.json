@@ -1,0 +1,359 @@
+{
+  "generated_utc": "2026-11-02T17:20:43.666031+00:00",
+  "checks": {
+    "prediction_completed": true,
+    "real_prediction_score": true,
+    "agent_order": true,
+    "source_backed_answer": true,
+    "out_of_domain_skips_prediction": true,
+    "sqlite_saved_three_runs": true
+  },
+  "all_passed": true,
+  "scenario": "synthetic input for software flow, not medical evaluation",
+  "prediction_example": {
+    "run_id": "7a80db57-461b-4ab4-94e2-0bddcbe47601",
+    "status": "completed",
+    "input": {
+      "age": 45.0,
+      "gender": "Male",
+      "hypertension": false,
+      "heart_disease": false,
+      "smoking_history": "never",
+      "bmi": 27.5,
+      "hba1c_level": 5.8,
+      "blood_glucose_level": 130.0
+    },
+    "prediction": {
+      "model": "MLP",
+      "positive_class_score": 0.033485,
+      "predicted_dataset_label": "diabetes = 0",
+      "threshold": 0.5,
+      "baseline_positive_class_score": 0.010657,
+      "interpretation": "Điểm sigmoid cho nhãn diabetes = 1 của dataset, chưa hiệu chuẩn thành nguy cơ cá nhân.",
+      "limitation": "Đây là phân loại nhãn diabetes của dataset Kaggle, sử dụng cả HbA1c và glucose; nguồn không mô tả khoảng thời gian tiên lượng. Nguồn gốc thu thập và cách tạo nhãn chưa được mô tả đầy đủ; chưa có kiểm định lâm sàng hoặc hiệu chuẩn cho quần thể Việt Nam. Điểm mô hình không phải xác suất mắc bệnh trong tương lai và không thay thế khám, xét nghiệm hay tư vấn chuyên môn. Không dùng kết quả để tự chẩn đoán hoặc thay đổi điều trị."
+    },
+    "rules": {
+      "valid_schema": true,
+      "within_training_domain": true,
+      "within_training_age": true,
+      "outside_features": [],
+      "matched_rules": [
+        "R1_REQUIRED_FIELDS_VALID",
+        "R2_IN_DOMAIN",
+        "R3_NO_INFO_DISTINCT_FROM_NEVER"
+      ],
+      "reported_conditions": [],
+      "warnings": [
+        "HbA1c/glucose là dữ liệu xét nghiệm trong dataset; model không thay thế việc diễn giải xét nghiệm của nhân viên y tế."
+      ],
+      "source": "https://www.cdc.gov/diabetes/diabetes-testing/index.html"
+    },
+    "explanation": {
+      "model_explanation": "MLP phân loại hồ sơ giả định vào nhãn diabetes = 0 của dataset với ngưỡng kỹ thuật 0.5. Điểm này không phải kết luận y khoa.",
+      "input_summary": [],
+      "input_summary_note": "Đây là thông tin bạn nhập, không phải phân tích đóng góp đặc trưng hoặc quan hệ nhân quả của mô hình.",
+      "general_information": [
+        {
+          "chunk_id": "testing:0",
+          "document_id": "testing",
+          "title": "Xét nghiệm và giới hạn của triệu chứng",
+          "publisher": "CDC",
+          "url": "https://www.cdc.gov/diabetes/diabetes-testing/index.html",
+          "accessed": "2026-11-02",
+          "text": "Xét nghiệm tiểu đường\nXét nghiệm máu được dùng để đánh giá đường huyết. A1C (HbA1c) phản ánh mức đường huyết trung bình khoảng hai đến ba tháng. Xét nghiệm đường huyết lúc đói đo sau một thời gian nhịn ăn; nghiệm pháp dung nạp glucose đánh giá đáp ứng sau uống dung dịch glucose. Xét nghiệm đường huyết ngẫu nhiên được thực hiện tại một thời điểm bất kỳ.",
+          "score": 0.4185
+        },
+        {
+          "chunk_id": "testing:1",
+          "document_id": "testing",
+          "title": "Xét nghiệm và giới hạn của triệu chứng",
+          "publisher": "CDC",
+          "url": "https://www.cdc.gov/diabetes/diabetes-testing/index.html",
+          "accessed": "2026-11-02",
+          "text": "Đọc kết quả\nNhân viên y tế chọn và diễn giải xét nghiệm theo bối cảnh. Điểm phân loại từ mô hình của demo không phải kết quả xét nghiệm và không xác nhận hay loại trừ bệnh. Nếu có băn khoăn về triệu chứng, hãy trao đổi với cơ sở y tế để được đánh giá phù hợp.",
+          "score": 0.17672
+        },
+        {
+          "chunk_id": "prevention:0",
+          "document_id": "prevention",
+          "title": "Phòng ngừa và tiền tiểu đường",
+          "publisher": "CDC",
+          "url": "https://www.cdc.gov/diabetes/prevention-type-2/index.html",
+          "accessed": "2026-11-02",
+          "text": "Tiền tiểu đường\nTiền tiểu đường là tình trạng đường huyết cao hơn bình thường nhưng chưa ở mức chẩn đoán type 2. Tình trạng này thường không có biểu hiện rõ. Cần xét nghiệm để xác nhận, không suy ra từ số điểm của ứng dụng.",
+          "score": 0.1767
+        }
+      ],
+      "rule_messages": [
+        "HbA1c/glucose là dữ liệu xét nghiệm trong dataset; model không thay thế việc diễn giải xét nghiệm của nhân viên y tế."
+      ],
+      "limitation": "Đây là phân loại nhãn diabetes của dataset Kaggle, sử dụng cả HbA1c và glucose; nguồn không mô tả khoảng thời gian tiên lượng. Nguồn gốc thu thập và cách tạo nhãn chưa được mô tả đầy đủ; chưa có kiểm định lâm sàng hoặc hiệu chuẩn cho quần thể Việt Nam. Điểm mô hình không phải xác suất mắc bệnh trong tương lai và không thay thế khám, xét nghiệm hay tư vấn chuyên môn. Không dùng kết quả để tự chẩn đoán hoặc thay đổi điều trị."
+    },
+    "trace": [
+      {
+        "order": 1,
+        "agent": "RuleBasedAgent",
+        "status": "ok",
+        "input": {
+          "age": 45.0,
+          "gender": "Male",
+          "hypertension": false,
+          "heart_disease": false,
+          "smoking_history": "never",
+          "bmi": 27.5,
+          "hba1c_level": 5.8,
+          "blood_glucose_level": 130.0
+        },
+        "output": {
+          "valid_schema": true,
+          "within_training_domain": true,
+          "within_training_age": true,
+          "outside_features": [],
+          "matched_rules": [
+            "R1_REQUIRED_FIELDS_VALID",
+            "R2_IN_DOMAIN",
+            "R3_NO_INFO_DISTINCT_FROM_NEVER"
+          ],
+          "reported_conditions": [],
+          "warnings": [
+            "HbA1c/glucose là dữ liệu xét nghiệm trong dataset; model không thay thế việc diễn giải xét nghiệm của nhân viên y tế."
+          ],
+          "source": "https://www.cdc.gov/diabetes/diabetes-testing/index.html"
+        },
+        "duration_ms": 0.01
+      },
+      {
+        "order": 2,
+        "agent": "PredictionAgent",
+        "status": "ok",
+        "input": {
+          "age": 45.0,
+          "gender": "Male",
+          "hypertension": false,
+          "heart_disease": false,
+          "smoking_history": "never",
+          "bmi": 27.5,
+          "hba1c_level": 5.8,
+          "blood_glucose_level": 130.0
+        },
+        "output": {
+          "model": "MLP",
+          "positive_class_score": 0.033485,
+          "predicted_dataset_label": "diabetes = 0",
+          "threshold": 0.5,
+          "baseline_positive_class_score": 0.010657,
+          "interpretation": "Điểm sigmoid cho nhãn diabetes = 1 của dataset, chưa hiệu chuẩn thành nguy cơ cá nhân.",
+          "limitation": "Đây là phân loại nhãn diabetes của dataset Kaggle, sử dụng cả HbA1c và glucose; nguồn không mô tả khoảng thời gian tiên lượng. Nguồn gốc thu thập và cách tạo nhãn chưa được mô tả đầy đủ; chưa có kiểm định lâm sàng hoặc hiệu chuẩn cho quần thể Việt Nam. Điểm mô hình không phải xác suất mắc bệnh trong tương lai và không thay thế khám, xét nghiệm hay tư vấn chuyên môn. Không dùng kết quả để tự chẩn đoán hoặc thay đổi điều trị."
+        },
+        "duration_ms": 33.184
+      },
+      {
+        "order": 3,
+        "agent": "KnowledgeAgent",
+        "status": "ok",
+        "input": {
+          "question": "Xét nghiệm HbA1c và đường huyết glucose"
+        },
+        "output": {
+          "mode": "retrieval-based QA",
+          "status": "answered",
+          "question": "Xét nghiệm HbA1c và đường huyết glucose",
+          "answer": "Các đoạn thông tin chung dưới đây được truy xuất từ bản diễn giải tiếng Việt có dẫn nguồn; hệ thống không dùng LLM để sinh thêm kết luận.",
+          "evidence": [
+            {
+              "chunk_id": "testing:0",
+              "document_id": "testing",
+              "title": "Xét nghiệm và giới hạn của triệu chứng",
+              "publisher": "CDC",
+              "url": "https://www.cdc.gov/diabetes/diabetes-testing/index.html",
+              "accessed": "2026-11-02",
+              "text": "Xét nghiệm tiểu đường\nXét nghiệm máu được dùng để đánh giá đường huyết. A1C (HbA1c) phản ánh mức đường huyết trung bình khoảng hai đến ba tháng. Xét nghiệm đường huyết lúc đói đo sau một thời gian nhịn ăn; nghiệm pháp dung nạp glucose đánh giá đáp ứng sau uống dung dịch glucose. Xét nghiệm đường huyết ngẫu nhiên được thực hiện tại một thời điểm bất kỳ.",
+              "score": 0.4185
+            },
+            {
+              "chunk_id": "testing:1",
+              "document_id": "testing",
+              "title": "Xét nghiệm và giới hạn của triệu chứng",
+              "publisher": "CDC",
+              "url": "https://www.cdc.gov/diabetes/diabetes-testing/index.html",
+              "accessed": "2026-11-02",
+              "text": "Đọc kết quả\nNhân viên y tế chọn và diễn giải xét nghiệm theo bối cảnh. Điểm phân loại từ mô hình của demo không phải kết quả xét nghiệm và không xác nhận hay loại trừ bệnh. Nếu có băn khoăn về triệu chứng, hãy trao đổi với cơ sở y tế để được đánh giá phù hợp.",
+              "score": 0.17672
+            },
+            {
+              "chunk_id": "prevention:0",
+              "document_id": "prevention",
+              "title": "Phòng ngừa và tiền tiểu đường",
+              "publisher": "CDC",
+              "url": "https://www.cdc.gov/diabetes/prevention-type-2/index.html",
+              "accessed": "2026-11-02",
+              "text": "Tiền tiểu đường\nTiền tiểu đường là tình trạng đường huyết cao hơn bình thường nhưng chưa ở mức chẩn đoán type 2. Tình trạng này thường không có biểu hiện rõ. Cần xét nghiệm để xác nhận, không suy ra từ số điểm của ứng dụng.",
+              "score": 0.1767
+            }
+          ]
+        },
+        "duration_ms": 0.933
+      },
+      {
+        "order": 4,
+        "agent": "ExplanationAgent",
+        "status": "ok",
+        "input": {
+          "prediction": {
+            "model": "MLP",
+            "positive_class_score": 0.033485,
+            "predicted_dataset_label": "diabetes = 0",
+            "threshold": 0.5,
+            "baseline_positive_class_score": 0.010657,
+            "interpretation": "Điểm sigmoid cho nhãn diabetes = 1 của dataset, chưa hiệu chuẩn thành nguy cơ cá nhân.",
+            "limitation": "Đây là phân loại nhãn diabetes của dataset Kaggle, sử dụng cả HbA1c và glucose; nguồn không mô tả khoảng thời gian tiên lượng. Nguồn gốc thu thập và cách tạo nhãn chưa được mô tả đầy đủ; chưa có kiểm định lâm sàng hoặc hiệu chuẩn cho quần thể Việt Nam. Điểm mô hình không phải xác suất mắc bệnh trong tương lai và không thay thế khám, xét nghiệm hay tư vấn chuyên môn. Không dùng kết quả để tự chẩn đoán hoặc thay đổi điều trị."
+          },
+          "rules": {
+            "valid_schema": true,
+            "within_training_domain": true,
+            "within_training_age": true,
+            "outside_features": [],
+            "matched_rules": [
+              "R1_REQUIRED_FIELDS_VALID",
+              "R2_IN_DOMAIN",
+              "R3_NO_INFO_DISTINCT_FROM_NEVER"
+            ],
+            "reported_conditions": [],
+            "warnings": [
+              "HbA1c/glucose là dữ liệu xét nghiệm trong dataset; model không thay thế việc diễn giải xét nghiệm của nhân viên y tế."
+            ],
+            "source": "https://www.cdc.gov/diabetes/diabetes-testing/index.html"
+          },
+          "knowledge": {
+            "mode": "retrieval-based QA",
+            "status": "answered",
+            "question": "Xét nghiệm HbA1c và đường huyết glucose",
+            "answer": "Các đoạn thông tin chung dưới đây được truy xuất từ bản diễn giải tiếng Việt có dẫn nguồn; hệ thống không dùng LLM để sinh thêm kết luận.",
+            "evidence": [
+              {
+                "chunk_id": "testing:0",
+                "document_id": "testing",
+                "title": "Xét nghiệm và giới hạn của triệu chứng",
+                "publisher": "CDC",
+                "url": "https://www.cdc.gov/diabetes/diabetes-testing/index.html",
+                "accessed": "2026-11-02",
+                "text": "Xét nghiệm tiểu đường\nXét nghiệm máu được dùng để đánh giá đường huyết. A1C (HbA1c) phản ánh mức đường huyết trung bình khoảng hai đến ba tháng. Xét nghiệm đường huyết lúc đói đo sau một thời gian nhịn ăn; nghiệm pháp dung nạp glucose đánh giá đáp ứng sau uống dung dịch glucose. Xét nghiệm đường huyết ngẫu nhiên được thực hiện tại một thời điểm bất kỳ.",
+                "score": 0.4185
+              },
+              {
+                "chunk_id": "testing:1",
+                "document_id": "testing",
+                "title": "Xét nghiệm và giới hạn của triệu chứng",
+                "publisher": "CDC",
+                "url": "https://www.cdc.gov/diabetes/diabetes-testing/index.html",
+                "accessed": "2026-11-02",
+                "text": "Đọc kết quả\nNhân viên y tế chọn và diễn giải xét nghiệm theo bối cảnh. Điểm phân loại từ mô hình của demo không phải kết quả xét nghiệm và không xác nhận hay loại trừ bệnh. Nếu có băn khoăn về triệu chứng, hãy trao đổi với cơ sở y tế để được đánh giá phù hợp.",
+                "score": 0.17672
+              },
+              {
+                "chunk_id": "prevention:0",
+                "document_id": "prevention",
+                "title": "Phòng ngừa và tiền tiểu đường",
+                "publisher": "CDC",
+                "url": "https://www.cdc.gov/diabetes/prevention-type-2/index.html",
+                "accessed": "2026-11-02",
+                "text": "Tiền tiểu đường\nTiền tiểu đường là tình trạng đường huyết cao hơn bình thường nhưng chưa ở mức chẩn đoán type 2. Tình trạng này thường không có biểu hiện rõ. Cần xét nghiệm để xác nhận, không suy ra từ số điểm của ứng dụng.",
+                "score": 0.1767
+              }
+            ]
+          }
+        },
+        "output": {
+          "model_explanation": "MLP phân loại hồ sơ giả định vào nhãn diabetes = 0 của dataset với ngưỡng kỹ thuật 0.5. Điểm này không phải kết luận y khoa.",
+          "input_summary": [],
+          "input_summary_note": "Đây là thông tin bạn nhập, không phải phân tích đóng góp đặc trưng hoặc quan hệ nhân quả của mô hình.",
+          "general_information": [
+            {
+              "chunk_id": "testing:0",
+              "document_id": "testing",
+              "title": "Xét nghiệm và giới hạn của triệu chứng",
+              "publisher": "CDC",
+              "url": "https://www.cdc.gov/diabetes/diabetes-testing/index.html",
+              "accessed": "2026-11-02",
+              "text": "Xét nghiệm tiểu đường\nXét nghiệm máu được dùng để đánh giá đường huyết. A1C (HbA1c) phản ánh mức đường huyết trung bình khoảng hai đến ba tháng. Xét nghiệm đường huyết lúc đói đo sau một thời gian nhịn ăn; nghiệm pháp dung nạp glucose đánh giá đáp ứng sau uống dung dịch glucose. Xét nghiệm đường huyết ngẫu nhiên được thực hiện tại một thời điểm bất kỳ.",
+              "score": 0.4185
+            },
+            {
+              "chunk_id": "testing:1",
+              "document_id": "testing",
+              "title": "Xét nghiệm và giới hạn của triệu chứng",
+              "publisher": "CDC",
+              "url": "https://www.cdc.gov/diabetes/diabetes-testing/index.html",
+              "accessed": "2026-11-02",
+              "text": "Đọc kết quả\nNhân viên y tế chọn và diễn giải xét nghiệm theo bối cảnh. Điểm phân loại từ mô hình của demo không phải kết quả xét nghiệm và không xác nhận hay loại trừ bệnh. Nếu có băn khoăn về triệu chứng, hãy trao đổi với cơ sở y tế để được đánh giá phù hợp.",
+              "score": 0.17672
+            },
+            {
+              "chunk_id": "prevention:0",
+              "document_id": "prevention",
+              "title": "Phòng ngừa và tiền tiểu đường",
+              "publisher": "CDC",
+              "url": "https://www.cdc.gov/diabetes/prevention-type-2/index.html",
+              "accessed": "2026-11-02",
+              "text": "Tiền tiểu đường\nTiền tiểu đường là tình trạng đường huyết cao hơn bình thường nhưng chưa ở mức chẩn đoán type 2. Tình trạng này thường không có biểu hiện rõ. Cần xét nghiệm để xác nhận, không suy ra từ số điểm của ứng dụng.",
+              "score": 0.1767
+            }
+          ],
+          "rule_messages": [
+            "HbA1c/glucose là dữ liệu xét nghiệm trong dataset; model không thay thế việc diễn giải xét nghiệm của nhân viên y tế."
+          ],
+          "limitation": "Đây là phân loại nhãn diabetes của dataset Kaggle, sử dụng cả HbA1c và glucose; nguồn không mô tả khoảng thời gian tiên lượng. Nguồn gốc thu thập và cách tạo nhãn chưa được mô tả đầy đủ; chưa có kiểm định lâm sàng hoặc hiệu chuẩn cho quần thể Việt Nam. Điểm mô hình không phải xác suất mắc bệnh trong tương lai và không thay thế khám, xét nghiệm hay tư vấn chuyên môn. Không dùng kết quả để tự chẩn đoán hoặc thay đổi điều trị."
+        },
+        "duration_ms": 0.003
+      }
+    ]
+  },
+  "question_example": {
+    "run_id": "cb780a99-9ca0-4731-8361-07362cde0a58",
+    "mode": "retrieval-based QA",
+    "status": "answered",
+    "question": "HbA1c phản ánh điều gì?",
+    "answer": "Các đoạn thông tin chung dưới đây được truy xuất từ bản diễn giải tiếng Việt có dẫn nguồn; hệ thống không dùng LLM để sinh thêm kết luận.",
+    "evidence": [
+      {
+        "chunk_id": "testing:0",
+        "document_id": "testing",
+        "title": "Xét nghiệm và giới hạn của triệu chứng",
+        "publisher": "CDC",
+        "url": "https://www.cdc.gov/diabetes/diabetes-testing/index.html",
+        "accessed": "2026-11-02",
+        "text": "Xét nghiệm tiểu đường\nXét nghiệm máu được dùng để đánh giá đường huyết. A1C (HbA1c) phản ánh mức đường huyết trung bình khoảng hai đến ba tháng. Xét nghiệm đường huyết lúc đói đo sau một thời gian nhịn ăn; nghiệm pháp dung nạp glucose đánh giá đáp ứng sau uống dung dịch glucose. Xét nghiệm đường huyết ngẫu nhiên được thực hiện tại một thời điểm bất kỳ.",
+        "score": 0.18303
+      }
+    ],
+    "trace": [
+      {
+        "order": 1,
+        "agent": "KnowledgeAgent",
+        "status": "ok",
+        "input": {
+          "question": "HbA1c phản ánh điều gì?"
+        },
+        "output": {
+          "mode": "retrieval-based QA",
+          "status": "answered",
+          "question": "HbA1c phản ánh điều gì?",
+          "answer": "Các đoạn thông tin chung dưới đây được truy xuất từ bản diễn giải tiếng Việt có dẫn nguồn; hệ thống không dùng LLM để sinh thêm kết luận.",
+          "evidence": [
+            {
+              "chunk_id": "testing:0",
+              "document_id": "testing",
+              "title": "Xét nghiệm và giới hạn của triệu chứng",
+              "publisher": "CDC",
+              "url": "https://www.cdc.gov/diabetes/diabetes-testing/index.html",
+              "accessed": "2026-11-02",
+              "text": "Xét nghiệm tiểu đường\nXét nghiệm máu được dùng để đánh giá đường huyết. A1C (HbA1c) phản ánh mức đường huyết trung bình khoảng hai đến ba tháng. Xét nghiệm đường huyết lúc đói đo sau một thời gian nhịn ăn; nghiệm pháp dung nạp glucose đánh giá đáp ứng sau uống dung dịch glucose. Xét nghiệm đường huyết ngẫu nhiên được thực hiện tại một thời điểm bất kỳ.",
+              "score": 0.18303
+            }
+          ]
+        },
+        "duration_ms": 1.182
+      }
+    ]
+  }
+}

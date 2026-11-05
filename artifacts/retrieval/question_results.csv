@@ -1,0 +1,15 @@
+question,expected_document,status,retrieved_documents,top1_hit,top3_hit,correct_rejection
+Insulin là gì và tiểu đường là bệnh gì?,overview,answered,overview|prevention,1.0,1.0,
+Có những thể bệnh type 1 type 2 và thai kỳ nào?,overview,answered,overview|risk,1.0,1.0,
+Khát nhiều và tiểu nhiều có phải triệu chứng không?,symptoms,answered,symptoms|testing,1.0,1.0,
+Không có triệu chứng có loại trừ bệnh không?,symptoms,answered,testing|symptoms,0.0,1.0,
+Vết thương chậm lành và nhìn mờ là biểu hiện gì?,symptoms,answered,symptoms|prevention,1.0,1.0,
+Thừa cân ít hoạt động và tiền sử gia đình có liên quan nguy cơ không?,risk,answered,risk|overview|prevention,1.0,1.0,
+Kháng insulin là gì?,risk,answered,risk|overview,1.0,1.0,
+HbA1c phản ánh đường huyết trong bao lâu?,testing,answered,testing|overview|risk,1.0,1.0,
+Xét nghiệm đường huyết lúc đói và dung nạp glucose là gì?,testing,answered,testing|prevention,1.0,1.0,
+Làm sao phòng ngừa type 2 bằng lối sống?,prevention,answered,prevention,1.0,1.0,
+Tiền tiểu đường là gì?,prevention,answered,prevention|risk|overview,1.0,1.0,
+Cách sửa động cơ xe máy?,,no_evidence,,,,1.0
+Giá cổ phiếu hôm nay?,,no_evidence,,,,1.0
+Tôi cần uống metformin liều bao nhiêu?,,outside_scope,,,,1.0

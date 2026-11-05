@@ -1,0 +1,215 @@
+{
+  "metadata": {
+    "seed": 42,
+    "dataset_sha256": "608a44d5619cd7ce7fdf97f6e8d3f754d1d0de72d7ff073122aa5654e1db7da8",
+    "generated_utc": "2026-11-02T17:06:08.047610+00:00",
+    "features": [
+      "age",
+      "gender",
+      "hypertension",
+      "heart_disease",
+      "smoking_history",
+      "bmi",
+      "hba1c_level",
+      "blood_glucose_level"
+    ],
+    "dataset_ref": "ziya07/diabetes-clinical-dataset100k-rows",
+    "input_dim": 15,
+    "transformed_feature_names": [
+      "numeric__age",
+      "numeric__bmi",
+      "numeric__hba1c_level",
+      "numeric__blood_glucose_level",
+      "numeric__hypertension",
+      "numeric__heart_disease",
+      "categorical__gender_Female",
+      "categorical__gender_Male",
+      "categorical__gender_Other",
+      "categorical__smoking_history_No Info",
+      "categorical__smoking_history_current",
+      "categorical__smoking_history_ever",
+      "categorical__smoking_history_former",
+      "categorical__smoking_history_never",
+      "categorical__smoking_history_not current"
+    ],
+    "architecture": "15 -> 16 ReLU Dropout(0.1) -> 8 ReLU -> 1 logit",
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 512,
+    "max_epochs": 100,
+    "epochs_run": 90,
+    "patience": 12,
+    "best_epoch": 78,
+    "best_validation_loss": 0.08322224766016006,
+    "threshold": 0.5,
+    "preprocessing": "numeric/binary median+StandardScaler; gender/smoking one-hot; fit train only",
+    "split_strategy": "deduplicate selected 8 X + y; StratifiedGroupKFold 5 outer / 4 inner; group = all selected X",
+    "dataset": {
+      "source": "https://www.kaggle.com/datasets/ziya07/diabetes-clinical-dataset100k-rows",
+      "name": "Kaggle Diabetes Clinical Dataset (100k rows)",
+      "raw_rows": 100000,
+      "raw_columns": 17,
+      "unique_rows": 96146,
+      "exact_duplicates_all_columns": 14,
+      "exact_duplicates_removed": 3854,
+      "deduplication_basis": "8 selected X + target; excluded notes/demographic extensions do not distinguish model observations",
+      "unique_feature_groups": 96055,
+      "conflicting_groups": 91,
+      "missing_cells": 0,
+      "excluded_columns": [
+        "year",
+        "location",
+        "race:AfricanAmerican",
+        "race:Asian",
+        "race:Caucasian",
+        "race:Hispanic",
+        "race:Other",
+        "clinical_notes"
+      ],
+      "observed_age_min": 0.08,
+      "observed_age_max": 80.0,
+      "numeric_ranges": {
+        "age": {
+          "min": 0.08,
+          "max": 80.0
+        },
+        "bmi": {
+          "min": 10.01,
+          "max": 95.69
+        },
+        "hba1c_level": {
+          "min": 3.5,
+          "max": 9.0
+        },
+        "blood_glucose_level": {
+          "min": 80.0,
+          "max": 300.0
+        }
+      },
+      "category_counts": {
+        "gender": {
+          "Female": 56161,
+          "Male": 39967,
+          "Other": 18
+        },
+        "smoking_history": {
+          "never": 34398,
+          "No Info": 32887,
+          "former": 9299,
+          "current": 9197,
+          "not current": 6367,
+          "ever": 3998
+        }
+      },
+      "class_counts": {
+        "0": 87664,
+        "1": 8482
+      },
+      "provenance_verified": false
+    },
+    "splits": {
+      "train": {
+        "rows": 57688,
+        "positive": 5090,
+        "negative": 52598
+      },
+      "validation": {
+        "rows": 19229,
+        "positive": 1696,
+        "negative": 17533
+      },
+      "test": {
+        "rows": 19229,
+        "positive": 1696,
+        "negative": 17533
+      }
+    },
+    "versions": {
+      "torch": "2.15.0",
+      "numpy": "2.5.4",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.9.1"
+    },
+    "inference_numeric_ranges": {
+      "age": {
+        "min": 0.08,
+        "max": 80.0
+      },
+      "bmi": {
+        "min": 10.08,
+        "max": 95.69
+      },
+      "hba1c_level": {
+        "min": 3.5,
+        "max": 9.0
+      },
+      "blood_glucose_level": {
+        "min": 80.0,
+        "max": 300.0
+      }
+    }
+  },
+  "metrics": {
+    "MLP": {
+      "accuracy": 0.9701492537313433,
+      "precision": 1.0,
+      "recall": 0.6615566037735849,
+      "f1": 0.7963094393186657,
+      "roc_auc": 0.9765431379264332,
+      "brier_score": 0.024409744888544083,
+      "average_precision": 0.8776041575992682,
+      "balanced_accuracy": 0.8307783018867925,
+      "confusion_matrix": [
+        [
+          17533,
+          0
+        ],
+        [
+          574,
+          1122
+        ]
+      ]
+    },
+    "Logistic Regression": {
+      "accuracy": 0.958656196370066,
+      "precision": 0.8713932399010718,
+      "recall": 0.6232311320754716,
+      "f1": 0.726710209694053,
+      "roc_auc": 0.961875497041159,
+      "brier_score": 0.032844919711351395,
+      "average_precision": 0.8189072501106082,
+      "balanced_accuracy": 0.8071668122591469,
+      "confusion_matrix": [
+        [
+          17377,
+          156
+        ],
+        [
+          639,
+          1057
+        ]
+      ]
+    },
+    "Majority baseline": {
+      "accuracy": 0.9117998855894742,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "brier_score": 0.08820011441052576,
+      "average_precision": 0.08820011441052576,
+      "balanced_accuracy": 0.5,
+      "confusion_matrix": [
+        [
+          17533,
+          0
+        ],
+        [
+          1696,
+          0
+        ]
+      ]
+    }
+  }
+}

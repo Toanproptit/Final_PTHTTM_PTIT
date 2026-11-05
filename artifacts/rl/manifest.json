@@ -1,0 +1,19 @@
+{
+  "source": "legacy/agent02_experiment.py (copied byte-for-byte from agent02_code.tex)",
+  "source_sha256": "3d40be4edc925f83b403c0b7e71e7fff03dfe0dbed56f0895c192058a4865ca9",
+  "original_sha256": "3d40be4edc925f83b403c0b7e71e7fff03dfe0dbed56f0895c192058a4865ca9",
+  "episodes": 5000,
+  "steps_per_episode": 20,
+  "evaluation_episodes": 500,
+  "seed": 42,
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "evaluation_exploration": false,
+  "generated_utc": "2026-11-02T16:57:50.557959+00:00",
+  "scope": "independent e-commerce simulation, no clinical use"
+}

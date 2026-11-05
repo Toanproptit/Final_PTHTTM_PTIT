@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Lab — Q-learning vs Rule-based</title>
+  <style>
+    :root{--bg:#f4f6fb;--card:#fff;--ink:#182235;--muted:#68758a;--line:#e6eaf1;--blue:#4357e8;--blue-soft:#edf0ff;--green:#0d9c78;--orange:#e88736;--shadow:0 12px 30px #2434510c}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    button,input{font:inherit}button{cursor:pointer;border:0;border-radius:10px;padding:10px 15px;font-weight:700;transition:.16s}button:hover{transform:translateY(-1px)}button:disabled{opacity:.55;cursor:wait;transform:none}
+    .shell{max-width:1160px;margin:auto;padding:30px 24px 52px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px}.mark{width:42px;height:42px;border-radius:13px;background:var(--blue);color:white;display:grid;place-items:center;font-size:21px;box-shadow:0 8px 18px #4357e83d}.eyebrow{color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.brand h1{font-size:21px;line-height:1.2;margin:2px 0 0}.status{padding:7px 11px;border:1px solid var(--line);background:white;border-radius:99px;color:var(--muted);font-size:12px;white-space:nowrap}.status i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:7px}
+    .intro{margin-bottom:20px}.intro h2{font-size:27px;letter-spacing:-.035em;margin:0 0 5px}.intro p{margin:0;color:var(--muted);max-width:720px}
+    .grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,.9fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}.card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:16px}.card h3{font-size:16px;margin:0}.sub{font-size:12px;color:var(--muted);margin-top:3px}.tag{border-radius:7px;background:var(--blue-soft);color:var(--blue);font-size:11px;font-weight:800;padding:5px 8px;white-space:nowrap}
+    .arena{background:linear-gradient(135deg,#f7f8ff,#f4f8ff);border:1px solid #e9edff;border-radius:13px;padding:17px;margin-bottom:16px}.arena-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px;margin-bottom:15px}.demand{display:flex;gap:7px;align-items:center;font-weight:800;color:var(--ink)}.demand .orb{width:9px;height:9px;border-radius:50%;background:var(--orange)}.demand.high .orb{background:var(--green)}.versus{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}.player{background:white;border:1px solid var(--line);border-radius:11px;padding:13px}.player.right{text-align:right}.player-name{font-size:12px;color:var(--muted);font-weight:700}.action{font-size:18px;font-weight:850;margin:3px 0}.action.rl{color:var(--blue)}.action.rule{color:var(--orange)}.versus-mark{width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:white;border:1px solid var(--line);color:#a4adbc;font-weight:800;font-size:11px}.result{font-size:12px;color:var(--muted)}
+    .controls{display:flex;align-items:center;flex-wrap:wrap;gap:9px}.primary{background:var(--blue);color:white;box-shadow:0 6px 14px #4357e82b}.secondary{background:#f0f2f7;color:#37445a}.quiet{color:#5e6a7e;background:white;border:1px solid var(--line)}.number{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12px;margin-left:auto}.number input{width:80px;border:1px solid var(--line);border-radius:8px;padding:8px;color:var(--ink)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}.stat{padding:12px;border:1px solid var(--line);border-radius:11px}.stat-label{font-size:11px;color:var(--muted)}.stat-value{font-size:20px;font-weight:850;margin-top:3px}.stat-value.blue{color:var(--blue)}.stat-value.orange{color:var(--orange)}
+    .chart-wrap{height:190px;border:1px solid var(--line);border-radius:11px;padding:10px 8px 4px;position:relative}.chart-wrap canvas{width:100%;height:100%}.legend{display:flex;gap:16px;color:var(--muted);font-size:11px;margin-top:8px}.legend span{display:flex;align-items:center;gap:6px}.swatch{width:8px;height:8px;border-radius:50%;background:var(--blue)}.swatch.orange{background:var(--orange)}
+    .right-col{display:flex;flex-direction:column;gap:18px}.qtable{width:100%;border-collapse:collapse;font-size:12px}.qtable th{text-align:right;color:var(--muted);font-weight:700;padding:8px 7px;border-bottom:1px solid var(--line)}.qtable th:first-child,.qtable td:first-child{text-align:left}.qtable td{text-align:right;padding:10px 7px;border-bottom:1px solid #f0f2f6;font-variant-numeric:tabular-nums}.qtable tr:last-child td{border-bottom:0}.best{color:var(--green);font-weight:800}.policy{display:inline-flex;padding:3px 7px;border-radius:6px;font-size:10px;font-weight:800}.policy.discount{background:#fff2e8;color:#c66a19}.policy.none{background:#edf0ff;color:var(--blue)}
+    .rule-list{display:grid;gap:9px}.rule-row{display:flex;gap:9px;align-items:flex-start;color:var(--muted);font-size:12px}.rule-num{flex:none;width:20px;height:20px;border-radius:6px;background:#fff1e5;color:var(--orange);display:grid;place-items:center;font-weight:800;font-size:10px}.rule-row b{color:var(--ink)}
+    .log{max-height:205px;overflow:auto}.log-row{display:grid;grid-template-columns:48px 1fr auto;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid #f0f2f6;font-size:11px}.log-row:last-child{border:0}.log-round{color:var(--muted)}.log-choice{color:var(--ink)}.log-profit{font-weight:800;font-variant-numeric:tabular-nums}.positive{color:var(--green)}.note{margin-top:18px;padding:12px 14px;background:#fff9ed;border:1px solid #f6e7c8;border-radius:10px;color:#796747;font-size:12px}
+    @media(max-width:850px){.grid{grid-template-columns:1fr}.right-col{display:grid;grid-template-columns:1fr 1fr}.right-col .log-card{grid-column:1/-1}}
+    @media(max-width:560px){.shell{padding:20px 14px 36px}.top{align-items:flex-start}.brand h1{font-size:17px}.status{font-size:0}.status i{margin:0}.intro h2{font-size:23px}.card{padding:15px}.right-col{display:flex}.number{margin-left:0}.stats{gap:7px}.stat{padding:9px}.stat-value{font-size:17px}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="brand"><div class="mark">✳</div><div><div class="eyebrow">Intelligent Systems · Agent 02</div><h1>Agent Lab</h1></div></div>
+      <div class="status"><i></i> Mô phỏng chạy trên trình duyệt</div>
+    </header>
+    <section class="intro"><h2>Q-learning đấu với agent theo luật</h2><p>Huấn luyện một agent chọn chiến lược giá trong thị trường mô phỏng, sau đó quan sát cách nó cạnh tranh với đối thủ có quy tắc cố định.</p></section>
+    <div class="grid">
+      <div class="left-col">
+        <section class="card">
+          <div class="card-head"><div><h3>Đấu trường thị trường</h3><div class="sub">Hai bên chọn hành động đồng thời trong mỗi lượt</div></div><span class="tag" id="roundTag">SẴN SÀNG</span></div>
+          <div class="arena">
+            <div class="arena-top"><div class="demand" id="demandBadge"><span class="orb"></span><span id="demandText">Nhu cầu —</span></div><div id="episodeText">Episode 0 · Lượt 0/20</div></div>
+            <div class="versus">
+              <div class="player"><div class="player-name">Q-LEARNING AGENT</div><div class="action rl" id="rlAction">Chưa chọn</div><div class="result" id="rlResult">Lợi nhuận: —</div></div>
+              <div class="versus-mark">VS</div>
+              <div class="player right"><div class="player-name">RULE-BASED AGENT</div><div class="action rule" id="ruleAction">Đối thủ cố định</div><div class="result" id="ruleResult">Lợi nhuận: —</div></div>
+            </div>
+          </div>
+          <div class="controls"><button class="primary" id="stepBtn">Chạy một lượt</button><button class="secondary" id="episodeBtn">Chạy episode</button><button class="quiet" id="resetBtn">Đặt lại</button><label class="number">Số lượt/episode <input id="stepsInput" type="number" min="1" max="100" value="20"></label></div>
+          <div class="stats">
+            <div class="stat"><div class="stat-label">Tổng lợi nhuận Q-learning</div><div class="stat-value blue" id="rlTotal">$0</div></div>
+            <div class="stat"><div class="stat-label">Tổng lợi nhuận Rule-based</div><div class="stat-value orange" id="ruleTotal">$0</div></div>
+            <div class="stat"><div class="stat-label">Tỷ lệ agent giảm giá</div><div class="stat-value" id="discountRate">0%</div></div>
+          </div>
+        </section>
+        <section class="card" style="margin-top:18px">
+          <div class="card-head"><div><h3>Tiến trình huấn luyện</h3><div class="sub">Phần thưởng trung bình mỗi lượt theo episode</div></div><span class="tag" id="trainedTag">CHƯA HUẤN LUYỆN</span></div>
+          <div class="chart-wrap"><canvas id="chart" aria-label="Biểu đồ phần thưởng huấn luyện"></canvas></div>
+          <div class="legend"><span><i class="swatch"></i>Q-learning</span><span><i class="swatch orange"></i>Rule-based</span></div>
+          <div class="controls" style="margin-top:14px"><button class="primary" id="trainBtn">Huấn luyện agent</button><label class="number">Episode <input id="episodesInput" type="number" min="100" max="20000" step="100" value="5000"></label></div>
+        </section>
+      </div>
+      <aside class="right-col">
+        <section class="card">
+          <div class="card-head"><div><h3>Q-table & chính sách</h3><div class="sub">Q càng cao, hành động càng được ưu tiên</div></div></div>
+          <table class="qtable"><thead><tr><th>Trạng thái<br>(nhu cầu, đối thủ trước)</th><th>Q: Không giảm</th><th>Q: Giảm giá</th><th>Chính sách</th></tr></thead><tbody id="qBody"></tbody></table>
+          <div class="sub" style="margin-top:9px">Trạng thái hiện tại: <b id="stateText">(—, —)</b></div>
+        </section>
+        <section class="card">
+          <div class="card-head"><div><h3>Luật của đối thủ</h3><div class="sub">Không cập nhật từ phần thưởng</div></div><span class="tag" style="background:#fff2e8;color:#c66a19">CỐ ĐỊNH</span></div>
+          <div class="rule-list"><div class="rule-row"><span class="rule-num">1</span><span>Nhu cầu thấp → <b>không giảm giá</b></span></div><div class="rule-row"><span class="rule-num">2</span><span>Nhu cầu cao và đối thủ đã giảm giá → <b>giảm giá</b></span></div><div class="rule-row"><span class="rule-num">3</span><span>Các trường hợp còn lại → <b>không giảm giá</b></span></div></div>
+        </section>
+        <section class="card log-card">
+          <div class="card-head"><div><h3>Lịch sử lượt đấu</h3><div class="sub">Lợi nhuận mỗi bên trong lượt gần nhất</div></div><button class="quiet" id="clearLogBtn" style="padding:6px 9px;font-size:11px">Xóa log</button></div>
+          <div class="log" id="log"><div class="sub">Chạy lượt đầu tiên để bắt đầu.</div></div>
+        </section>
+      </aside>
+    </div>
+    <div class="note"><b>Bản minh họa JavaScript:</b> số đơn hàng được lấy ngẫu nhiên theo xác suất chuyển đổi; nhu cầu thay đổi ngẫu nhiên giữa các lượt. Thực nghiệm trong báo cáo dùng code Python AGENT02 và có thể cho kết quả khác do bộ tạo số ngẫu nhiên. Đây là demo học tập.</div>
+  </main>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const config = {alpha:.10,gamma:.90,epsilonStart:.20,epsilonMin:.02,epsilonDecay:.995,price:10,cost:5,discountRate:.20,lowCustomers:10,highCustomers:20};
+  let q, rng, demand, previous=[0,0], episode=0, round=0, steps=20, totalSteps=0, totals=[0,0], actionsTaken=[0,0], logRows=[], chartRows=[], trained=false;
+  function random(seed){let a=seed>>>0;return()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296}}
+  function randInt(n){return Math.floor(rng()*n)}
+  function binomial(n,p){let x=0;for(let i=0;i<n;i++)if(rng()<p)x++;return x}
+  function stateFor(i){return [demand,previous[1-i]]}
+  function ruleAct(s){return s[0]===1&&s[1]===1?1:0}
+  function choose(s,explore=true){if(explore&&rng()<agentEpsilon)return randInt(2);const vals=q[s[0]][s[1]], max=Math.max(...vals), choices=vals.map((v,i)=>Math.abs(v-max)<1e-10?i:-1).filter(i=>i>=0);return choices[randInt(choices.length)]}
+  let agentEpsilon=config.epsilonStart;
+  function learn(s,a,r,ns,terminal){const old=q[s[0]][s[1]][a], target=terminal?r:r+config.gamma*Math.max(...q[ns[0]][ns[1]]);q[s[0]][s[1]][a]=old+config.alpha*(target-old)}
+  function reset(seed=42){rng=random(seed);q=Array.from({length:2},()=>Array.from({length:2},()=>[0,0]));demand=randInt(2);previous=[0,0];episode=0;round=0;totalSteps=0;steps=Math.max(1,Math.min(100,Number($('stepsInput').value)||20));totals=[0,0];actionsTaken=[0,0];logRows=[];chartRows=[];trained=false;agentEpsilon=config.epsilonStart;$('trainedTag').textContent='CHƯA HUẤN LUYỆN';$('trainBtn').textContent='Huấn luyện agent';updateUI();drawChart();}
+  function transition(){demand=randInt(2)}
+  function profit(action,other,d){const customers=d?config.highCustomers:config.lowCustomers;const conv=Math.max(.05,Math.min(.95,.30+.25*d+.15*action-.10*other));const sales=binomial(customers,conv);const effective=config.price*(1-config.discountRate*action);return {profit:sales*(effective-config.cost),sales,conv,customers}}
+  function doStep(){if(episode===0||round>=steps){episode++;round=0;previous=[0,0];demand=randInt(2)}const states=[stateFor(0),stateFor(1)],d=demand;const ra=choose(states[0],false),ba=ruleAct(states[1]);const rp=profit(ra,ba,d),bp=profit(ba,ra,d);totals[0]+=rp.profit;totals[1]+=bp.profit;actionsTaken[0]+=ra;actionsTaken[1]+=ba;round++;totalSteps++;previous=[ra,ba];transition();logRows.unshift({ep:episode,r:round,d,ra,ba,rp:rp.profit,bp:bp.profit});logRows=logRows.slice(0,40);updateUI({d,ra,ba,rp,bp,observedPrevious:states[0][1]});}
+  function updateUI(last){$('demandText').textContent=last?(last.d?'Nhu cầu cao':'Nhu cầu thấp'):'Nhu cầu —';$('demandBadge').classList.toggle('high',!!last&&last.d===1);$('rlAction').textContent=last?(last.ra?'Giảm giá 20%':'Không giảm giá'):'Chưa chọn';$('ruleAction').textContent=last?(last.ba?'Giảm giá 20%':'Không giảm giá'):'Đối thủ cố định';$('rlResult').textContent=last?`Lợi nhuận: $${last.rp.profit} · ${last.rp.sales}/${last.rp.customers} đơn`:'Lợi nhuận: —';$('ruleResult').textContent=last?`Lợi nhuận: $${last.bp.profit} · ${last.bp.sales}/${last.bp.customers} đơn`:'Lợi nhuận: —';$('episodeText').textContent=`Episode ${episode} · Lượt ${round}/${steps}`;$('roundTag').textContent=round>=steps?'EPISODE XONG':totalSteps?`LƯỢT ${round}`:'SẴN SÀNG';$('rlTotal').textContent='$'+totals[0].toLocaleString('en-US');$('ruleTotal').textContent='$'+totals[1].toLocaleString('en-US');$('discountRate').textContent=`${Math.round(actionsTaken[0]/Math.max(1,totalSteps)*100)}%`;$('stateText').textContent=last?`(${last.d?'cao':'thấp'}, ${last.observedPrevious?'giảm':'không giảm'})`:'(—, —)';$('stepsInput').disabled=round>0&&round<steps;renderQ();renderLog();}
+  function renderQ(){const labels=['Thấp · Không','Thấp · Giảm','Cao · Không','Cao · Giảm'];$('qBody').innerHTML=labels.map((label,i)=>{const d=i>1?1:0,c=i%2,v=q[d][c],best=Math.max(...v),act=v[1]>v[0]?1:0;return `<tr><td>${label}</td><td class="${v[0]===best?'best':''}">${v[0].toFixed(2)}</td><td class="${v[1]===best?'best':''}">${v[1].toFixed(2)}</td><td><span class="policy ${act?'discount':'none'}">${act?'GIẢM':'GIỮ GIÁ'}</span></td></tr>`}).join('')}
+  function renderLog(){if(!logRows.length){$('log').innerHTML='<div class="sub">Chạy lượt đầu tiên để bắt đầu.</div>';return}$('log').innerHTML=logRows.map(x=>`<div class="log-row"><span class="log-round">E${x.ep} · ${x.r}</span><span class="log-choice">${x.d?'Cao':'Thấp'} · RL ${x.ra?'giảm':'giữ'} / Luật ${x.ba?'giảm':'giữ'}</span><span class="log-profit positive">$${x.rp} / $${x.bp}</span></div>`).join('')}
+  function train(){const n=Math.max(100,Math.min(20000,Number($('episodesInput').value)||5000));$('trainBtn').disabled=true;$('trainBtn').textContent='Đang huấn luyện…';setTimeout(()=>{const trng=random(42), oldRng=rng;let tq=Array.from({length:2},()=>Array.from({length:2},()=>[0,0]));let eps=config.epsilonStart;const data=[];const pick=(s,explore)=>{if(explore&&trng()<eps)return Math.floor(trng()*2);const vals=tq[s[0]][s[1]],m=Math.max(...vals),ix=vals.map((v,i)=>Math.abs(v-m)<1e-10?i:-1).filter(i=>i>=0);return ix[Math.floor(trng()*ix.length)]};for(let e=0;e<n;e++){eps=Math.max(config.epsilonMin,config.epsilonStart*Math.pow(config.epsilonDecay,e));let d=Math.floor(trng()*2),prev=[0,0],rew=[0,0];for(let t=0;t<steps;t++){let s=[d,prev[1]],oppS=[d,prev[0]],a=pick(s,true),b=d===1&&oppS[1]===1?1:0;let customers=d?20:10;let convA=Math.max(.05,Math.min(.95,.30+.25*d+.15*a-.10*b)),convB=Math.max(.05,Math.min(.95,.30+.25*d+.15*b-.10*a));let salesA=0,salesB=0;for(let j=0;j<customers;j++){if(trng()<convA)salesA++;if(trng()<convB)salesB++}let rA=salesA*(10*(1-.2*a)-5),rB=salesB*(10*(1-.2*b)-5);rew[0]+=rA;rew[1]+=rB;let nd=Math.floor(trng()*2),ns=[nd,b],old=tq[s[0]][s[1]][a],target=t===steps-1?rA:rA+.9*Math.max(...tq[ns[0]][ns[1]]);tq[s[0]][s[1]][a]=old+.1*(target-old);d=nd;prev=[a,b]}if(e%Math.max(1,Math.floor(n/120))===0||e===n-1)data.push({rl:rew[0]/steps,rule:rew[1]/steps})}q=tq;chartRows=data;trained=true;$('trainedTag').textContent=`${n.toLocaleString()} EPISODE`;$('trainBtn').disabled=false;$('trainBtn').textContent='Huấn luyện lại';drawChart();renderQ();if(episode===0&&round===0){$('rlAction').textContent='Đã sẵn sàng';$('ruleAction').textContent='Đối thủ cố định'}},30)}
+  function drawChart(){const canvas=$('chart'),rect=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;canvas.width=rect.width*dpr;canvas.height=rect.height*dpr;const c=canvas.getContext('2d');c.scale(dpr,dpr);const w=rect.width,h=rect.height,p={l:38,r:10,t:12,b:25},cw=w-p.l-p.r,ch=h-p.t-p.b;c.clearRect(0,0,w,h);const ceiling=chartRows.length?Math.max(10,Math.ceil(Math.max(...chartRows.flatMap(row=>[row.rl,row.rule]))/10)*10):60;c.font='10px system-ui';c.fillStyle='#8994a6';c.strokeStyle='#edf0f5';for(let i=0;i<4;i++){let y=p.t+ch*i/3;c.beginPath();c.moveTo(p.l,y);c.lineTo(w-p.r,y);c.stroke();c.fillText('$'+Math.round(ceiling*(1-i/3)),4,y+3)}c.fillText('Episode',w-46,h-5);if(!chartRows.length)return;const line=(key,color)=>{c.beginPath();chartRows.forEach((row,i)=>{const x=p.l+(chartRows.length===1?0:i/(chartRows.length-1))*cw;const y=p.t+ch*(1-Math.max(0,Math.min(ceiling,row[key]))/ceiling);if(i===0)c.moveTo(x,y);else c.lineTo(x,y)});c.strokeStyle=color;c.lineWidth=2;c.stroke()};line('rl','#4357e8');line('rule','#e88736')}
+  $('stepBtn').onclick=()=>{if(round===0||round>=steps)steps=Math.max(1,Math.min(100,Number($('stepsInput').value)||20));doStep()};
+  $('episodeBtn').onclick=()=>{if(round===0||round>=steps)steps=Math.max(1,Math.min(100,Number($('stepsInput').value)||20));const remaining=round>0&&round<steps?steps-round:steps;for(let i=0;i<remaining;i++)doStep()};
+  $('resetBtn').onclick=()=>reset(42);$('trainBtn').onclick=train;$('clearLogBtn').onclick=()=>{logRows=[];renderLog()};window.addEventListener('resize',drawChart);reset();
+})();
+</script>
+</body>
+</html>

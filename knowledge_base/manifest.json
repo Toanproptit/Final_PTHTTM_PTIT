@@ -1,0 +1,7 @@
+[
+  {"id":"overview","file":"01_overview.md","title":"Tiểu đường và các thể bệnh","publisher":"WHO","url":"https://www.who.int/news-room/fact-sheets/detail/diabetes","accessed":"2026-11-02","usage":"Bản diễn giải ngắn tự biên soạn; không sao chép tài liệu hoặc logo WHO."},
+  {"id":"symptoms","file":"02_symptoms.md","title":"Triệu chứng có thể gặp","publisher":"CDC","url":"https://www.cdc.gov/diabetes/signs-symptoms/index.html","accessed":"2026-11-02","usage":"Diễn giải ngắn từ thông tin CDC; liên kết bản gốc miễn phí; không dùng hình/logo."},
+  {"id":"risk","file":"03_risk.md","title":"Yếu tố nguy cơ type 2","publisher":"CDC","url":"https://www.cdc.gov/diabetes/about/about-type-2-diabetes.html","accessed":"2026-11-02","usage":"Diễn giải ngắn từ thông tin CDC; liên kết bản gốc miễn phí; không dùng hình/logo."},
+  {"id":"testing","file":"04_testing.md","title":"Xét nghiệm và giới hạn của triệu chứng","publisher":"CDC","url":"https://www.cdc.gov/diabetes/diabetes-testing/index.html","accessed":"2026-11-02","usage":"Diễn giải ngắn từ thông tin CDC; liên kết bản gốc miễn phí; không dùng hình/logo."},
+  {"id":"prevention","file":"05_prevention.md","title":"Phòng ngừa và tiền tiểu đường","publisher":"CDC","url":"https://www.cdc.gov/diabetes/prevention-type-2/index.html","accessed":"2026-11-02","usage":"Diễn giải ngắn từ thông tin CDC; liên kết bản gốc miễn phí; không dùng hình/logo."}
+]

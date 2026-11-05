@@ -1,0 +1,14 @@
+{
+  "generated_utc": "2026-11-02T17:20:43.436886+00:00",
+  "questions": 14,
+  "supported_questions": 11,
+  "unsupported_questions": 3,
+  "hit_at_1": 0.9090909090909091,
+  "hit_at_3": 1.0,
+  "rejection_accuracy": 1.0,
+  "minimum_score": 0.08,
+  "index_sha256": "627531e26154e19c580cbe4a649572b690b727d12f6dc233ea643a3d14b7c6f2",
+  "mode": "retrieval-based QA",
+  "evaluation_unit": "document id, deduplicated top-3 chunks",
+  "limitation": "Bộ câu hỏi nhỏ do tác giả soạn, cùng ngôn ngữ/nội dung KB; không phải benchmark độc lập."
+}

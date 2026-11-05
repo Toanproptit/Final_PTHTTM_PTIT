@@ -1,0 +1,72 @@
+{
+  "generated_utc": "2026-11-02T17:20:39.094182+00:00",
+  "base_url": "http://127.0.0.1:8000",
+  "checks": {
+    "/": {
+      "passed": true,
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 9514
+    },
+    "/assets/app.js": {
+      "passed": true,
+      "status": 200,
+      "content_type": "text/javascript",
+      "bytes": 18614
+    },
+    "/assets/style.css": {
+      "passed": true,
+      "status": 200,
+      "content_type": "text/css",
+      "bytes": 12168
+    },
+    "/docs": {
+      "passed": true,
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 1033
+    },
+    "/legacy-demo": {
+      "passed": true,
+      "status": 200,
+      "content_type": "text/html",
+      "bytes": 20004
+    },
+    "health_kaggle": {
+      "passed": true
+    },
+    "live_demo_form_constraints": {
+      "passed": true
+    },
+    "live_prediction": {
+      "passed": true,
+      "score": 0.033485
+    },
+    "live_qa": {
+      "passed": true
+    },
+    "live_experiments": {
+      "passed": true
+    },
+    "image_ml_training_loss.png": {
+      "passed": true
+    },
+    "image_ml_roc_curves.png": {
+      "passed": true
+    },
+    "image_ml_confusion_matrices.png": {
+      "passed": true
+    },
+    "image_rl_episode_rewards.png": {
+      "passed": true
+    },
+    "image_rl_learning_rate_comparison.png": {
+      "passed": true
+    },
+    "image_rl_exploration_comparison.png": {
+      "passed": true
+    }
+  },
+  "all_passed": true,
+  "browser_rendering_verified": false
+}

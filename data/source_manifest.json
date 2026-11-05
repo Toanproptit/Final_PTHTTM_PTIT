@@ -1,0 +1,34 @@
+{
+  "source": "https://www.kaggle.com/datasets/ziya07/diabetes-clinical-dataset100k-rows",
+  "download_url": "https://www.kaggle.com/api/v1/datasets/download/ziya07/diabetes-clinical-dataset100k-rows",
+  "dataset_ref": "ziya07/diabetes-clinical-dataset100k-rows",
+  "title": "Diabetes Clinical Dataset(100k rows)",
+  "license": "CC0: Public Domain",
+  "kaggle_id": 6620808,
+  "last_updated": "2025-02-07T10:00:56.583Z",
+  "accessed_date": "2026-11-03",
+  "manifest_created_utc": "2026-11-02T17:04:56.904668+00:00",
+  "sha256": "608a44d5619cd7ce7fdf97f6e8d3f754d1d0de72d7ff073122aa5654e1db7da8",
+  "file": "kaggle\\diabetes_dataset_with_notes.csv",
+  "provenance": "Uploader does not document original collection, institution, patient IDs or label generation. Synthetic/real status not independently verified.",
+  "included_features": [
+    "age",
+    "gender",
+    "hypertension",
+    "heart_disease",
+    "smoking_history",
+    "bmi",
+    "hba1c_level",
+    "blood_glucose_level"
+  ],
+  "excluded_columns": [
+    "year",
+    "location",
+    "race:AfricanAmerican",
+    "race:Asian",
+    "race:Caucasian",
+    "race:Hispanic",
+    "race:Other",
+    "clinical_notes"
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {"question":"Insulin là gì và tiểu đường là bệnh gì?","expected_document":"overview"},
+  {"question":"Có những thể bệnh type 1 type 2 và thai kỳ nào?","expected_document":"overview"},
+  {"question":"Khát nhiều và tiểu nhiều có phải triệu chứng không?","expected_document":"symptoms"},
+  {"question":"Không có triệu chứng có loại trừ bệnh không?","expected_document":"symptoms"},
+  {"question":"Vết thương chậm lành và nhìn mờ là biểu hiện gì?","expected_document":"symptoms"},
+  {"question":"Thừa cân ít hoạt động và tiền sử gia đình có liên quan nguy cơ không?","expected_document":"risk"},
+  {"question":"Kháng insulin là gì?","expected_document":"risk"},
+  {"question":"HbA1c phản ánh đường huyết trong bao lâu?","expected_document":"testing"},
+  {"question":"Xét nghiệm đường huyết lúc đói và dung nạp glucose là gì?","expected_document":"testing"},
+  {"question":"Làm sao phòng ngừa type 2 bằng lối sống?","expected_document":"prevention"},
+  {"question":"Tiền tiểu đường là gì?","expected_document":"prevention"},
+  {"question":"Cách sửa động cơ xe máy?","expected_document":null},
+  {"question":"Giá cổ phiếu hôm nay?","expected_document":null},
+  {"question":"Tôi cần uống metformin liều bao nhiêu?","expected_document":null}
+]
