@@ -47,5 +47,9 @@ class AgentChatInput(BaseModel):
     message: str = Field(min_length=1, max_length=2000)
     history: list[ChatTurn] = Field(default_factory=list, max_length=8)
 
+class PredictionAdviceInput(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    run_id: str = Field(min_length=1, max_length=64)
+
 DEMO_PATIENT = {"age": 45.0, "gender": "Male", "hypertension": False, "heart_disease": False,
                 "smoking_history": "never", "bmi": 27.5, "hba1c_level": 5.8, "blood_glucose_level": 130.0}

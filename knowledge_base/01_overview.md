@@ -1,5 +1,7 @@
-# Tiểu đường và insulin
-Tiểu đường là bệnh mạn tính liên quan đến cơ thể không tạo đủ insulin hoặc sử dụng insulin không hiệu quả. Insulin giúp điều hòa đường huyết. Đường huyết tăng kéo dài có thể ảnh hưởng tim, thận, mắt và thần kinh.
+# Tổng quan về bệnh đái tháo đường
 
-## Các thể bệnh
-Type 1 liên quan thiếu insulin. Type 2 liên quan cơ thể sử dụng insulin kém hiệu quả. Tiểu đường thai kỳ xuất hiện trong thai kỳ và được phát hiện qua sàng lọc trước sinh. Các thể bệnh khác nhau cần đánh giá chuyên môn; đầu vào mô hình trong demo không xác định thể bệnh.
+Đái tháo đường là rối loạn chuyển hóa với tình trạng tăng glucose máu, liên quan đến khiếm khuyết trong tiết insulin, tác động của insulin hoặc cả hai. Tăng glucose kéo dài có thể gây tổn thương ở tim mạch, thận, mắt và thần kinh.
+
+Các thể thường được nhắc đến gồm type 1, type 2 và đái tháo đường thai kỳ. Chúng khác nhau về cơ chế và cách đánh giá; không thể xác định thể bệnh chỉ từ điểm dự đoán của ứng dụng này.
+
+Nội dung được diễn giải ngắn từ bài tổng quan Vinmec, có cố vấn chuyên môn là bác sĩ chuyên khoa II Nguyễn Xuân Thắng, Bệnh viện Đa khoa Quốc tế Vinmec Central Park. Đây là thông tin chung, không thay thế đánh giá của nhân viên y tế.

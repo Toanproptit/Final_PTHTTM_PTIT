@@ -1,7 +1,47 @@
 [
-  {"id":"overview","file":"01_overview.md","title":"Tiểu đường và các thể bệnh","publisher":"WHO","url":"https://www.who.int/news-room/fact-sheets/detail/diabetes","accessed":"2026-11-02","usage":"Bản diễn giải ngắn tự biên soạn; không sao chép tài liệu hoặc logo WHO."},
-  {"id":"symptoms","file":"02_symptoms.md","title":"Triệu chứng có thể gặp","publisher":"CDC","url":"https://www.cdc.gov/diabetes/signs-symptoms/index.html","accessed":"2026-11-02","usage":"Diễn giải ngắn từ thông tin CDC; liên kết bản gốc miễn phí; không dùng hình/logo."},
-  {"id":"risk","file":"03_risk.md","title":"Yếu tố nguy cơ type 2","publisher":"CDC","url":"https://www.cdc.gov/diabetes/about/about-type-2-diabetes.html","accessed":"2026-11-02","usage":"Diễn giải ngắn từ thông tin CDC; liên kết bản gốc miễn phí; không dùng hình/logo."},
-  {"id":"testing","file":"04_testing.md","title":"Xét nghiệm và giới hạn của triệu chứng","publisher":"CDC","url":"https://www.cdc.gov/diabetes/diabetes-testing/index.html","accessed":"2026-11-02","usage":"Diễn giải ngắn từ thông tin CDC; liên kết bản gốc miễn phí; không dùng hình/logo."},
-  {"id":"prevention","file":"05_prevention.md","title":"Phòng ngừa và tiền tiểu đường","publisher":"CDC","url":"https://www.cdc.gov/diabetes/prevention-type-2/index.html","accessed":"2026-11-02","usage":"Diễn giải ngắn từ thông tin CDC; liên kết bản gốc miễn phí; không dùng hình/logo."}
+  {
+    "id": "overview",
+    "file": "01_overview.md",
+    "title": "Tổng quan về bệnh đái tháo đường",
+    "publisher": "Vinmec",
+    "url": "https://www.vinmec.com/vie/bai-viet/tong-quan-ve-benh-dai-thao-duong-vi",
+    "accessed": "2026-11-11",
+    "usage": "Diễn giải ngắn bằng tiếng Việt từ bài Vinmec; không phải bản sao hay nội dung được Vinmec bảo trợ."
+  },
+  {
+    "id": "symptoms",
+    "file": "02_symptoms.md",
+    "title": "Triệu chứng có thể gặp",
+    "publisher": "Vinmec",
+    "url": "https://www.vinmec.com/vie/bai-viet/tong-quan-ve-benh-dai-thao-duong-vi",
+    "accessed": "2026-11-11",
+    "usage": "Diễn giải ngắn từ phần triệu chứng trong bài tổng quan Vinmec; nội dung không thay thế đánh giá y tế."
+  },
+  {
+    "id": "risk",
+    "file": "03_risk.md",
+    "title": "Yếu tố nguy cơ đái tháo đường type 2",
+    "publisher": "Vinmec",
+    "url": "https://www.vinmec.com/vie/bai-viet/cac-yeu-nguy-co-chinh-gay-benh-dai-thao-duong-type-2-o-viet-nam-vi",
+    "accessed": "2026-11-11",
+    "usage": "Diễn giải ngắn từ bài Vinmec của TS. Nguyễn Khánh Hòa; không sao chép nguyên văn."
+  },
+  {
+    "id": "testing",
+    "file": "04_testing.md",
+    "title": "Xét nghiệm chẩn đoán đái tháo đường",
+    "publisher": "Vinmec",
+    "url": "https://www.vinmec.com/vie/bai-viet/xet-nghiem-chan-doan-dai-thao-duong-vi",
+    "accessed": "2026-11-11",
+    "usage": "Diễn giải thông tin xét nghiệm từ Vinmec; không dùng để chẩn đoán cá nhân."
+  },
+  {
+    "id": "prevention",
+    "file": "05_prevention.md",
+    "title": "Phát hiện và phòng ngừa tiền đái tháo đường",
+    "publisher": "Vinmec",
+    "url": "https://www.vinmec.com/vie/bai-viet/phat-hien-va-phong-ngua-tien-dai-thao-duong-vi",
+    "accessed": "2026-11-11",
+    "usage": "Diễn giải ngắn từ bài Vinmec; nội dung chung, không phải kế hoạch điều trị cá nhân."
+  }
 ]

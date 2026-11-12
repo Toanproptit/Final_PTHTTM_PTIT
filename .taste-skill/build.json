@@ -1,0 +1,11 @@
+{
+ "page": null,
+ "url": "http://127.0.0.1:8000",
+ "root": null,
+ "kind": "software",
+ "category": "Diabetes research dashboard",
+ "primary": "Run profile classification",
+ "rounds": 3,
+ "start": "2026-11-09T10:11:20.067Z",
+ "by": "gate.mjs --start"
+}

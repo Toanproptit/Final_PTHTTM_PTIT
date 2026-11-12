@@ -1,9 +1,7 @@
 # Kho tri thức của demo
 
-Năm tài liệu Markdown là **bản diễn giải ngắn tự biên soạn bằng tiếng Việt**, không phải bản dịch chính thức. `manifest.json` lưu nguồn và ngày truy cập 02/11/2026. Chỉ lưu thông tin chung, không có liều thuốc hoặc quy tắc chẩn đoán cá nhân. Tài liệu gốc được liên kết ở từng kết quả và có thể đọc miễn phí.
+Năm tài liệu Markdown là các bản diễn giải ngắn tự biên soạn bằng tiếng Việt. `manifest.json` ghi tiêu đề, nhà xuất bản, liên kết gốc và ngày truy cập. Nguồn hiện dùng cho nội dung RAG là các bài sức khỏe của Vinmec. Nội dung không phải bản sao, tư vấn cá nhân hay nội dung được Vinmec bảo trợ.
 
-Nguồn: WHO và CDC. Việc dùng nguồn/liên kết không hàm ý WHO, CDC, ATSDR, HHS hoặc Chính phủ Hoa Kỳ bảo trợ, phê duyệt hay chứng nhận ứng dụng. Không sử dụng logo/hình ảnh của các tổ chức. Chính sách CDC: https://www.cdc.gov/other/agencymaterials.html. Ưu tiên liên kết nội dung gốc; nội dung có thể thay đổi và cần được rà soát khi mở rộng hoặc dùng sau thời điểm truy cập.
+MVP dùng retrieval-based QA: chia Markdown thành các đoạn, xếp hạng bằng TF-IDF/cosine và hiển thị evidence cùng đường dẫn nguồn. Khi Neo4j được nhập bằng `scripts/import_knowledge_graph.py`, ứng dụng có thể thêm truy xuất vector và facts của đồ thị. Không có mô hình ngôn ngữ sinh câu trả lời trong luồng QA cơ bản.
 
-MVP chạy **retrieval-based QA**: chunk Markdown theo đoạn, TF-IDF, cosine similarity, lọc ngưỡng rồi hiển thị nguyên các đoạn tiếng Việt đã biên soạn. Không có LLM sinh câu trả lời. Không gọi đây là RAG có mô hình sinh.
-
-`evaluation_questions.json` là bộ câu hỏi nhỏ do người làm đồ án tự xây; không phải benchmark độc lập. Ngưỡng truy xuất là tham số thiết kế, không được tối ưu bằng cách nhìn kết quả test y khoa. Muốn chứng minh khả năng tổng quát cần một tập câu hỏi độc lập lớn hơn, người đánh giá chuyên môn và kiểm tra nguồn cập nhật.
+`evaluation_questions.json` là bộ câu hỏi demo do nhóm tự xây, không phải benchmark độc lập. Nội dung y tế cần được rà soát định kỳ; các đoạn này chỉ cung cấp thông tin chung và không thay thế đánh giá của nhân viên y tế.

@@ -1,0 +1,51 @@
+{
+ "start": "2026-11-09T10:11:20.067Z",
+ "round": 0,
+ "idle": 0,
+ "errors": 1,
+ "status": "error",
+ "history": [
+  {
+   "at": "2026-11-09T10:15:33.068Z",
+   "mode": "manual",
+   "status": "error",
+   "fails": 0,
+   "round": 0,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": null,
+  "url": "http://127.0.0.1:8000",
+  "root": null,
+  "kind": "software",
+  "category": "Diabetes research dashboard",
+  "primary": "Run profile classification",
+  "rounds": 3,
+  "start": "2026-11-09T10:11:20.067Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "fp": "c58356e4da89cf19",
+ "page": "http://127.0.0.1:8000",
+ "found": {
+  "fails": [],
+  "warns": [],
+  "crashed": [
+   "the copy (the page showed no <main>, <section> or <h1> to lint)",
+   "consistency.mjs could not walk 1440, 390",
+   "check.mjs could not run (exit 2: check: timed out)"
+  ],
+  "seconds": {
+   "consistency": 3,
+   "layout": 240
+  }
+ },
+ "open": [],
+ "waived": [],
+ "warnCount": 0,
+ "note": "the copy (the page showed no <main>, <section> or <h1> to lint); consistency.mjs could not walk 1440, 390; check.mjs could not run (exit 2: check: timed out)",
+ "at": "2026-11-09T10:15:33.076Z"
+}

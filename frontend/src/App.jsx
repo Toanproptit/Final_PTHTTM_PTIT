@@ -1,10 +1,10 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import {
   Activity, ArrowDownRight, ArrowRight, ArrowUpRight, BookOpen, BrainCircuit,
   Check, ChevronDown, ChevronRight, CircleHelp, Clock3, Database, ExternalLink,
   FileText, FlaskConical, HeartPulse, History, LayoutDashboard, LoaderCircle,
   MessageCircle, MoreHorizontal, Play, Plus, RefreshCw, Send, Settings2,
-  ShieldCheck, Sparkles, Trash2, Workflow, X,
+  ShieldCheck, Sparkles, Sprout, Trash2, Workflow, X,
 } from 'lucide-react';
 
 const NAV = [
@@ -54,8 +54,8 @@ async function api(path, options = {}) {
   return body;
 }
 
-function IconButton({ title, onClick, children, className = '' }) {
-  return <button className={cx('icon-button', className)} title={title} aria-label={title} onClick={onClick}>{children}</button>;
+function IconButton({ title, onClick, children, className = '', expanded, controls }) {
+  return <button className={cx('icon-button', className)} title={title} aria-label={title} aria-expanded={expanded} aria-controls={controls} onClick={onClick}>{children}</button>;
 }
 
 function App() {
@@ -66,6 +66,7 @@ function App() {
   const [error, setError] = useState('');
   const [mobileNav, setMobileNav] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [predictionAdvice, setPredictionAdvice] = useState(null);
 
   const go = useCallback((next) => {
     setPage(next);
@@ -73,6 +74,12 @@ function App() {
     setError('');
     if (location.hash !== `#${next}`) history.replaceState(null, '', `#${next}`);
   }, []);
+
+  const requestPredictionAdvice = useCallback((runId) => {
+    setPredictionAdvice({ runId, token: `${runId}:${Date.now()}` });
+    go('llm-agent');
+  }, [go]);
+  const clearPredictionAdvice = useCallback(() => setPredictionAdvice(null), []);
 
   const refreshExperiments = useCallback(async () => {
     setError('');
@@ -103,57 +110,41 @@ function App() {
     return { metadata, mlp: mlp || {}, retrieval };
   }, [experiments]);
 
-  const pageProps = { schema, health, experiments, metrics, go, setError, error, refreshExperiments };
+  const pageProps = { schema, health, experiments, metrics, go, setError, error, refreshExperiments,
+    requestPredictionAdvice, predictionAdvice, clearPredictionAdvice };
 
   return (
     <div className="app-shell">
+      <a className="skip-link" href="#main-content">Chuyển đến nội dung chính</a>
       {mobileNav && <button className="mobile-scrim" aria-label="Đóng menu" onClick={() => setMobileNav(false)} />}
-      <aside className={cx('sidebar', mobileNav && 'sidebar-open')}>
+      <header className="app-header">
         <div className="brand-row">
           <div className="brand-icon"><HeartPulse size={21} strokeWidth={2.3} /></div>
-          <div className="brand-copy"><b>Diabetes<span>Lab</span></b><small>RESEARCH WORKSPACE</small></div>
-          <button className="mobile-close" onClick={() => setMobileNav(false)} aria-label="Đóng menu"><X size={18} /></button>
+          <div className="brand-copy"><b>Diabetes<span>Lab</span></b><small>Workspace cá nhân</small></div>
+          <button className="mobile-menu" onClick={() => setMobileNav((open) => !open)} aria-label={mobileNav ? 'Đóng menu' : 'Mở menu'} aria-expanded={mobileNav} aria-controls="primary-nav"><span /></button>
         </div>
-        <div className="workspace-switcher">
-          <div className="workspace-avatar">DL</div>
-          <div><b>Diabetes Agent Lab</b><small>Workspace cá nhân</small></div>
-          <ChevronDown size={15} />
-        </div>
-        <div className="nav-caption">KHÔNG GIAN LÀM VIỆC</div>
-        <nav className="side-nav" aria-label="Điều hướng chính">
+        <nav className={cx('side-nav', mobileNav && 'side-nav-open')} id="primary-nav" aria-label="Điều hướng chính">
           {NAV.map(({ id, label, icon: Icon, badge }) => (
-            <button key={id} className={cx('nav-item', page === id && 'active')} onClick={() => go(id)}>
+            <button key={id} className={cx('nav-item', page === id && 'active')} aria-current={page === id ? 'page' : undefined} onClick={() => go(id)}>
               <Icon size={18} strokeWidth={1.8} /><span>{label}</span>{badge && <small className="nav-badge">{badge}</small>}
             </button>
           ))}
         </nav>
-        <div className="sidebar-bottom">
-          <div className="sidebar-status"><span className={cx('status-dot', health && 'online')} /><span>{health ? 'API đang hoạt động' : 'Đang kết nối API'}</span><MoreHorizontal size={17} /></div>
+        <div className="header-actions">
+          <div className="api-indicator"><span className={cx('status-dot', health && 'online')} /><span>{health ? 'API đang hoạt động' : 'Đang kết nối API'}</span></div>
+          <div className="top-menu-wrap">
+            <IconButton title="Tùy chọn" expanded={menuOpen} controls="top-menu" onClick={() => setMenuOpen((open) => !open)}><MoreHorizontal size={19} /></IconButton>
+            {menuOpen && <div className="top-menu" id="top-menu"><button onClick={() => { setMenuOpen(false); go('workflow'); }}>Lịch sử và trace</button><button onClick={() => { setMenuOpen(false); go('experiments'); }}>Artifact thực nghiệm</button></div>}
+          </div>
           <div className="profile-row"><div className="profile-avatar">N</div><div><b>Researcher</b><small>Local demo</small></div><Settings2 size={17} /></div>
-          <p className="sidebar-note">Demo nghiên cứu · Chỉ dùng hồ sơ giả định</p>
         </div>
-      </aside>
+      </header>
 
       <main className="main-shell">
-        <header className="topbar">
-          <div className="topbar-left">
-            <button className="mobile-menu" onClick={() => setMobileNav(true)} aria-label="Mở menu"><span /></button>
-            <div className="breadcrumbs"><span>Workspace</span><ChevronRight size={14} /><b>{TITLES[page] || 'Tổng quan'}</b></div>
-          </div>
-          <div className="topbar-actions">
-            <div className="api-indicator"><span className={cx('status-dot', health && 'online')} />{health ? 'Local API connected' : 'Connecting...'}</div>
-            <div className="top-menu-wrap">
-              <IconButton title="Tùy chọn" onClick={() => setMenuOpen((open) => !open)}><MoreHorizontal size={19} /></IconButton>
-              {menuOpen && <div className="top-menu"><button onClick={() => { setMenuOpen(false); go('workflow'); }}>Lịch sử và trace</button><button onClick={() => { setMenuOpen(false); go('experiments'); }}>Artifact thực nghiệm</button></div>}
-            </div>
-            <div className="top-avatar">N</div>
-          </div>
-        </header>
-
         {error && <div className="global-error"><CircleHelp size={17} /><span>{error}</span><button onClick={() => setError('')} aria-label="Đóng lỗi"><X size={16} /></button></div>}
         {!health && !error && <div className="loading-strip"><LoaderCircle size={16} className="spin" /> Đang tải dữ liệu dự án…</div>}
 
-        <div className="content-area">
+        <div className="content-area" id="main-content" tabIndex="-1">
           {page === 'overview' && <OverviewPage {...pageProps} />}
           {page === 'prediction' && <PredictionPage {...pageProps} />}
           {page === 'knowledge' && <KnowledgePage {...pageProps} />}
@@ -178,18 +169,38 @@ function OverviewPage({ health, metrics, go }) {
     { label: 'MÔI TRƯỜNG', value: health?.orchestrator?.framework || 'LangGraph', detail: `FastAPI · ${health?.database?.backend === 'mysql' ? 'MySQL' : 'SQLite dev'}`, icon: ShieldCheck, tone: 'amber' },
   ];
   return <>
-    <section className="hero-panel">
+    <section className="hero-panel" data-enter>
       <div className="hero-copy"><div className="hero-kicker"><span className="hero-kicker-dot" /> RESEARCH WORKSPACE <span className="hero-kicker-line" /> AGENT SYSTEM</div>
         <h1>Hiểu dữ liệu.<br /><span>Theo dõi từng agent.</span></h1>
         <p>Khám phá bộ dữ liệu, mô hình nghiên cứu và cách các agent phối hợp trong một không gian trực quan.</p>
         <div className="hero-actions"><button className="button button-light" onClick={() => go('prediction')}>Bắt đầu demo <ArrowRight size={16} /></button><button className="button button-ghost" onClick={() => go('workflow')}>Xem workflow <Workflow size={16} /></button></div>
       </div>
-      <div className="hero-art" aria-hidden="true"><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="orbit orbit-three" /><div className="hero-core"><HeartPulse size={35} /></div><div className="float-node node-a"><BrainCircuit size={17} /></div><div className="float-node node-b"><BookOpen size={16} /></div><div className="float-node node-c"><Activity size={17} /></div><span className="hero-spark spark-a" /><span className="hero-spark spark-b" /></div>
+      <div className="hero-art" aria-hidden="true">
+        <div className="tile-field">{Array.from({ length: 108 }, (_, index) => <i className={`tile tile-${index % 7}`} key={index} />)}</div>
+        <article className="hero-preview-back">
+          <div className="preview-topline"><span>AGENT PIPELINE</span><Workflow size={17} /></div>
+          <div className="preview-flow">
+            {[['Validation Agent', Check], ['Safety Agent', ShieldCheck], ['Prediction Agent', BrainCircuit], ['Knowledge Agent', BookOpen]].map(([label, Icon], index) => <div className="preview-flow-row" key={label}><span className="preview-flow-icon"><Icon size={15} /></span><span>{label}</span><b>0{index + 1}</b></div>)}
+          </div>
+        </article>
+        <article className="hero-preview-front">
+          <div className="preview-topline"><span>MODEL PERFORMANCE</span><span className="preview-status"><i /> TEST SET</span></div>
+          <h2>Hiệu năng mô hình</h2>
+          <div className="preview-score">{pct(metrics.mlp?.accuracy)}<small>accuracy</small></div>
+          <div className="preview-metrics"><div><span>Recall</span><b>{pct(metrics.mlp?.recall)}</b></div><div><span>F1 score</span><b>{pct(metrics.mlp?.f1)}</b></div><div><span>ROC-AUC</span><b>{pct(metrics.mlp?.roc_auc)}</b></div></div>
+        </article>
+      </div>
       <div className="hero-index">01 <span>/ 06</span></div>
     </section>
 
-    <div className="section-title-row"><div><div className="eyebrow">TỔNG QUAN DỰ ÁN</div><h2>Workspace snapshot</h2></div><button className="quiet-button" onClick={() => go('experiments')}>Mở báo cáo <ArrowUpRight size={15} /></button></div>
-    <div className="stats-grid">{overviewStats.map(({ label, value, detail, icon: Icon, tone }) => <article className="stat-card" key={label}><div className="stat-top"><span>{label}</span><div className={`stat-icon ${tone}`}><Icon size={18} /></div></div><div className="stat-value">{typeof value === 'number' ? value.toLocaleString('vi-VN') : value}</div><div className="stat-detail">{detail}</div></article>)}</div>
+    <div className="section-divider" aria-hidden="true"><span><Sprout size={19} /></span></div>
+    <section className="snapshot-section">
+      <div className="snapshot-copy"><div className="eyebrow">TỔNG QUAN DỰ ÁN</div><h2>Workspace snapshot</h2><p>Khám phá bộ dữ liệu, mô hình nghiên cứu và cách các agent phối hợp trong một không gian trực quan.</p><button className="quiet-button" onClick={() => go('experiments')}>Mở báo cáo <ArrowUpRight size={15} /></button></div>
+      <div className="snapshot-board"><div className="panel-heading"><div><div className="eyebrow">DIABETES AGENT LAB</div><h2>Trạng thái dự án</h2></div><span className="live-tag"><i /> READY</span></div>
+        <div className="stats-grid">{overviewStats.map(({ label, value, detail, icon: Icon, tone }) => <article className="stat-card" key={label}><div className="stat-top"><span>{label}</span><div className={`stat-icon ${tone}`}><Icon size={18} /></div></div><div className="stat-value">{typeof value === 'number' ? value.toLocaleString('vi-VN') : value}</div><div className="stat-detail">{detail}</div></article>)}</div>
+      </div>
+    </section>
+    <div className="section-divider section-divider-small" aria-hidden="true"><span><Activity size={18} /></span></div>
 
     <div className="overview-grid">
       <article className="panel model-panel"><div className="panel-heading"><div><div className="eyebrow">MODEL PERFORMANCE</div><h2>Hiệu năng mô hình</h2></div><button className="square-action" onClick={() => go('experiments')} aria-label="Mở thực nghiệm"><ArrowUpRight size={17} /></button></div>
@@ -212,7 +223,7 @@ function OverviewPage({ health, metrics, go }) {
   </>;
 }
 
-function PredictionPage({ schema, health }) {
+function PredictionPage({ schema, health, requestPredictionAdvice }) {
   const [values, setValues] = useState({});
   const [result, setResult] = useState(null);
   const [busy, setBusy] = useState(false);
@@ -234,12 +245,12 @@ function PredictionPage({ schema, health }) {
       <div className="form-disclaimer"><ShieldCheck size={15} /><span>Không nhập tên, địa chỉ hoặc thông tin định danh. Mọi kết quả chỉ phục vụ demo nghiên cứu.</span></div>
       <button className="button button-primary full-button" disabled={busy}>{busy ? <><LoaderCircle size={16} className="spin" /> Đang chạy agent…</> : <>Chạy phân loại <ArrowRight size={16} /></>}</button>
     </form>
-    <div className="result-column">{result ? <PredictionResult result={result} /> : <article className="panel result-empty"><div className="empty-orbit"><BrainCircuit size={27} /></div><span className="eyebrow">MODEL OUTPUT</span><h2>Kết quả sẽ xuất hiện tại đây</h2><p>Hồ sơ được kiểm tra bằng luật trước khi gửi tới mô hình. Trace chi tiết nằm trong trang Workflow.</p><div className="result-empty-foot"><span><ShieldCheck size={14} /> Validation trước inference</span><span><Clock3 size={14} /> Thường chỉ vài giây</span></div></article>}
+    <div className="result-column">{result ? <PredictionResult result={result} onAdvice={requestPredictionAdvice} /> : <article className="panel result-empty"><div className="empty-orbit"><BrainCircuit size={27} /></div><span className="eyebrow">MODEL OUTPUT</span><h2>Kết quả sẽ xuất hiện tại đây</h2><p>Hồ sơ được kiểm tra bằng luật trước khi gửi tới mô hình. Trace chi tiết nằm trong trang Workflow.</p><div className="result-empty-foot"><span><ShieldCheck size={14} /> Validation trước inference</span><span><Clock3 size={14} /> Thường chỉ vài giây</span></div></article>}
       <div className="notice-bar compact"><div className="notice-icon"><CircleHelp size={16} /></div><p><b>Giới hạn mô hình</b><span>Điểm sigmoid không được hiệu chuẩn thành nguy cơ cá nhân.</span></p></div></div></div>
   </>;
 }
 
-function PredictionResult({ result }) {
+function PredictionResult({ result, onAdvice }) {
   const prediction = result.prediction;
   return <article className="panel prediction-result"><div className="panel-heading"><div><div className="eyebrow">MODEL OUTPUT</div><h2>{prediction ? 'Kết quả phân loại' : 'Ngoài miền dữ liệu'}</h2></div><span className={cx('result-status', prediction ? 'positive' : 'muted-status')}>{result.status === 'completed' ? 'COMPLETED' : 'OUT OF DOMAIN'}</span></div>
     {prediction ? <><div className="big-score">{pct(prediction.positive_class_score)}<small>điểm cho nhãn diabetes = 1</small></div><div className="score-track"><i style={{ width: `${prediction.positive_class_score * 100}%` }} /></div><p className="body-copy">{result.explanation.model_explanation}</p><div className="mini-metrics"><div><small>Logistic baseline</small><b>{pct(prediction.baseline_positive_class_score)}</b></div><div><small>Ngưỡng kỹ thuật</small><b>{pretty(prediction.threshold)}</b></div></div></> : <p className="body-copy">{result.explanation.model_explanation}</p>}
@@ -247,6 +258,7 @@ function PredictionResult({ result }) {
     <div className="result-section"><h3><HeartPulse size={16} /> Safety Agent · {result.safety?.level}</h3>{result.safety?.messages?.map((message) => <p className="warning-line" key={message}>{message}</p>)}</div>
     {result.explanation.general_information?.length > 0 && <div className="result-section"><h3><BookOpen size={16} /> Thông tin có nguồn</h3><EvidenceList items={result.explanation.general_information} /></div>}
     <div className="clinical-caveat">{result.explanation.limitation}</div>
+    {prediction && <div className="prediction-advice-action"><button className="button button-primary" onClick={() => onAdvice?.(result.run_id)}><MessageCircle size={16} /> Tư vấn kết quả với LLM Agent <ArrowRight size={16} /></button><small>Kết quả hồ sơ demo và bằng chứng RAG sẽ được gửi tới OpenRouter để tạo phần giải thích.</small></div>}
   </article>;
 }
 
@@ -279,13 +291,31 @@ function KnowledgePage({ health }) {
   </>;
 }
 
-function LLMAgentPage() {
+function LLMAgentPage({ predictionAdvice, clearPredictionAdvice }) {
   const [status, setStatus] = useState(null);
   const [messages, setMessages] = useState([]);
   const [text, setText] = useState('');
   const [busy, setBusy] = useState(false);
   const [localError, setLocalError] = useState('');
+  const processedAdvice = useRef(null);
   useEffect(() => { api('/api/agent/status').then(setStatus).catch((e) => setLocalError(e.message)); }, []);
+  useEffect(() => {
+    if (!predictionAdvice || processedAdvice.current === predictionAdvice.token) return;
+    processedAdvice.current = predictionAdvice.token;
+    clearPredictionAdvice?.();
+    const runId = predictionAdvice.runId;
+    setMessages((old) => [...old, { role: 'user', content: 'Tư vấn từ kết quả dự đoán vừa chạy' }]);
+    setBusy(true); setLocalError('');
+    api('/api/agent/advice', { method: 'POST', body: JSON.stringify({ run_id: runId }) })
+      .then((response) => setMessages((old) => [...old, {
+        role: 'assistant', content: response.answer, sources: response.sources || [],
+        calls: [{ name: 'search_health_knowledge', status: response.status === 'no_evidence' ? 'no_evidence' : 'ok',
+          arguments: { prediction_run_id: runId },
+          summary: { evidence_count: response.evidence_count || 0, retrieval: response.retrieval_status || {} } }],
+      }]))
+      .catch((e) => { setLocalError(e.message); setMessages((old) => [...old, { role: 'error', content: e.message }]); })
+      .finally(() => setBusy(false));
+  }, [predictionAdvice, clearPredictionAdvice]);
   const submit = async (event) => {
     event?.preventDefault();
     const message = text.trim(); if (!message || busy) return;
@@ -302,7 +332,7 @@ function LLMAgentPage() {
     <PageHeading eyebrow="MODEL-PLANNED TOOLS" title="LLM Agent workspace" description="Đặt câu hỏi tự nhiên. Model sẽ tự quyết định có cần tìm kiến thức, chạy mô hình nghiên cứu hay đọc kết quả dự án." action={<span className={cx('soft-tag', configured ? 'soft-green' : 'soft-amber')}><span className={cx('status-dot', configured && 'online')} />{configured ? 'OpenRouter connected' : 'Cần cấu hình API'}</span>} />
     <div className="agent-layout"><section className="panel chat-panel"><div className="chat-header"><div className="assistant-avatar"><Sparkles size={18} /></div><div><b>Diabetes Research Assistant</b><small>{configured ? `${status.model} · ${status.tools?.length || 3} tools available` : 'Local tool-calling agent'}</small></div><span className="live-tag"><i /> READY</span></div>
       <div className="chat-scroll"><div className="chat-intro"><span className="chat-orb"><Sparkles size={22} /></span><h2>Xin chào, mình có thể giúp gì?</h2><p>Mình có thể tra cứu tài liệu, xem kết quả thực nghiệm hoặc chạy mô hình trên hồ sơ giả định.</p><div className="prompt-grid">{DEMO_PROMPTS.map((prompt, i) => <button key={prompt} className="prompt-card" onClick={() => setText(prompt)}><span>{i === 0 ? <BookOpen size={15} /> : i === 1 ? <FlaskConical size={15} /> : <BrainCircuit size={15} />}</span>{prompt}<ArrowUpRight size={14} /></button>)}</div></div>
-        {messages.map((message, index) => <div key={index} className={cx('chat-message-row', message.role)}><div className={cx('chat-bubble', message.role)}>{message.role !== 'user' && <div className="bubble-label"><Sparkles size={13} /> {message.role === 'error' ? 'Kết nối gặp lỗi' : 'Research Assistant'}</div>}<p>{message.content}</p>{message.calls?.length > 0 && <div className="tool-trace"><div className="trace-caption"><Workflow size={14} /> TOOL CALLS · {message.calls.length}</div>{message.calls.map((call, callIndex) => <details className="tool-call-card" key={`${call.name}-${callIndex}`}><summary><span className="tool-success"><Check size={12} /></span><b>{call.name}</b><span className="trace-state">{call.status}</span><ChevronDown size={14} /></summary><div className="tool-call-content"><small>Tham số</small><pre>{JSON.stringify(call.arguments, null, 2)}</pre><small>Kết quả tóm tắt</small><pre>{JSON.stringify(call.summary, null, 2)}</pre></div></details>)}</div>}</div></div>)}
+        {messages.map((message, index) => <div key={index} className={cx('chat-message-row', message.role)}><div className={cx('chat-bubble', message.role)}>{message.role !== 'user' && <div className="bubble-label"><Sparkles size={13} /> {message.role === 'error' ? 'Kết nối gặp lỗi' : 'Research Assistant'}</div>}<p>{message.content}</p>{message.sources?.length > 0 && <div className="advice-source-list"><b>Nguồn đã dùng</b>{message.sources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>{source.publisher} · {source.title}<ExternalLink size={12} /></a>)}</div>}{message.calls?.length > 0 && <div className="tool-trace"><div className="trace-caption"><Workflow size={14} /> TOOL CALLS · {message.calls.length}</div>{message.calls.map((call, callIndex) => <details className="tool-call-card" key={`${call.name}-${callIndex}`}><summary><span className="tool-success"><Check size={12} /></span><b>{call.name}</b><span className="trace-state">{call.status}</span><ChevronDown size={14} /></summary><div className="tool-call-content"><small>Tham số</small><pre>{JSON.stringify(call.arguments, null, 2)}</pre><small>Kết quả tóm tắt</small><pre>{JSON.stringify(call.summary, null, 2)}</pre></div></details>)}</div>}</div></div>)}
         {busy && <div className="chat-message-row assistant"><div className="chat-bubble assistant"><div className="typing-dots"><i /><i /><i /><span>Đang suy nghĩ và chọn công cụ…</span></div></div></div>}
       </div>
       <form className="chat-composer" onSubmit={submit}><textarea value={text} onChange={(e) => setText(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); submit(e); } }} rows={2} maxLength={2000} placeholder="Nhắn tin cho agent…" /><div className="composer-bottom"><span><ShieldCheck size={13} /> Không nhập dữ liệu định danh</span><button className="send-button" disabled={busy || !text.trim()} aria-label="Gửi"><Send size={17} /></button></div></form>

@@ -10,7 +10,7 @@
 | 4. `data.py` | download_dataset, encode_features, load_dataset, split_dataset, make_preprocessor | pandas/sklearn/schema/paths | Vì sao 100000 còn 96146? Vì sao hash không chứa y? |
 | 5. `train.py` | run_training, classification_metrics, create_plots; splits/arrays/targets/best_state/stale | data/model/torch/sklearn | Đi từ batch loss.backward đến checkpoint epoch tốt nhất |
 | 6. `agents.py` | RuleBasedAgent.run; PredictionAgent.ready/load/run; ExplanationAgent.run | schema/data/model/joblib/torch | Nhập tuổi100 làm prediction bị bỏ qua ở đâu? |
-| 7. `knowledge.py` | normalize, chunk_markdown, KnowledgeAgent.__init__/run; matrix/vectorizer/chunks/score | KB/sklearn; Orchestrator dùng | Từ HbA1c đến chunk testing:0 và link CDC |
+| 7. `knowledge.py` | normalize, chunk_markdown, KnowledgeAgent.__init__/run; matrix/vectorizer/chunks/score | KB/sklearn; Orchestrator dùng | Từ HbA1c đến chunk testing:0 và link Vinmec |
 | 8. `storage.py` | DemoStore.__init__/save/recent/clear; connection/path | sqlite3/contextlib | Vì sao `closing` cần thiết trên Windows? |
 | 9. `orchestrator.py` | OrchestratorAgent.call/predict/ask; trace/run_id/result | agents/knowledge/storage | Input Explanation lấy từ biến nào của ba bước trước? |
 | 10. `api.py` | create_app/lifespan; predict/ask/history/experiments/artifact | FastAPI/orchestrator/schema | POST không có model trả503, thiếu trường trả422 |

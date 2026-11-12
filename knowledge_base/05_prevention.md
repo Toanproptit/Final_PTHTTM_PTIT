@@ -1,5 +1,7 @@
-# Tiền tiểu đường
-Tiền tiểu đường là tình trạng đường huyết cao hơn bình thường nhưng chưa ở mức chẩn đoán type 2. Tình trạng này thường không có biểu hiện rõ. Cần xét nghiệm để xác nhận, không suy ra từ số điểm của ứng dụng.
+# Tiền đái tháo đường và giảm nguy cơ type 2
 
-## Phòng ngừa type 2
-Các thay đổi lối sống như ăn uống lành mạnh, tăng hoạt động thể lực và quản lý cân nặng có thể giúp phòng ngừa hoặc trì hoãn type 2. Chương trình hỗ trợ thay đổi lối sống giúp người tham gia xây dựng thói quen phù hợp. Đây là kiến thức chung, không phải kế hoạch điều trị cá nhân.
+Tiền đái tháo đường thường ít biểu hiện rõ; Vinmec mô tả các xét nghiệm như HbA1c, glucose lúc đói và nghiệm pháp dung nạp glucose để đánh giá. Kết quả xét nghiệm cần được nhân viên y tế giải thích.
+
+Các bài viết Vinmec nêu việc duy trì cân nặng phù hợp, ăn uống cân đối và hoạt động thể lực thường xuyên là những cách có thể giúp giảm nguy cơ tiến triển type 2. Lựa chọn phù hợp còn tùy tình trạng từng người; nội dung này không phải kế hoạch điều trị cá nhân.
+
+Nội dung được diễn giải từ bài “Phát hiện và phòng ngừa tiền đái tháo đường” của Vinmec, cố vấn chuyên môn ThS.BS Vũ Thị Duyên, Vinmec Hải Phòng.

@@ -32,7 +32,7 @@
 30. **KB khác RAG?** KB là nội dung lưu; RAG thường kết hợp truy xuất với generator. MVP chỉ retrieval-based QA, không generator.
 31. **TF-IDF/cosine làm gì?** Chuyển query/chunk sang vector có trọng số từ vựng, xếp hạng theo cosine. Score không phải độ đúng y khoa.
 32. **Hệ thống trả lời khi thiếu bằng chứng thế nào?** Trả no_evidence hoặc outside_scope, không tạo thêm kết luận/đơn thuốc.
-33. **Tài liệu KB lấy từ đâu?** Bản diễn giải ngắn từ WHO/CDC, có URL/ngày truy cập, không dùng clinical_notes. Việc dẫn nguồn không hàm ý được tổ chức bảo trợ.
+33. **Tài liệu KB lấy từ đâu?** Bản diễn giải ngắn từ các bài sức khỏe Vinmec, có URL/ngày truy cập, không dùng clinical_notes. Việc dẫn nguồn không hàm ý Vinmec bảo trợ ứng dụng.
 34. **Hit@3=100% có chứng minh QA tốt mọi câu không?** Không. Chỉ11 câu có nguồn trong bộ nhỏ do tác giả biên soạn; có thiên lệch và chưa độc lập.
 35. **Q-learning hoạt động thế nào?** Lưu Q(s,a), chọn epsilon-greedy, cập nhật theo TD error giữa target r+gamma*maxQnext và Q cũ.
 36. **State/action/reward RL là gì?** State=(nhu cầu, hành động trước của đối thủ), action=giảm/không giảm, reward=lợi nhuận mô phỏng.

@@ -36,6 +36,17 @@ class DemoStore:
         with self.sessions() as session:
             return session.get(AgentExecution, run_id) is not None
 
+    def get_execution(self, run_id: str) -> dict[str, Any] | None:
+        with self.sessions() as session:
+            row = session.get(AgentExecution, run_id)
+            if row is None:
+                return None
+            return {
+                "id": row.id,
+                "kind": row.kind,
+                "final_payload": row.final_payload or {},
+            }
+
     def save(self, run_id: str, kind: str, payload: dict, intent: str | None = None) -> None:
         now = datetime.now(timezone.utc)
         trace = payload.get("trace", [])

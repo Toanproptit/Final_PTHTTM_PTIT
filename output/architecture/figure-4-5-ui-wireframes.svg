@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Hình 4.5 - Wireframe các màn hình chính</title>
+  <desc id="desc">Sáu wireframe gồm Tổng quan, Dự đoán nghiên cứu, Kho tri thức, LLM Agent, Workflow và Thực nghiệm.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f4f7f6; }
+      .panel { fill: #ffffff; stroke: #cbd8d4; stroke-width: 2; }
+      .panel-title { fill: #163a34; font: 700 24px 'Segoe UI', Arial, sans-serif; }
+      .page-title { fill: #102f2a; font: 800 40px 'Segoe UI', Arial, sans-serif; }
+      .subtitle { fill: #5f7771; font: 500 17px 'Segoe UI', Arial, sans-serif; }
+      .label { fill: #294a44; font: 600 14px 'Segoe UI', Arial, sans-serif; }
+      .tiny { fill: #66807a; font: 500 11px 'Segoe UI', Arial, sans-serif; }
+      .active { fill: #dff4ec; stroke: #4aa98d; stroke-width: 1.5; }
+      .soft { fill: #f6f9f8; stroke: #d7e1de; stroke-width: 1.5; }
+      .block { fill: #ffffff; stroke: #b9cbc6; stroke-width: 1.5; }
+      .accent { fill: #e5f5ef; stroke: #5aa98f; stroke-width: 1.5; }
+      .purple { fill: #f0ebfb; stroke: #8a6cc4; stroke-width: 1.5; }
+      .amber { fill: #fff5dd; stroke: #d4a84f; stroke-width: 1.5; }
+      .line { fill: none; stroke: #8fa7a1; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+      .accent-line { fill: none; stroke: #27856e; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+      .dot { fill: #27856e; }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#27856e"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1800" height="1200"/>
+  <text class="page-title" x="900" y="58" text-anchor="middle">HÌNH 4.5 · WIREFRAME CÁC MÀN HÌNH CHÍNH</text>
+  <text class="subtitle" x="900" y="91" text-anchor="middle">Diabetes Agent Lab · Cấu trúc giao diện web</text>
+
+  <!-- 1. Tổng quan -->
+  <g transform="translate(54,125)">
+    <rect class="panel" width="540" height="475" rx="18"/>
+    <rect fill="#123d35" width="118" height="475" rx="18"/>
+    <rect fill="#123d35" x="96" width="22" height="475"/>
+    <circle cx="27" cy="29" r="13" fill="#7dd3b7"/><text x="48" y="35" fill="#fff" font-family="Segoe UI,Arial" font-size="15" font-weight="700">DiabetesLab</text>
+    <rect class="active" x="10" y="71" width="98" height="32" rx="8"/><text class="tiny" x="22" y="91">Tổng quan</text>
+    <text x="22" y="132" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Dự đoán</text>
+    <text x="22" y="164" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Kho tri thức</text>
+    <text x="22" y="196" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">LLM Agent</text>
+    <text x="22" y="228" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Workflow</text>
+    <text x="22" y="260" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Thực nghiệm</text>
+    <text class="panel-title" x="142" y="43">Tổng quan</text>
+    <text class="tiny" x="142" y="64">Tình trạng hệ thống và kết quả gần nhất</text>
+    <g transform="translate(142,86)">
+      <rect class="accent" width="116" height="68" rx="10"/><text class="tiny" x="12" y="22">Dataset</text><rect fill="#73bda7" x="12" y="36" width="62" height="11" rx="5"/>
+      <rect class="soft" x="128" width="116" height="68" rx="10"/><text class="tiny" x="140" y="22">Model active</text><rect fill="#9eb4ae" x="140" y="36" width="72" height="11" rx="5"/>
+      <rect class="soft" x="256" width="116" height="68" rx="10"/><text class="tiny" x="268" y="22">Agent runs</text><rect fill="#9eb4ae" x="268" y="36" width="48" height="11" rx="5"/>
+      <rect class="block" y="84" width="238" height="158" rx="12"/><text class="label" x="14" y="108">Hiệu năng mô hình</text>
+      <path class="line" d="M20 125 L20 52 M20 125 L218 125"/><path class="accent-line" d="M28 112 C65 106,73 80,105 88 S155 48,210 58"/>
+      <rect class="block" x="250" y="84" width="122" height="158" rx="12"/><text class="label" x="263" y="108">Trạng thái</text>
+      <circle class="dot" cx="271" cy="137" r="5"/><rect fill="#c9d8d4" x="284" y="132" width="70" height="9" rx="4"/>
+      <circle class="dot" cx="271" cy="165" r="5"/><rect fill="#c9d8d4" x="284" y="160" width="56" height="9" rx="4"/>
+      <circle class="dot" cx="271" cy="193" r="5"/><rect fill="#c9d8d4" x="284" y="188" width="64" height="9" rx="4"/>
+      <rect class="block" y="254" width="372" height="97" rx="12"/><text class="label" x="14" y="278">Hoạt động gần đây</text>
+      <line class="line" x1="14" y1="294" x2="355" y2="294"/><line class="line" x1="14" y1="317" x2="355" y2="317"/><line class="line" x1="14" y1="340" x2="355" y2="340"/>
+    </g>
+  </g>
+
+  <!-- 2. Dự đoán nghiên cứu -->
+  <g transform="translate(630,125)">
+    <rect class="panel" width="540" height="475" rx="18"/>
+    <rect fill="#123d35" width="118" height="475" rx="18"/><rect fill="#123d35" x="96" width="22" height="475"/>
+    <circle cx="27" cy="29" r="13" fill="#7dd3b7"/><text x="48" y="35" fill="#fff" font-family="Segoe UI,Arial" font-size="15" font-weight="700">DiabetesLab</text>
+    <text x="22" y="91" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Tổng quan</text><rect class="active" x="10" y="110" width="98" height="32" rx="8"/><text class="tiny" x="20" y="130">Dự đoán</text>
+    <text x="22" y="171" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Kho tri thức</text><text x="22" y="203" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">LLM Agent</text><text x="22" y="235" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Workflow</text><text x="22" y="267" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Thực nghiệm</text>
+    <text class="panel-title" x="142" y="43">Dự đoán nghiên cứu</text><text class="tiny" x="142" y="64">Nhập hồ sơ giả lập và chạy workflow</text>
+    <g transform="translate(142,86)">
+      <rect class="block" width="178" height="306" rx="12"/><text class="label" x="14" y="24">Thông tin đầu vào</text>
+      <rect class="soft" x="14" y="42" width="70" height="35" rx="7"/><rect class="soft" x="94" y="42" width="70" height="35" rx="7"/>
+      <rect class="soft" x="14" y="89" width="150" height="35" rx="7"/><rect class="soft" x="14" y="136" width="70" height="35" rx="7"/><rect class="soft" x="94" y="136" width="70" height="35" rx="7"/>
+      <rect class="soft" x="14" y="183" width="150" height="35" rx="7"/><rect class="soft" x="14" y="230" width="150" height="35" rx="7"/>
+      <rect fill="#27856e" x="14" y="277" width="150" height="18" rx="7"/>
+      <rect class="accent" x="190" width="182" height="116" rx="12"/><text class="label" x="204" y="24">Kết quả nguy cơ</text><circle cx="281" cy="70" r="31" fill="none" stroke="#79bba7" stroke-width="10"/><path d="M281 39 A31 31 0 0 1 307 87" fill="none" stroke="#27856e" stroke-width="10"/>
+      <rect class="block" x="190" y="128" width="182" height="84" rx="12"/><text class="label" x="204" y="152">Giải thích</text><line class="line" x1="204" y1="169" x2="356" y2="169"/><line class="line" x1="204" y1="188" x2="337" y2="188"/>
+      <rect class="block" x="190" y="224" width="182" height="82" rx="12"/><text class="label" x="204" y="248">Evidence</text><line class="line" x1="204" y1="265" x2="356" y2="265"/><line class="line" x1="204" y1="284" x2="326" y2="284"/>
+    </g>
+  </g>
+
+  <!-- 3. Kho tri thức -->
+  <g transform="translate(1206,125)">
+    <rect class="panel" width="540" height="475" rx="18"/>
+    <rect fill="#123d35" width="118" height="475" rx="18"/><rect fill="#123d35" x="96" width="22" height="475"/>
+    <circle cx="27" cy="29" r="13" fill="#7dd3b7"/><text x="48" y="35" fill="#fff" font-family="Segoe UI,Arial" font-size="15" font-weight="700">DiabetesLab</text>
+    <text x="22" y="91" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Tổng quan</text><text x="22" y="123" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Dự đoán</text><rect class="active" x="10" y="142" width="98" height="32" rx="8"/><text class="tiny" x="19" y="162">Kho tri thức</text>
+    <text x="22" y="203" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">LLM Agent</text><text x="22" y="235" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Workflow</text><text x="22" y="267" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Thực nghiệm</text>
+    <text class="panel-title" x="142" y="43">Kho tri thức</text><text class="tiny" x="142" y="64">Tìm kiếm tài liệu, chunk và graph facts</text>
+    <g transform="translate(142,86)">
+      <rect class="soft" width="372" height="38" rx="9"/><circle cx="18" cy="19" r="7" fill="none" stroke="#78938c" stroke-width="2"/><line class="line" x1="23" y1="24" x2="29" y2="30"/><rect fill="#c2d2ce" x="42" y="14" width="192" height="9" rx="4"/>
+      <rect class="block" y="51" width="120" height="300" rx="12"/><text class="label" x="13" y="75">Tài liệu</text>
+      <rect class="active" x="10" y="91" width="100" height="49" rx="8"/><line class="line" x1="20" y1="106" x2="99" y2="106"/><line class="line" x1="20" y1="123" x2="82" y2="123"/>
+      <rect class="soft" x="10" y="150" width="100" height="49" rx="8"/><line class="line" x1="20" y1="165" x2="99" y2="165"/><line class="line" x1="20" y1="182" x2="74" y2="182"/>
+      <rect class="soft" x="10" y="209" width="100" height="49" rx="8"/><rect class="soft" x="10" y="268" width="100" height="49" rx="8"/>
+      <rect class="block" x="132" y="51" width="240" height="176" rx="12"/><text class="label" x="146" y="75">Graph preview</text>
+      <line class="accent-line" x1="189" y1="125" x2="248" y2="100"/><line class="accent-line" x1="248" y1="100" x2="309" y2="139"/><line class="accent-line" x1="189" y1="125" x2="229" y2="177"/><line class="accent-line" x1="229" y1="177" x2="309" y2="139"/>
+      <circle cx="189" cy="125" r="16" fill="#dff4ec" stroke="#27856e"/><circle cx="248" cy="100" r="16" fill="#f0ebfb" stroke="#8a6cc4"/><circle cx="309" cy="139" r="16" fill="#fff5dd" stroke="#d4a84f"/><circle cx="229" cy="177" r="16" fill="#dff4ec" stroke="#27856e"/>
+      <rect class="block" x="132" y="239" width="240" height="112" rx="12"/><text class="label" x="146" y="263">Evidence &amp; nguồn</text><line class="line" x1="146" y1="282" x2="351" y2="282"/><line class="line" x1="146" y1="305" x2="332" y2="305"/><line class="line" x1="146" y1="328" x2="291" y2="328"/>
+    </g>
+  </g>
+
+  <!-- 4. LLM Agent -->
+  <g transform="translate(54,632)">
+    <rect class="panel" width="540" height="475" rx="18"/>
+    <rect fill="#123d35" width="118" height="475" rx="18"/><rect fill="#123d35" x="96" width="22" height="475"/>
+    <circle cx="27" cy="29" r="13" fill="#7dd3b7"/><text x="48" y="35" fill="#fff" font-family="Segoe UI,Arial" font-size="15" font-weight="700">DiabetesLab</text>
+    <text x="22" y="91" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Tổng quan</text><text x="22" y="123" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Dự đoán</text><text x="22" y="155" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Kho tri thức</text><rect class="active" x="10" y="174" width="98" height="32" rx="8"/><text class="tiny" x="22" y="194">LLM Agent</text>
+    <text x="22" y="235" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Workflow</text><text x="22" y="267" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Thực nghiệm</text>
+    <text class="panel-title" x="142" y="43">LLM Agent</text><text class="tiny" x="142" y="64">Hội thoại có gọi công cụ và truy vết</text>
+    <g transform="translate(142,86)">
+      <rect class="block" width="244" height="300" rx="12"/><text class="label" x="14" y="24">Cuộc hội thoại</text>
+      <rect class="soft" x="14" y="44" width="152" height="45" rx="12"/><line class="line" x1="26" y1="60" x2="150" y2="60"/><line class="line" x1="26" y1="75" x2="119" y2="75"/>
+      <rect class="accent" x="72" y="102" width="158" height="55" rx="12"/><line class="accent-line" x1="86" y1="120" x2="214" y2="120"/><line class="accent-line" x1="86" y1="138" x2="188" y2="138"/>
+      <rect class="purple" x="14" y="171" width="190" height="64" rx="12"/><text class="tiny" x="27" y="191">Tool result</text><line class="line" x1="27" y1="207" x2="188" y2="207"/><line class="line" x1="27" y1="222" x2="156" y2="222"/>
+      <rect class="soft" x="14" y="249" width="216" height="37" rx="10"/><circle class="dot" cx="213" cy="267" r="10"/>
+      <rect class="block" x="256" width="116" height="146" rx="12"/><text class="label" x="269" y="24">Công cụ</text>
+      <rect class="accent" x="268" y="41" width="92" height="24" rx="7"/><rect class="soft" x="268" y="75" width="92" height="24" rx="7"/><rect class="soft" x="268" y="109" width="92" height="24" rx="7"/>
+      <rect class="block" x="256" y="158" width="116" height="142" rx="12"/><text class="label" x="269" y="182">Tool trace</text><circle class="dot" cx="274" cy="207" r="4"/><line class="line" x1="286" y1="207" x2="350" y2="207"/><circle class="dot" cx="274" cy="235" r="4"/><line class="line" x1="286" y1="235" x2="342" y2="235"/><circle class="dot" cx="274" cy="263" r="4"/><line class="line" x1="286" y1="263" x2="352" y2="263"/>
+    </g>
+  </g>
+
+  <!-- 5. Workflow -->
+  <g transform="translate(630,632)">
+    <rect class="panel" width="540" height="475" rx="18"/>
+    <rect fill="#123d35" width="118" height="475" rx="18"/><rect fill="#123d35" x="96" width="22" height="475"/>
+    <circle cx="27" cy="29" r="13" fill="#7dd3b7"/><text x="48" y="35" fill="#fff" font-family="Segoe UI,Arial" font-size="15" font-weight="700">DiabetesLab</text>
+    <text x="22" y="91" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Tổng quan</text><text x="22" y="123" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Dự đoán</text><text x="22" y="155" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Kho tri thức</text><text x="22" y="187" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">LLM Agent</text><rect class="active" x="10" y="206" width="98" height="32" rx="8"/><text class="tiny" x="26" y="226">Workflow</text>
+    <text x="22" y="267" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Thực nghiệm</text>
+    <text class="panel-title" x="142" y="43">Workflow</text><text class="tiny" x="142" y="64">Theo dõi từng bước thực thi agent</text>
+    <g transform="translate(142,86)">
+      <rect class="block" width="115" height="351" rx="12"/><text class="label" x="13" y="24">Lịch sử chạy</text>
+      <rect class="active" x="10" y="42" width="95" height="50" rx="8"/><line class="line" x1="20" y1="58" x2="93" y2="58"/><line class="line" x1="20" y1="76" x2="77" y2="76"/>
+      <rect class="soft" x="10" y="102" width="95" height="50" rx="8"/><rect class="soft" x="10" y="162" width="95" height="50" rx="8"/><rect class="soft" x="10" y="222" width="95" height="50" rx="8"/>
+      <rect class="block" x="127" width="245" height="351" rx="12"/><text class="label" x="141" y="24">Workflow phân loại</text>
+      <line class="accent-line" x1="158" y1="60" x2="158" y2="304" marker-end="url(#arrow)"/>
+      <g><circle cx="158" cy="64" r="13" fill="#dff4ec" stroke="#27856e"/><rect class="soft" x="181" y="48" width="169" height="34" rx="8"/><text class="tiny" x="193" y="69">ValidationAgent</text></g>
+      <g><circle cx="158" cy="118" r="13" fill="#dff4ec" stroke="#27856e"/><rect class="soft" x="181" y="102" width="169" height="34" rx="8"/><text class="tiny" x="193" y="123">SafetyAgent</text></g>
+      <g><circle cx="158" cy="172" r="13" fill="#dff4ec" stroke="#27856e"/><rect class="soft" x="181" y="156" width="169" height="34" rx="8"/><text class="tiny" x="193" y="177">PredictionAgent</text></g>
+      <g><circle cx="158" cy="226" r="13" fill="#dff4ec" stroke="#27856e"/><rect class="soft" x="181" y="210" width="169" height="34" rx="8"/><text class="tiny" x="193" y="231">KnowledgeAgent</text></g>
+      <g><circle cx="158" cy="280" r="13" fill="#dff4ec" stroke="#27856e"/><rect class="soft" x="181" y="264" width="169" height="34" rx="8"/><text class="tiny" x="193" y="285">ExplanationAgent</text></g>
+      <rect class="accent" x="181" y="310" width="169" height="25" rx="7"/><text class="tiny" x="224" y="327">Input / Output</text>
+    </g>
+  </g>
+
+  <!-- 6. Thực nghiệm -->
+  <g transform="translate(1206,632)">
+    <rect class="panel" width="540" height="475" rx="18"/>
+    <rect fill="#123d35" width="118" height="475" rx="18"/><rect fill="#123d35" x="96" width="22" height="475"/>
+    <circle cx="27" cy="29" r="13" fill="#7dd3b7"/><text x="48" y="35" fill="#fff" font-family="Segoe UI,Arial" font-size="15" font-weight="700">DiabetesLab</text>
+    <text x="22" y="91" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Tổng quan</text><text x="22" y="123" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Dự đoán</text><text x="22" y="155" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Kho tri thức</text><text x="22" y="187" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">LLM Agent</text><text x="22" y="219" fill="#cce4dc" font-family="Segoe UI,Arial" font-size="11">Workflow</text><rect class="active" x="10" y="238" width="98" height="32" rx="8"/><text class="tiny" x="19" y="258">Thực nghiệm</text>
+    <text class="panel-title" x="142" y="43">Thực nghiệm</text><text class="tiny" x="142" y="64">So sánh mô hình và các chỉ số đánh giá</text>
+    <g transform="translate(142,86)">
+      <rect class="accent" width="84" height="56" rx="9"/><text class="tiny" x="10" y="20">Recall</text><rect fill="#63aa94" x="10" y="33" width="48" height="9" rx="4"/>
+      <rect class="soft" x="96" width="84" height="56" rx="9"/><text class="tiny" x="106" y="20">F1-score</text><rect fill="#9eb4ae" x="106" y="33" width="43" height="9" rx="4"/>
+      <rect class="soft" x="192" width="84" height="56" rx="9"/><text class="tiny" x="202" y="20">ROC AUC</text><rect fill="#9eb4ae" x="202" y="33" width="52" height="9" rx="4"/>
+      <rect class="soft" x="288" width="84" height="56" rx="9"/><text class="tiny" x="298" y="20">Accuracy</text><rect fill="#9eb4ae" x="298" y="33" width="50" height="9" rx="4"/>
+      <rect class="block" y="69" width="178" height="143" rx="12"/><text class="label" x="14" y="93">ROC / PR curve</text><path class="line" d="M20 188 L20 111 M20 188 L160 188"/><path class="accent-line" d="M26 181 C56 179,61 142,88 138 S121 107,154 104"/>
+      <rect class="block" x="190" y="69" width="182" height="143" rx="12"/><text class="label" x="204" y="93">Confusion matrix</text>
+      <rect fill="#dff4ec" x="224" y="111" width="49" height="37"/><rect fill="#b8decf" x="278" y="111" width="49" height="37"/><rect fill="#eaf3f0" x="224" y="153" width="49" height="37"/><rect fill="#78bda7" x="278" y="153" width="49" height="37"/>
+      <rect class="block" y="224" width="372" height="127" rx="12"/><text class="label" x="14" y="248">So sánh mô hình</text>
+      <line class="line" x1="14" y1="264" x2="357" y2="264"/><line class="line" x1="14" y1="291" x2="357" y2="291"/><line class="line" x1="14" y1="318" x2="357" y2="318"/><line class="line" x1="14" y1="338" x2="357" y2="338"/>
+      <line class="line" x1="119" y1="248" x2="119" y2="338"/><line class="line" x1="211" y1="248" x2="211" y2="338"/><line class="line" x1="292" y1="248" x2="292" y2="338"/>
+    </g>
+  </g>
+
+  <text class="subtitle" x="900" y="1160" text-anchor="middle">Wireframe mức khối nội dung · Không mô tả chi tiết tương tác</text>
+</svg>

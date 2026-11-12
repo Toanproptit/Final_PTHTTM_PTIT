@@ -36,7 +36,7 @@ Mở http://127.0.0.1:8000, Neo4j Browser ở http://127.0.0.1:7474 và API docs
 
 Demo LLM tự chọn tool qua OpenRouter: xem hướng dẫn cấu hình tại [docs/LLM_AGENT_SETUP.md](docs/LLM_AGENT_SETUP.md).
 
-Đồ án **hệ thống multi-agent hỗ trợ tìm hiểu bài toán tiểu đường**: phân loại nhãn trên dataset Kaggle, kiểm tra đầu vào bằng luật, truy xuất thông tin WHO/CDC và theo dõi workflow. Module Q-learning kế thừa trực tiếp code AGENT02, hoạt động trong mô phỏng thương mại điện tử độc lập.
+Đồ án **hệ thống multi-agent hỗ trợ tìm hiểu bài toán tiểu đường**: phân loại nhãn trên dataset Kaggle, kiểm tra đầu vào bằng luật, truy xuất thông tin sức khỏe từ Vinmec và theo dõi workflow. Module Q-learning kế thừa trực tiếp code AGENT02, hoạt động trong mô phỏng thương mại điện tử độc lập.
 
 Dataset hiện tại do người dùng chỉ định: [ziya07/diabetes-clinical-dataset100k-rows](https://www.kaggle.com/datasets/ziya07/diabetes-clinical-dataset100k-rows), 100.000 dòng, CC0 theo metadata Kaggle. Nguồn không mô tả đầy đủ quy trình thu thập/tạo nhãn; không khẳng định dữ liệu là bệnh án thật hoặc synthetic. Mô hình có HbA1c/glucose làm đầu vào và **không phải mô hình tiên lượng mắc bệnh tương lai đã kiểm định**. Chỉ dùng hồ sơ giả định cho demo, không dùng để chẩn đoán hoặc thay đổi điều trị.
 
@@ -142,7 +142,7 @@ ASIGNMENT-AGENT_02/
 2. Dự đoán: nhấn **Điền hồ sơ giả định**, rồi **Chạy các agent**. Giải thích nhãn dataset, điểm sigmoid và giới hạn.
 3. Workflow: mở từng input/output theo thứ tự Rule → Prediction → Knowledge → Explanation.
 4. Thử tuổi 100 để thấy Rule chặn ngoài miền; thử bỏ trống trường để thấy validation.
-5. Hỏi đáp: “HbA1c phản ánh điều gì?”; chỉ nguồn CDC. Thử “Giá cổ phiếu hôm nay?” hoặc yêu cầu liều thuốc để thấy giới hạn.
+5. Hỏi đáp: “HbA1c phản ánh điều gì?”; mở nguồn Vinmec trong evidence. Thử “Giá cổ phiếu hôm nay?” hoặc yêu cầu liều thuốc để thấy giới hạn.
 6. Thực nghiệm: đọc Recall/F1 cùng Accuracy, confusion matrix và majority baseline. Mở RL, chỉ ra reward lợi nhuận và kết quả nhiều seed.
 7. Chỉ đường dẫn model, CSV và test report để chứng minh đây là artifact đã chạy thật.
 
