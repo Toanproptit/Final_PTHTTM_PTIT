@@ -1,5 +1,7 @@
-# Triệu chứng thường gặp
-Tiểu nhiều, khát nhiều, đói nhiều, sụt cân không chủ ý, mệt mỏi và nhìn mờ là những triệu chứng có thể gặp ở người có tiểu đường. Vết thương chậm lành cũng có thể gặp ở type 2. Chỉ một triệu chứng không đủ để xác nhận bệnh.
+# Triệu chứng có thể gặp
 
-## Không có triệu chứng
-Triệu chứng type 2 có thể phát triển chậm trong nhiều năm; một số người không nhận thấy biểu hiện. Không có triệu chứng không đồng nghĩa chắc chắn không có bệnh. Tài liệu triệu chứng không thay thế việc đánh giá của nhân viên y tế.
+Các dấu hiệu thường được mô tả gồm đi tiểu thường xuyên, rất khát hoặc đói, mệt mỏi, nhìn mờ, vết thương chậm lành; một số trường hợp có thể sụt cân không chủ ý hoặc tê, đau ran ở tay chân. Người mắc type 2 đôi khi có triệu chứng nhẹ hoặc không nhận ra triệu chứng.
+
+Triệu chứng riêng lẻ không xác nhận cũng không loại trừ đái tháo đường. Nếu lo ngại về sức khỏe, cần được cơ sở y tế đánh giá và làm xét nghiệm phù hợp.
+
+Nội dung được diễn giải từ bài “Tổng quan về bệnh đái tháo đường” của Vinmec, cố vấn chuyên môn BS.CKII Nguyễn Xuân Thắng, Vinmec Central Park.

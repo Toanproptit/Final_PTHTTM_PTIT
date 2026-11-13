@@ -1,5 +1,7 @@
-# Các yếu tố nguy cơ type 2
-Nguy cơ type 2 có liên quan đến thừa cân, tuổi cao hơn, ít hoạt động thể lực, tiền sử gia đình, tiền tiểu đường và tiền sử tiểu đường thai kỳ. Yếu tố nguy cơ không phải kết luận chẩn đoán; người trẻ vẫn có thể mắc type 2.
+# Yếu tố nguy cơ đái tháo đường type 2
 
-## Cơ chế kháng insulin
-Ở type 2, tế bào đáp ứng kém với insulin, gọi là kháng insulin. Theo thời gian, tụy có thể không đáp ứng đủ nhu cầu và đường huyết tăng. Các yếu tố trong tài liệu tổng quát không hoàn toàn trùng với 16 đặc trưng trong dataset nghiên cứu.
+Các yếu tố được Vinmec nêu gồm thừa cân, ít hoạt động thể lực, tiền sử gia đình mắc đái tháo đường, tiền sử đái tháo đường thai kỳ, tuổi cao hơn, tăng huyết áp và rối loạn lipid máu. Có yếu tố nguy cơ không đồng nghĩa với đã mắc bệnh; người có nguy cơ nên hỏi nhân viên y tế về việc tầm soát.
+
+Ở type 2, cơ thể có thể đáp ứng kém với insulin. Bài viết của Vinmec về các nguy cơ tại Việt Nam cũng mô tả mối liên hệ của thừa cân và ít vận động với nguy cơ bệnh.
+
+Nội dung được diễn giải từ bài “Các yếu tố nguy cơ chính gây bệnh đái tháo đường type 2 ở Việt Nam” của Vinmec, viết bởi TS. Nguyễn Khánh Hòa, Viện Nghiên cứu Tế bào gốc và Công nghệ Gen Vinmec.

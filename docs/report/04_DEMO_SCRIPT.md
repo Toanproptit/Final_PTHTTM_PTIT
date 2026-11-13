@@ -20,7 +20,7 @@ Mở Workflow từ nút trace. Đi qua output Rule, input/output Prediction, evi
 
 ## Phút 3–4: hỏi đáp có nguồn
 
-Hỏi “HbA1c phản ánh điều gì?”; mở link CDC nếu có mạng. “Hệ thống đang trả các đoạn KB, chưa dùng LLM sinh.” Thử “Giá cổ phiếu hôm nay?” hoặc câu hỏi liều thuốc; giải thích giới hạn thay vì tạo câu trả lời không có căn cứ.
+Hỏi “HbA1c phản ánh điều gì?”; mở link Vinmec nếu có mạng. “Hệ thống đang trả các đoạn KB, chưa dùng LLM sinh.” Thử “Giá cổ phiếu hôm nay?” hoặc câu hỏi liều thuốc; giải thích giới hạn thay vì tạo câu trả lời không có căn cứ.
 
 ## Phút 4–6: thực nghiệm
 

@@ -57,7 +57,7 @@ KB nhỏ, câu hỏi do cùng tác giả soạn và heuristic từ vựng có th
 ## Nguồn tham khảo chính
 
 - [Kaggle dataset do người dùng chỉ định](https://www.kaggle.com/datasets/ziya07/diabetes-clinical-dataset100k-rows), CC0 theo metadata; truy cập03/11/2026.
-- [WHO Diabetes fact sheet](https://www.who.int/news-room/fact-sheets/detail/diabetes), nguồn tổng quan KB.
-- [CDC Symptoms](https://www.cdc.gov/diabetes/signs-symptoms/index.html), [CDC Testing](https://www.cdc.gov/diabetes/diabetes-testing/index.html), [CDC Type2](https://www.cdc.gov/diabetes/about/about-type-2-diabetes.html), [CDC Prevention](https://www.cdc.gov/diabetes/prevention-type-2/index.html), truy cập02/11/2026.
+- [Vinmec: Tổng quan về bệnh đái tháo đường](https://www.vinmec.com/vie/bai-viet/tong-quan-ve-benh-dai-thao-duong-vi).
+- [Vinmec: Yếu tố nguy cơ type 2](https://www.vinmec.com/vie/bai-viet/cac-yeu-nguy-co-chinh-gay-benh-dai-thao-duong-type-2-o-viet-nam-vi), [xét nghiệm chẩn đoán](https://www.vinmec.com/vie/bai-viet/xet-nghiem-chan-doan-dai-thao-duong-vi), [phòng ngừa tiền đái tháo đường](https://www.vinmec.com/vie/bai-viet/phat-hien-va-phong-ngua-tien-dai-thao-duong-vi). Truy cập 11/11/2026.
 - [PyTorch optimization tutorial](https://docs.pytorch.org/tutorials/beginner/basics/optimization_tutorial.html) và [sklearn StratifiedGroupKFold](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedGroupKFold.html).
 - Code `AGENT02: Reinforcement-Learning-Based Agent vs Rule-Based Agent` do sinh viên cung cấp, `agent02_code.tex`.

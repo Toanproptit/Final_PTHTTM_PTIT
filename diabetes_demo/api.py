@@ -10,7 +10,7 @@ from fastapi.staticfiles import StaticFiles
 from .orchestrator import OrchestratorAgent
 from .llm_agent import LLMToolAgent
 from .paths import ARTIFACTS, ML, RL, ROOT, WEB
-from .schema import AgentChatInput, CATEGORY_VALUES, DEMO_PATIENT, FEATURES, LABELS, LIMITATION, NUMERIC_FEATURES, PatientInput, QuestionInput
+from .schema import AgentChatInput, CATEGORY_VALUES, DEMO_PATIENT, FEATURES, LABELS, LIMITATION, NUMERIC_FEATURES, PatientInput, PredictionAdviceInput, QuestionInput
 from .storage import DemoStore
 
 def read_json(path: Path):
@@ -78,6 +78,20 @@ def create_app(store_path: Path | None = None) -> FastAPI:
             raise HTTPException(status_code=503, detail="Chưa cấu hình OPENROUTER_API_KEY.")
         try:
             return agent.chat(payload.message, [turn.model_dump() for turn in payload.history])
+        except RuntimeError as error:
+            raise HTTPException(status_code=502, detail=str(error)) from error
+
+    @app.post("/api/agent/advice")
+    def agent_advice(payload: PredictionAdviceInput, request: Request):
+        agent = request.app.state.llm_agent
+        if not agent.configured:
+            raise HTTPException(status_code=503, detail="ChÆ°a cáº¥u hÃ¬nh OPENROUTER_API_KEY.")
+        try:
+            return agent.advise_from_prediction(payload.run_id)
+        except KeyError as error:
+            raise HTTPException(status_code=404, detail=str(error).strip("'")) from error
+        except ValueError as error:
+            raise HTTPException(status_code=422, detail=str(error)) from error
         except RuntimeError as error:
             raise HTTPException(status_code=502, detail=str(error)) from error
 

@@ -15,6 +15,9 @@ from .langchain_tools import build_langchain_tools
 INSTRUCTIONS = """You are the tool-using assistant in a Vietnamese student research demo.
 Respond in the user's language. You may choose and call the provided local tools when useful; decide which tools to use and in what order. Never invent tool results, sources, or profile fields. Ask a concise follow-up when prediction fields are missing. For general health information, call search_health_knowledge and ground factual claims in its evidence and source URLs. If the knowledge tool returns no evidence or outside_scope, say so. Treat all predictions as classification scores for labels in an inadequately documented Kaggle dataset, not diagnosis, future disease risk, or treatment advice. Never recommend medication or individual treatment. The project uses hypothetical demo profiles only. Do not expose internal chain-of-thought; a short user-facing summary of actions taken is fine."""
 
+ADVICE_INSTRUCTIONS = """You explain a saved research-model result in Vietnamese using only the supplied profile summary and retrieved evidence.
+The model predicts a label in an inadequately documented Kaggle dataset. Never call the label or score a diagnosis, an individual's disease probability, or future risk. Explain that limitation plainly. Do not recommend, start, stop, or change medication; do not give a treatment plan. Do not infer a medical condition from one numeric field. If evidence is insufficient for a requested conclusion, say so. Ground health facts only in the supplied evidence and cite its Vinmec source URL. Give general educational context and suggest discussing personal concerns with a qualified health professional."""
+
 
 class LLMToolAgent:
     """LangChain agent loop that may execute only registered StructuredTools."""
@@ -36,8 +39,8 @@ class LLMToolAgent:
                 model=self.model,
                 temperature=0,
                 max_tokens=1200,
-                timeout=self.timeout_seconds,
-                max_retries=2,
+                timeout=round(self.timeout_seconds * 1000),
+                max_retries=0,
                 app_title="Diabetes Agent Lab",
             )
             self.bound_model = self.chat_model.bind_tools(
@@ -233,6 +236,91 @@ class LLMToolAgent:
             "input": {"message": message},
         }
         self._persist_chat(result, conversation, answer)
+        return result
+
+    def advise_from_prediction(self, source_run_id: str) -> dict:
+        """Retrieve sourced context for a saved prediction, then explain it with the LLM."""
+        if not self.configured or self.chat_model is None:
+            raise RuntimeError("ChÆ°a cáº¥u hÃ¬nh OPENROUTER_API_KEY.")
+
+        execution = self.orchestrator.store.get_execution(source_run_id)
+        if execution is None or execution["kind"] != "prediction":
+            raise KeyError("KhÃ´ng tÃ¬m tháº¥y láº§n dá»± Ä‘oÃ¡n nÃ y.")
+        prediction_result = execution["final_payload"]
+        prediction = prediction_result.get("prediction")
+        if not prediction:
+            raise ValueError("Láº§n cháº¡y nÃ y khÃ´ng cÃ³ káº¿t quáº£ dá»± Ä‘oÃ¡n Ä‘á»ƒ giáº£i thÃ­ch.")
+
+        # Retrieve general evidence for every advice request. The RAG layer
+        # still enforces its scope and minimum-score threshold.
+        knowledge_query = "HbA1c glucose xét nghiệm yếu tố nguy cơ tiểu đường type 2 phòng ngừa"
+        knowledge = self.orchestrator.knowledge.run(knowledge_query)
+        evidence = knowledge.get("evidence", [])
+        sources = []
+        seen_urls = set()
+        for item in [*evidence, *knowledge.get("graph_facts", [])]:
+            url = item.get("url")
+            if url and url not in seen_urls:
+                seen_urls.add(url)
+                sources.append({
+                    "title": item.get("title"),
+                    "publisher": item.get("publisher"),
+                    "url": url,
+                    "accessed": item.get("accessed"),
+                })
+
+        if not evidence:
+            return {
+                "status": "no_evidence",
+                "source_prediction_run_id": source_run_id,
+                "answer": "Mình chưa tìm được đoạn tài liệu đủ liên quan để đưa ra phần giải thích có dẫn nguồn. Kết quả mô hình chỉ là phân loại trên dataset nghiên cứu, không phải chẩn đoán.",
+                "sources": [],
+                "evidence_count": 0,
+                "retrieval_status": knowledge.get("retrieval_status", {}),
+            }
+
+        context = {
+            "profile_fields": prediction_result.get("input", {}),
+            "prediction": prediction,
+            "validation_warnings": prediction_result.get("rules", {}).get("warnings", []),
+            "safety": prediction_result.get("safety", {}),
+            "retrieved_evidence": [
+                {key: item.get(key) for key in ("title", "publisher", "url", "accessed", "text", "score")}
+                for item in evidence
+            ],
+            "graph_facts": knowledge.get("graph_facts", []),
+        }
+        messages = [
+            SystemMessage(content=ADVICE_INSTRUCTIONS + "\n\nPrediction context and RAG evidence (JSON):\n" + json.dumps(context, ensure_ascii=False)),
+            HumanMessage(content="Giải thích kết quả dự đoán này theo ngữ cảnh hồ sơ, nêu rõ giới hạn và chỉ đưa thông tin sức khỏe có căn cứ trong evidence. Trả lời ngắn gọn, có trích dẫn nguồn Vinmec."),
+        ]
+        try:
+            response = self.chat_model.invoke(messages)
+        except Exception as error:
+            raise RuntimeError(
+                f"KhÃ´ng thá»ƒ gá»i OpenRouter Ä‘á»ƒ giáº£i thÃ­ch káº¿t quáº£ ({type(error).__name__})."
+            ) from None
+        if not isinstance(response, AIMessage):
+            raise RuntimeError("LangChain returned an unexpected response type.")
+        answer = self._text(response)
+        if not answer:
+            raise RuntimeError("Model returned no text response.")
+
+        run_id = str(uuid4())
+        result = {
+            "run_id": run_id,
+            "status": "completed",
+            "source_prediction_run_id": source_run_id,
+            "model": self.model,
+            "framework": "LangChain",
+            "answer": answer,
+            "sources": sources,
+            "evidence_count": len(evidence),
+            "graph_fact_count": len(knowledge.get("graph_facts", [])),
+            "retrieval_status": knowledge.get("retrieval_status", {}),
+        }
+        self.orchestrator.store.save(run_id, "llm_advice", result, intent="prediction_advice")
+        self.orchestrator.store.save_retrieval(run_id, knowledge_query, knowledge)
         return result
 
     def _persist_chat(self, result: dict, conversation: list[BaseMessage], answer: str) -> None:

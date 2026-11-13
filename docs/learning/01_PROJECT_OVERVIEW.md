@@ -8,7 +8,7 @@ Tách ba loại đầu ra khi trình bày:
 
 1. **Điểm mô hình**: sigmoid của MLP, học từ mối liên hệ trong dataset.
 2. **Thông báo luật**: đầu vào đúng schema, có nằm trong khoảng số đã quan sát không, No Info có ý nghĩa gì.
-3. **Kiến thức chung**: đoạn được biên soạn từ WHO/CDC, kèm URL. Đoạn này không biến điểm mô hình thành chẩn đoán.
+3. **Kiến thức chung**: đoạn được biên soạn từ các bài sức khỏe Vinmec, kèm URL. Đoạn này không biến điểm mô hình thành chẩn đoán.
 
 ## Vì sao dùng nhiều agent?
 

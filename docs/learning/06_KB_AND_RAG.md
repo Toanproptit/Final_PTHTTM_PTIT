@@ -4,7 +4,7 @@
 
 Knowledge Base là phần nội dung: ở đây gồm 5 tệp Markdown và `manifest.json`. Retrieval là bước tìm đoạn liên quan. RAG có mô hình sinh còn dùng các đoạn tìm được làm ngữ cảnh cho generator. MVP **chỉ triển khai retrieval-based QA**, không có generator hoặc Ollama. Không nói “LLM đã đọc hồ sơ” vì code không làm việc đó.
 
-Các bản diễn giải được biên soạn từ trang WHO/CDC, liên kết nguồn miễn phí, ngày truy cập 02/11/2026, không sao chép logo/hình và không ngụ ý được cơ quan đó bảo trợ. `clinical_notes` trong dataset không phải nguồn tri thức y khoa và không đưa vào KB.
+Các bản diễn giải hiện được biên soạn từ các bài sức khỏe Vinmec, kèm liên kết và ngày truy cập trong `manifest.json`. Đây không phải nội dung Vinmec bảo trợ. `clinical_notes` trong dataset không phải nguồn tri thức y khoa và không đưa vào KB.
 
 ## Pipeline trong `KnowledgeAgent.__init__`
 
@@ -28,7 +28,7 @@ Ngưỡng 0.08 và từ điển là lựa chọn kỹ thuật của KB nhỏ, kh
 
 ## Ví dụ đường đi của câu hỏi
 
-“HbA1c phản ánh điều gì?” → normalize chứa hba1c → query vector → chunk từ `04_testing.md` có điểm cao → output gồm text, url CDC, date và score → UI hiển thị đoạn và link. Không tạo đáp án mới bằng sampling LLM. Người xem có thể mở nguồn để kiểm chứng.
+“HbA1c phản ánh điều gì?” → normalize chứa hba1c → query vector → chunk từ `04_testing.md` có điểm cao → output gồm text, URL Vinmec, ngày truy cập và score → UI hiển thị đoạn và link. Không tạo đáp án mới bằng sampling LLM. Người xem có thể mở nguồn để kiểm chứng.
 
 “Giá cổ phiếu hôm nay?” không qua cổng phạm vi. “Tôi nên uống metformin liều bao nhiêu?” thuộc yêu cầu ngoài phạm vi. Không lấy điểm phân loại của một hồ sơ để trả lời chẩn đoán cá nhân.
 

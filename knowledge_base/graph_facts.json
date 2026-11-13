@@ -1,12 +1,12 @@
 [
-  {"id":"fact-diabetes-insulin","subject":{"label":"Disease","name":"Tiểu đường"},"predicate":"ASSOCIATED_WITH","object":{"label":"Biomarker","name":"Insulin"},"document_id":"overview","anchor":"insulin"},
-  {"id":"fact-diabetes-glucose","subject":{"label":"Disease","name":"Tiểu đường"},"predicate":"ASSOCIATED_WITH","object":{"label":"Biomarker","name":"Đường huyết"},"document_id":"overview","anchor":"đường huyết"},
-  {"id":"fact-diabetes-polydipsia","subject":{"label":"Disease","name":"Tiểu đường"},"predicate":"HAS_SYMPTOM","object":{"label":"ClinicalCondition","name":"Khát nhiều"},"document_id":"symptoms","anchor":"khát nhiều"},
-  {"id":"fact-diabetes-polyuria","subject":{"label":"Disease","name":"Tiểu đường"},"predicate":"HAS_SYMPTOM","object":{"label":"ClinicalCondition","name":"Tiểu nhiều"},"document_id":"symptoms","anchor":"tiểu nhiều"},
-  {"id":"fact-type2-overweight","subject":{"label":"Disease","name":"Tiểu đường type 2"},"predicate":"ASSOCIATED_WITH","object":{"label":"RiskFactor","name":"Thừa cân"},"document_id":"risk","anchor":"thừa cân"},
-  {"id":"fact-type2-inactivity","subject":{"label":"Disease","name":"Tiểu đường type 2"},"predicate":"ASSOCIATED_WITH","object":{"label":"RiskFactor","name":"Ít hoạt động thể lực"},"document_id":"risk","anchor":"hoạt động thể lực"},
-  {"id":"fact-hba1c-average","subject":{"label":"Biomarker","name":"HbA1c"},"predicate":"REFLECTS","object":{"label":"Biomarker","name":"Đường huyết trung bình 2–3 tháng"},"document_id":"testing","anchor":"hai đến ba tháng"},
-  {"id":"fact-testing-blood","subject":{"label":"Disease","name":"Tiểu đường"},"predicate":"MEASURED_BY","object":{"label":"MedicalGuideline","name":"Xét nghiệm máu"},"document_id":"testing","anchor":"Xét nghiệm máu"},
-  {"id":"fact-prevention-activity","subject":{"label":"Recommendation","name":"Tăng hoạt động thể lực"},"predicate":"RECOMMENDED_FOR","object":{"label":"Disease","name":"Phòng ngừa tiểu đường type 2"},"document_id":"prevention","anchor":"hoạt động thể lực"},
-  {"id":"fact-prevention-weight","subject":{"label":"Recommendation","name":"Quản lý cân nặng"},"predicate":"RECOMMENDED_FOR","object":{"label":"Disease","name":"Phòng ngừa tiểu đường type 2"},"document_id":"prevention","anchor":"quản lý cân nặng"}
+  {"id":"fact-diabetes-insulin","subject":{"label":"Disease","name":"Đái tháo đường"},"predicate":"ASSOCIATED_WITH","object":{"label":"Biomarker","name":"Insulin"},"document_id":"overview","anchor":"insulin"},
+  {"id":"fact-diabetes-glucose","subject":{"label":"Disease","name":"Đái tháo đường"},"predicate":"ASSOCIATED_WITH","object":{"label":"Biomarker","name":"Glucose máu"},"document_id":"overview","anchor":"glucose"},
+  {"id":"fact-diabetes-polydipsia","subject":{"label":"Disease","name":"Đái tháo đường"},"predicate":"HAS_SYMPTOM","object":{"label":"ClinicalCondition","name":"Khát nhiều"},"document_id":"symptoms","anchor":"khát"},
+  {"id":"fact-diabetes-polyuria","subject":{"label":"Disease","name":"Đái tháo đường"},"predicate":"HAS_SYMPTOM","object":{"label":"ClinicalCondition","name":"Tiểu nhiều"},"document_id":"symptoms","anchor":"tiểu"},
+  {"id":"fact-type2-overweight","subject":{"label":"Disease","name":"Đái tháo đường type 2"},"predicate":"ASSOCIATED_WITH","object":{"label":"RiskFactor","name":"Thừa cân"},"document_id":"risk","anchor":"thừa cân"},
+  {"id":"fact-type2-inactivity","subject":{"label":"Disease","name":"Đái tháo đường type 2"},"predicate":"ASSOCIATED_WITH","object":{"label":"RiskFactor","name":"Ít hoạt động thể lực"},"document_id":"risk","anchor":"ít vận động"},
+  {"id":"fact-hba1c-average","subject":{"label":"Biomarker","name":"HbA1c"},"predicate":"REFLECTS","object":{"label":"Biomarker","name":"Glucose máu trung bình khoảng 2–3 tháng"},"document_id":"testing","anchor":"hai đến ba tháng"},
+  {"id":"fact-testing-blood","subject":{"label":"Disease","name":"Đái tháo đường"},"predicate":"MEASURED_BY","object":{"label":"MedicalGuideline","name":"Xét nghiệm glucose máu và HbA1c"},"document_id":"testing","anchor":"xét nghiệm"},
+  {"id":"fact-prevention-activity","subject":{"label":"Recommendation","name":"Hoạt động thể lực thường xuyên"},"predicate":"RECOMMENDED_FOR","object":{"label":"Disease","name":"Giảm nguy cơ đái tháo đường type 2"},"document_id":"prevention","anchor":"hoạt động thể lực"},
+  {"id":"fact-prevention-weight","subject":{"label":"Recommendation","name":"Duy trì cân nặng phù hợp"},"predicate":"RECOMMENDED_FOR","object":{"label":"Disease","name":"Giảm nguy cơ đái tháo đường type 2"},"document_id":"prevention","anchor":"cân nặng"}
 ]
