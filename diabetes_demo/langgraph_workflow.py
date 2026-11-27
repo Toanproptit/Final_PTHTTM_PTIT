@@ -91,7 +91,7 @@ class LangGraphPredictionWorkflow:
             "LangGraph always runs the independent safety node before model inference.",
             lambda: self.owner.safety.run(patient),
         )
-        audit.safety_status = output
+        audit.safety_status = output 
         audit.citations.extend(output["citations"])
         return {"safety": output, "audit_state": audit}
 

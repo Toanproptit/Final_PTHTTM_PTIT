@@ -46,6 +46,7 @@ class AgentChatInput(BaseModel):
     model_config = ConfigDict(extra="forbid")
     message: str = Field(min_length=1, max_length=2000)
     history: list[ChatTurn] = Field(default_factory=list, max_length=8)
+    conversation_id: str | None = Field(default=None, min_length=1, max_length=64)
 
 class PredictionAdviceInput(BaseModel):
     model_config = ConfigDict(extra="forbid")

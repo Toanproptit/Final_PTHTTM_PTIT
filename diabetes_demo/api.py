@@ -77,9 +77,24 @@ def create_app(store_path: Path | None = None) -> FastAPI:
         if not agent.configured:
             raise HTTPException(status_code=503, detail="Chưa cấu hình OPENROUTER_API_KEY.")
         try:
-            return agent.chat(payload.message, [turn.model_dump() for turn in payload.history])
+            return agent.chat(
+                payload.message,
+                [turn.model_dump() for turn in payload.history],
+                payload.conversation_id,
+            )
         except RuntimeError as error:
             raise HTTPException(status_code=502, detail=str(error)) from error
+
+    @app.get("/api/agent/history")
+    def agent_chat_history(request: Request):
+        return request.app.state.orchestrator.store.recent_chats()
+
+    @app.get("/api/agent/history/{run_id}")
+    def agent_chat_detail(run_id: str, request: Request):
+        chat = request.app.state.orchestrator.store.get_chat(run_id)
+        if chat is None:
+            raise HTTPException(status_code=404, detail="Không tìm thấy cuộc trò chuyện này.")
+        return chat
 
     @app.post("/api/agent/advice")
     def agent_advice(payload: PredictionAdviceInput, request: Request):

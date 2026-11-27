@@ -1,0 +1,352 @@
+[
+  {
+    "page": 9,
+    "old": "Quy trình gồm khảo cứu tài liệu, EDA, kiểm tra đạo hàm và đối chứng mô hình. Tệp nguồn được ghi URL, kích thước và SHA-256. Tiền xử lý chỉ fit trên train, checkpoint chọn theo validation và test dùng đánh giá cuối. Khoảng thời gian dữ liệu lấy từ tệp thực nghiệm.",
+    "new": "Quy trình nghiên cứu gồm khảo sát tài liệu, phân tích dữ liệu, kiểm tra đạo hàm và so sánh mô hình. Nguồn được nhận diện bằng URL, kích thước và SHA-256. Tiền xử lý học trên train; validation chọn checkpoint; test dành cho đánh giá cuối."
+  },
+  {
+    "page": 9,
+    "old": "Độ trễ là trung vị của 20 lượt suy luận một mẫu sau warm-up, không gồm tải trọng số, HTTP hay vẽ giao diện. Dung lượng đo từ checkpoint thực nên còn phụ thuộc định dạng lưu; số tham số được đếm từ mô hình. Các đồ thị minh họa không dùng để chọn lại cấu hình trên test. Kết quả một seed và một cách chia tập chỉ phản ánh cấu hình đã chạy.",
+    "new": "Chi phí suy luận được đo bằng trung vị 20 lượt sau warm-up, chưa gồm nạp mô hình, HTTP và dựng giao diện. Dung lượng phụ thuộc định dạng checkpoint; số tham số được đếm trên kiến trúc. Kết quả chỉ đại diện cho cấu hình và cách chia tập đã sử dụng."
+  },
+  {
+    "page": 11,
+    "old": "Hệ chuyên gia gồm cơ sở luật và cơ chế suy diễn. Nó phù hợp phạm vi hẹp, có quy tắc ổn định và cần giải thích lý do. Chi phí lớn nằm ở việc lấy tri thức từ chuyên gia, xử lý luật xung đột và cập nhật khi nghiệp vụ thay đổi.",
+    "new": "Hệ chuyên gia tổ chức tri thức thành cơ sở luật và bộ suy diễn, phù hợp nhiệm vụ hẹp với quy tắc ổn định. Khó khăn triển khai nằm ở thu thập tri thức, giải quyết luật xung đột và duy trì tính nhất quán khi nghiệp vụ thay đổi."
+  },
+  {
+    "page": 11,
+    "old": "Mùa đông AI là giai đoạn kỳ vọng, đầu tư hoặc nguồn lực giảm khi kết quả chưa đáp ứng lời hứa. Diễn biến này liên quan cả hạn chế phần cứng, thiếu dữ liệu, chi phí triển khai và kỳ vọng quá cao, không chỉ một công trình riêng lẻ.",
+    "new": "Các mùa đông AI phản ánh khoảng cách giữa kỳ vọng và khả năng thực hiện. Khi hiệu quả chưa đáp ứng cam kết, đầu tư và nguồn lực suy giảm. Nguyên nhân gồm hạn chế tính toán, dữ liệu chưa đủ và chi phí ứng dụng cao."
+  },
+  {
+    "page": 11,
+    "old": "Học máy tìm tham số từ những quan sát đã có để dự báo cho mẫu mới. Vì vậy lỗi trên tập huấn luyện và lỗi trên dữ liệu chưa dùng để học phải được đo riêng. Mục tiêu thực tế là kết quả trên mẫu mới, không chỉ làm lỗi train nhỏ.",
+    "new": "Mục tiêu của học máy là dự báo trên quan sát chưa dùng để học. Vì thế, sai số huấn luyện cần được đọc cùng sai số ngoài mẫu. Một mô hình khớp rất tốt tập train vẫn có thể thất bại khi phân bố đầu vào thay đổi."
+  },
+  {
+    "page": 11,
+    "old": "Mô hình tuyến tính có chi phí thấp; cây quyết định chia không gian đặc trưng; Random Forest kết hợp nhiều cây; SVM mở rộng biên dự báo bằng kernel. Các đối chứng này giúp kiểm tra lợi ích thực tế của mạng phức tạp.",
+    "new": "Các mô hình đối chứng cung cấp nhiều cách tiếp cận: tuyến tính ưu tiên sự đơn giản, cây phân hoạch không gian đặc trưng, Random Forest tổng hợp nhiều cây và SVM sử dụng biên phân tách. So sánh này giúp xác định khi nào mạng sâu đem lại lợi ích."
+  },
+  {
+    "page": 11,
+    "old": "Validation dùng chọn checkpoint hoặc cấu hình; test dành cho đánh giá cuối. Nếu liên tục sửa mô hình theo test, test không còn độc lập. Báo cáo giữ cùng mẫu kiểm tra giữa framework, fit chuẩn hóa chỉ trên train và ghi seed. Một seed chưa đủ chứng minh khác biệt nhỏ có ý nghĩa thống kê.",
+    "new": "Validation phục vụ chọn cấu hình; test chỉ dùng để chấm kết quả cuối. Điều chỉnh nhiều lần theo test làm suy yếu tính độc lập của đánh giá. Các framework cần dùng cùng mẫu kiểm tra, cùng tiền xử lý và seed được ghi lại; khác biệt nhỏ cần thêm nhiều lần chạy để kiểm chứng."
+  },
+  {
+    "page": 12,
+    "old": "RNN cập nhật trạng thái theo chuỗi; LSTM và GRU dùng cổng để giữ hoặc bỏ thông tin. Trong ngôn ngữ, encoder-decoder và attention mở rộng cách kết nối thông tin giữa các vị trí.",
+    "new": "RNN xử lý chuỗi bằng trạng thái ẩn theo từng bước. LSTM và GRU dùng cổng để điều tiết thông tin. Với ngôn ngữ, encoder-decoder và attention mở rộng liên kết giữa các vị trí."
+  },
+  {
+    "page": 12,
+    "old": "Transformer dùng attention để liên kết các vị trí mà không cần vòng lặp như Simple RNN. Mô hình nền tảng học trên dữ liệu lớn; RAG bổ sung bằng chứng truy xuất; agent tổ chức hành động và công cụ. Báo cáo chỉ giới thiệu các hướng này, không huấn luyện chúng.",
+    "new": "Transformer liên kết các vị trí bằng attention. Mô hình nền tảng mở rộng quy mô học; RAG bổ sung tài liệu tại thời điểm truy vấn; agent tổ chức việc sử dụng công cụ. Các hướng này cung cấp bối cảnh cho nội dung thực hành trong tiểu luận."
+  },
+  {
+    "page": 14,
+    "old": "Logistic Regression biến điểm số tuyến tính thành xác suất cho bài toán nhị phân. Khi số lớp lớn hơn hai, dạng softmax chuẩn hóa các điểm số thành phân bố trên các lớp. Tên gọi regression ở đây không có nghĩa đầu ra cuối là một mức giá; mô hình được dùng để phân loại.",
+    "new": "Logistic Regression chuyển điểm tuyến tính thành xác suất nhị phân qua sigmoid. Với nhiều lớp, softmax chuẩn hóa vector điểm thành phân bố xác suất. Mặc dù có tên regression, mô hình ở mục này được dùng cho nhiệm vụ phân loại."
+  },
+  {
+    "page": 14,
+    "old": "Ngưỡng hoặc argmax chuyển xác suất thành nhãn; xác suất cao chưa bảo đảm hiệu chỉnh tốt. Breast Cancer được chấm thêm macro F1 để nhìn cả lớp ít mẫu. Xác suất trên web là đầu ra từng mẫu; đánh giá chất lượng dùng tập test độc lập.",
+    "new": "Quyết định phân lớp được tạo bằng ngưỡng hoặc argmax. Độ tin cậy của xác suất cần được đánh giá riêng với độ đúng của nhãn. Trong Breast Cancer, macro F1 bổ sung góc nhìn về cả hai lớp thay vì chỉ dựa vào accuracy."
+  },
+  {
+    "page": 14,
+    "old": "Cây quyết định chia dữ liệu bằng điều kiện trên từng đặc trưng; lá chứa dự báo. Cây học được quan hệ phi tuyến mà không cần một hàm tuyến tính chung. Cây quá sâu có thể ghi nhớ nhiễu và thay đổi mạnh khi tập train thay đổi.",
+    "new": "Cây quyết định học các điều kiện chia trên từng thuộc tính và đưa ra dự báo tại nút lá. Cách chia này biểu diễn được quan hệ phi tuyến. Cây quá sâu dễ khớp cả nhiễu, khiến dự báo nhạy với thay đổi của tập huấn luyện."
+  },
+  {
+    "page": 15,
+    "old": "SVM dùng các điểm hỗ trợ để xác định biên quyết định. Kernel RBF tính mức gần nhau từ khoảng cách đặc trưng; một cột có thang số quá lớn có thể lấn át các cột khác. Vì vậy đầu vào của SVM cần được chuẩn hóa.",
+    "new": "Biên quyết định của SVM được xác định bởi các điểm hỗ trợ. Với kernel RBF, độ gần phụ thuộc khoảng cách trong không gian đặc trưng. Chuẩn hóa giúp hạn chế việc một thuộc tính có trị số lớn chi phối khoảng cách."
+  },
+  {
+    "page": 15,
+    "old": "SVM bổ sung đối chứng cho các nhóm tuyến tính, Random Forest và MLP. Ba hiện thực MLP bằng NumPy, Keras và PyTorch được dùng để kiểm tra tính nhất quán của cùng kiến trúc giữa các thư viện.",
+    "new": "SVM được đặt cạnh mô hình tuyến tính, Random Forest và MLP để so sánh các giả định học khác nhau. Ba bản MLP bằng NumPy, Keras và PyTorch bổ sung phép đối chiếu cách hiện thực cùng kiến trúc."
+  },
+  {
+    "page": 16,
+    "old": "ANN nhận đặc trưng ở đầu vào, học biểu diễn ở tầng ẩn và dự báo ở tầng ra. Mỗi tầng tính z = W a + b rồi áp dụng φ(z). W là trọng số, b là bias. Backprop tính gradient loss theo W và b; optimizer dùng gradient để cập nhật tham số.",
+    "new": "Mạng ANN biến đổi đặc trưng qua các tầng ẩn tới đầu ra. Mỗi tầng tính z = W a + b rồi áp dụng hàm kích hoạt. Backprop truyền gradient về các trọng số; optimizer dùng gradient để cập nhật tham số."
+  },
+  {
+    "page": 16,
+    "old": "Ba hàm mất mát thường dùng là MSE = (1/N)Σ(ŷᵢ−yᵢ)² cho hồi quy; BCE = −(1/N)Σ[yᵢ log pᵢ +(1−yᵢ)log(1−pᵢ)] cho hai lớp; và CCE = −(1/N)ΣᵢΣⱼ yᵢⱼ log pᵢⱼ cho nhiều lớp. y là nhãn thật, p là xác suất; với one-hot chỉ hạng ứng với lớp đúng còn lại trong CCE. BCEWithLogitsLoss tính BCE trực tiếp từ logits theo cách ổn định số.",
+    "new": "Lựa chọn loss phụ thuộc kiểu mục tiêu như Bảng trên: MSE cho giá trị liên tục, BCE cho hai lớp và CCE cho nhiều lớp. Nhãn one-hot chỉ giữ hạng ứng với lớp đúng trong CCE. Với BCEWithLogitsLoss, đầu vào là logits, không áp dụng sigmoid trước."
+  },
+  {
+    "page": 17,
+    "old": "Batch là nhóm mẫu cho một lần cập nhật; epoch là một lượt qua toàn bộ train. Mẫu train được hoán vị bằng seed cố định. Loss epoch được cộng theo số mẫu mỗi batch rồi chia tổng mẫu, để batch cuối nhỏ hơn vẫn có trọng số đúng.",
+    "new": "Batch xác định số mẫu trong một lần cập nhật; epoch là một lượt qua tập train. Mẫu được hoán vị với seed cố định. Loss của epoch lấy trung bình theo số mẫu, nhờ đó batch cuối có kích thước nhỏ hơn vẫn được tính đúng trọng số."
+  },
+  {
+    "page": 106,
+    "old": "Gói Tieu_luan_02_Netlify.zip gồm index.html, style.css, app.mjs, engine.mjs, data.json và figures. Netlify phục vụ tệp tĩnh; chế độ đã chạy trả lời trích xuất có nguồn, không cần notebook, LLM hoặc API key trên máy chủ.",
+    "new": "Gói triển khai gồm trang HTML, stylesheet, mô-đun giao diện, bộ truy xuất và dữ liệu JSON. Máy chủ tệp tĩnh cung cấp các thành phần này; nhánh trả lời trích xuất chạy từ chỉ mục đã xuất, không cần khóa API trên trình duyệt."
+  },
+  {
+    "page": 106,
+    "old": "Hình mục 5.7.2–5.7.4 được vẽ lại từ dữ kiện đã thực thi để hướng dẫn thao tác, không phải ảnh chụp phiên Netlify đã phát hành. Báo cáo dùng đường dẫn tương đối; tên miền được cấp khi triển khai.",
+    "new": "Các hình ở mục 5.7 mô tả lại luồng dữ liệu và bằng chứng của từng miền. Đây là sơ đồ chức năng, dùng để giải thích thiết kế và đối chiếu nguồn trong câu trả lời."
+  },
+  {
+    "page": 106,
+    "old": "Thao tác sử dụng. Người dùng chọn tab Tiểu đường, nhập câu hỏi hoặc dùng các gợi ý về nhãn, BMI, huyết áp và Age. Chọn phương pháp kết hợp KG và TF-IDF rồi bấm Tra cứu. Kết quả gồm nội dung trả lời, ID nguồn, các tài liệu liên quan và điểm xếp hạng. Nút xuất JSON giữ lại câu hỏi và bằng chứng để đối chiếu.",
+    "new": "Luồng tra cứu tiểu đường nhận câu hỏi về nhãn khảo sát, BMI, huyết áp hoặc nhóm tuổi. Bộ truy xuất kết hợp chọn tài liệu theo văn bản và thực thể. Đầu ra gắn câu trả lời với ID nguồn, tài liệu liên quan và điểm xếp hạng để kiểm tra."
+  },
+  {
+    "page": 107,
+    "old": "Thao tác sử dụng. Quy trình gồm chọn tab chứng khoán, đặt câu hỏi có tên mã, bấm Tra cứu rồi kiểm tra ID dạng s_FPT. Sau đó chọn FPT trong danh sách mã để đối chiếu đường giá và mốc cuối 14/03/2025. Giá đóng cửa cuối chuỗi FPT là 131.400 VND/cổ phiếu; VNM là 62.100 VND/cổ phiếu. IMP có mốc cuối khác nên giao diện luôn ghi ngày riêng thay vì gọi chung là giá hôm nay.",
+    "new": "Tra cứu chứng khoán cần nêu rõ mã và thời điểm. Tài liệu s_FPT có mốc cuối 14/03/2025 với giá 131.400 VND/cổ phiếu; VNM ghi 62.100 VND/cổ phiếu. Ngày cuối của IMP khác các mã còn lại, vì vậy từng kết quả cần hiển thị mốc riêng."
+  },
+  {
+    "page": 108,
+    "old": "Thao tác sử dụng. Ví dụ câu hỏi trung bình vàng năm 2020 nhận tài liệu g_2020; bộ chọn năm 2020 hiển thị cùng thống kê và các giá quan sát trong năm đó. Kiến thức được ứng dụng. Thực thể year:2020 góp phần phân biệt các tài liệu có nội dung gần giống nhau. Nút xuất JSON giữ lại nguồn để kiểm tra phép tổng hợp groupby trong notebook.",
+    "new": "Với câu hỏi về vàng năm 2020, hệ thống nhận diện year:2020 rồi truy xuất g_2020. Tài liệu và đồ thị phải dùng cùng thống kê theo năm; ID nguồn cho phép đối chiếu lại phép tổng hợp trong notebook."
+  },
+  {
+    "page": 109,
+    "old": "Phần 5.1–5.8 trình bày hệ tra cứu thống kê dùng NetworkX và TF-IDF. Phần này trình bày riêng KB y khoa của Diabetes_Agent: tri thức được tạo, lưu, truy vấn và dùng để trả lời thế nào. Các cấu trúc và số liệu được đối chiếu với mã nguồn, bản seed [20] và báo cáo chuyên đề [21].",
+    "new": "Hệ tra cứu thống kê dùng NetworkX và TF-IDF được phân biệt với KB y khoa của Diabetes_Agent. Mục này tập trung vào lưu trữ, truy vấn và truy nguồn tri thức trong Neo4j, dựa trên mã nguồn, bản seed [20] và báo cáo [21]."
+  },
+  {
+    "page": 118,
+    "old": "Epsilon-greedy chọn ngẫu nhiên với xác suất ε và chọn hành động có Q lớn nhất ở nhánh khai thác. Giảm ε làm thay đổi tần suất thử ngẫu nhiên, nhưng không tự chứng minh chính sách tối ưu. Cần tách kết quả trong huấn luyện còn khám phá với đánh giá chính sách sau huấn luyện; phần thực nghiệm giảm giá còn dùng nhiều seed và đối chứng cùng kịch bản để kiểm tra ảnh hưởng ngẫu nhiên.",
+    "new": "Epsilon-greedy dành xác suất ε cho khám phá và chọn hành động có Q lớn nhất ở phần còn lại. Giảm ε chỉ thay đổi mức khám phá. Cần đánh giá chính sách sau huấn luyện trên các seed và kịch bản chung, tách khỏi phần thưởng thu trong lúc còn thử ngẫu nhiên."
+  },
+  {
+    "page": 143,
+    "old": "Một agent đơn có thể gọi toàn bộ công cụ, nhưng khó tách trách nhiệm dự báo, truy nguồn và kiểm soát lỗi. Phân vai giúp kiểm thử từng đầu vào/đầu ra và gắn trace với người chịu trách nhiệm. Chưa có đối chứng thực nghiệm cho thấy cách phân vai này tốt hơn một agent trên cùng ngân sách, nên lợi ích được trình bày ở mức tổ chức phần mềm.",
+    "new": "Phân vai tách dự báo, truy xuất và bộ nhớ thành các trách nhiệm có đầu vào, đầu ra rõ ràng. Trace giúp theo dõi bước phát sinh lỗi. Lợi ích ở đây thuộc tổ chức phần mềm; chưa có đối chứng trên cùng ngân sách để kết luận hệ đa agent chính xác hơn agent đơn."
+  },
+  {
+    "page": 144,
+    "old": "Quy trình dưới đây dùng để tái lập trên laptop, tách khỏi các lần chạy đã được báo cáo. Cần cài dependencies, có artifact mô hình, Neo4j chứa seed, cấu hình kết nối và mô hình nhúng. Các hình ở dưới là ảnh chụp ứng dụng chạy cục bộ ngày 27/11/2026; ba lượt API ở Bảng 6.17 lấy từ [21]. Cả hai chưa xác nhận dịch vụ trực tiếp hiện tại.",
+    "new": "Kịch bản trình diễn yêu cầu mô hình, cấu hình kết nối và KB đã nạp. Các sơ đồ tiếp theo minh họa cấu trúc kết quả, bằng chứng và dấu vết xử lý; số liệu ba lượt API được trích riêng từ [21]. Chúng không đại diện cho một lần chạy mới trong bản biên tập."
+  },
+  {
+    "page": 36,
+    "old": "Kết quả suy luận: Iris-virginica [0.0099 0.1210 0.8691 ]. Nhập bốn số đo rồi chọn Dự báo để xem loài Iris và xác suất từng lớp; có thể dùng mẫu điền sẵn để thử nhanh. MLP chuẩn hóa theo train, qua lớp ẩn ReLU 32 nơ-ron rồi softmax. Đầu vào là số đo, không phải ảnh hoa. Ứng dụng chỉ được huấn luyện trên ba loài Iris. Mẫu ngoài phân bố vẫn có thể nhận nhãn và xác suất softmax cao.",
+    "new": "Đầu vào gồm bốn số đo hoa theo centimet, được chuẩn hóa bằng thống kê của train. MLP sử dụng lớp ẩn ReLU 32 nơ-ron và đầu ra softmax để phân biệt ba loài Iris.\nKết quả cần được đọc trong phạm vi ba loài đã học. Softmax cao không xác nhận mẫu thuộc phân bố huấn luyện; ảnh hoa không phải đầu vào của mô hình này."
+  },
+  {
+    "page": 39,
+    "old": "Kết quả suy luận: B [0.8684 0.1316]. Chọn dataset, nhập 30 đặc trưng hoặc dùng mẫu có sẵn rồi bấm Dự báo. Kết quả gồm nhãn B (lành tính), M (ác tính) và xác suất hai lớp. MLP dùng bộ chuẩn hóa và thứ tự 30 đặc trưng đã lưu; loại id và cột Unnamed. Bảng benchmark đối chiếu các cấu hình trên cùng tập test. Phạm vi kết quả. Đây là ứng dụng nghiên cứu trên đặc trưng dataset; chưa được kiểm định lâm sàng. Không sử dụng kết quả để tự chẩn đoán hoặc thay thế đánh giá chuyên môn.",
+    "new": "Mô hình nhận vector 30 đặc trưng số theo đúng thứ tự đã lưu, loại mã định danh và dùng bộ chuẩn hóa của train. Đầu ra phân biệt nhãn B và M; các bảng kế tiếp đánh giá mô hình trên cùng tập kiểm tra.\nỨng dụng phục vụ nghiên cứu dữ liệu đặc trưng. Kết quả chưa được kiểm định lâm sàng và không thay thế đánh giá của người có chuyên môn."
+  },
+  {
+    "page": 42,
+    "old": "Kết quả suy luận: 86390.6328 USD. Nhập dữ liệu hoặc chọn Điền dữ liệu ví dụ, rồi bấm Ước lượng giá. Kết quả hiển thị bằng USD; nút tải CSV lưu đầu vào, ước lượng và tên mô hình. Đặc trưng số được chuẩn hóa; ocean_proximity được one-hot theo các nhóm đã lưu. Đầu ra MLP được khôi phục về USD. Dữ liệu thuộc California năm 1990, mô tả giá trung vị khu vực. Đầu ra không đại diện giá nhà hiện tại hay giá nhà Việt Nam; RMSE test không phải khoảng tin cậy của từng dự báo.",
+    "new": "Đầu vào mô tả khu vực bằng tọa độ, tuổi nhà, số phòng, dân số, số hộ, thu nhập và vị trí so với biển. Đặc trưng số được chuẩn hóa; ocean_proximity được one-hot. Dự báo MLP được chuyển ngược về USD.\nDữ liệu thuộc California năm 1990 và mục tiêu là giá trung vị khu vực. Sai số test không phải khoảng tin cậy cho một căn nhà, cũng không mô tả giá thị trường hiện tại."
+  },
+  {
+    "page": 59,
+    "old": "Kết quả suy luận: 9 [1.4731e-06 4.6508e-04 1.7775e-05 3.3538e-04 1.1713e-02 6.7921e-04 3.9351e-05 1.5195e-03 4.1073e-03 9.8112e-01]. Thao tác sử dụng. Mở link để chọn chế độ chữ số. Vẽ nét sáng trên nền tối bằng chuột hoặc cảm ứng, chọn một ảnh mẫu, hoặc tải ảnh của bạn. Bấm Nhận dạng ảnh để xem nhãn và phân bố xác suất; tải CSV nếu cần lưu kết quả. Kiến thức được ứng dụng. Ảnh đưa vào mô hình được hiển thị ở vùng xem trước. Pixel được chia 255, giữ một kênh và đưa qua convolution, ReLU, average pooling và lớp đầu ra. Trọng số dùng lại từ thí nghiệm NumPy, không học lại khi người dùng vẽ. Phạm vi kết quả. Ảnh mẫu có bố cục gần chuẩn MNIST. Chữ lệch, nhiều chữ số trong một ảnh hoặc nền khác nguồn có thể làm dự báo sai. Hệ thống xử lý một ảnh chứa một chữ số, không thực hiện OCR toàn bộ tài liệu.",
+    "new": "Một ảnh chữ số được đưa về một kênh 28 × 28 rồi chia pixel cho 255. CNN cơ sở thực hiện tích chập, ReLU, average pooling và phân loại bằng trọng số đã huấn luyện.\nPhân bố xác suất dùng để so sánh các lớp trong MNIST. Hệ thống xử lý một chữ số; ảnh nhiều ký tự, nét lệch hoặc nền khác dữ liệu nguồn có thể làm dự báo sai. Đây không phải quy trình OCR cả tài liệu."
+  },
+  {
+    "page": 62,
+    "old": "Kết quả suy luận: Pullover [6.4440e-02 2.8694e-03 6.1395e-01 3.3667e-04 1.7060e-02 2.1471e-09 2.9729e-01 1.9968e-09 4.0332e-03 1.8505e-05]. Thao tác sử dụng. Mở link để chọn đúng chế độ trang phục. Chọn ảnh mẫu hoặc tải ảnh, sau đó xem ảnh thu nhỏ và bấm Nhận dạng ảnh. Kết quả gồm nhãn có xác suất cao nhất, xác suất các lớp và chức năng xuất CSV. Kiến thức được ứng dụng. Ảnh được chuyển về ảnh xám một kênh 28 × 28. Cấu trúc CNN cơ sở giống MNIST nhưng sử dụng bộ trọng số huấn luyện riêng cho Fashion-MNIST; không dùng trọng số nhận chữ số để dự báo trang phục. Phạm vi kết quả. Các nhãn Shirt, Coat và Pullover có hình dạng gần nhau ở độ phân giải này. Ảnh thời trang có người mặc, nhiều vật thể hoặc nền phức tạp khác đáng kể ảnh nguồn và có thể làm giảm chất lượng.",
+    "new": "Ảnh trang phục được biểu diễn bằng tensor xám 1 × 28 × 28. CNN sử dụng kiến trúc cơ sở nhưng có bộ trọng số riêng cho Fashion-MNIST; đầu ra gồm mười lớp trang phục.\nCác lớp Shirt, Coat và Pullover có thể khó phân biệt ở độ phân giải nhỏ. Ảnh có người mặc, nền phức tạp hoặc nhiều vật thể khác phân bố nguồn nên cần được đánh giá bổ sung."
+  },
+  {
+    "page": 65,
+    "old": "Kết quả suy luận: automobile [0.1076 0.4720 0.0449 0.0406 0.0096 0.0371 0.0041 0.0061 0.1608 0.1173]. Thao tác sử dụng. Mở link để chọn chế độ đối tượng. Tải ảnh hoặc chọn ảnh mẫu; vùng xem trước cho biết ảnh 32 × 32 đã được đưa vào CNN. Chọn Nhận dạng ảnh, xem nhãn và xác suất, rồi xuất kết quả CSV khi cần. Kiến thức được ứng dụng. Ảnh màu giữ ba kênh RGB và được chia 255. Kiến trúc cơ sở có tám kernel convolution; mỗi kernel nhận đủ ba kênh. Bộ trọng số CIFAR-10 riêng biệt với hai tập ảnh xám được chọn tự động theo dataset. Phạm vi kết quả. Độ phân giải thấp làm mất chi tiết và bối cảnh. Mô hình chỉ biết mười lớp của dataset, không có lớp unknown. Một đối tượng ngoài danh sách vẫn có thể bị gán nhãn trong mười lớp.",
+    "new": "Ảnh CIFAR-10 giữ đủ ba kênh RGB với kích thước 32 × 32 và pixel trong [0,1]. Mỗi kernel tích chập nhận cả ba kênh; mô hình dùng bộ trọng số riêng cho miền dữ liệu này.\nMười lớp tạo thành tập nhãn đóng, chưa có lớp unknown. Vì vậy, ảnh ngoài danh sách vẫn có thể nhận một nhãn; xác suất đầu ra cần được đọc cùng giới hạn này."
+  },
+  {
+    "page": 82,
+    "old": "Kết quả suy luận: 86023.9642 đồng/cổ phiếu. Nhập 30 giá FPT từ cũ đến mới hoặc tải CSV có cột Close; tệp dài hơn dùng 30 dòng cuối. Chọn Dự báo giá tiếp theo để xem giá, chênh lệch, biểu đồ và tải CSV. RNN chuẩn hóa chuỗi bằng thống kê train, dự báo chênh lệch rồi khôi phục và cộng vào giá cuối. Biểu đồ gồm 30 quan sát lịch sử và một điểm dự báo. Chuỗi ví dụ kết thúc 30/06/2023, không cập nhật trực tiếp và chưa xác nhận điều chỉnh corporate actions. Chưa có đánh giá lợi nhuận giao dịch.",
+    "new": "Đầu vào là 30 giá FPT theo thứ tự thời gian. Chuỗi được chuẩn hóa bằng thống kê train; mô hình dự báo chênh lệch, khôi phục đơn vị rồi cộng với mức giá cuối.\nNguồn ví dụ kết thúc 30/06/2023. Kết quả mô tả dự báo một bước trên lịch sử, chưa đánh giá lợi nhuận giao dịch và chưa xác nhận đầy đủ điều chỉnh cổ tức, chia tách."
+  },
+  {
+    "page": 35,
+    "old": "Link sử dụng: https://zingy-sorbet-7a4670.netlify.app/ml/?dataset=iris",
+    "new": ""
+  },
+  {
+    "page": 38,
+    "old": "Link sử dụng: https://zingy-sorbet-7a4670.netlify.app/ml/?dataset=breast",
+    "new": ""
+  },
+  {
+    "page": 41,
+    "old": "Link sử dụng: https://zingy-sorbet-7a4670.netlify.app/ung-dung/ml/",
+    "new": ""
+  },
+  {
+    "page": 58,
+    "old": "Link sử dụng: https://zingy-sorbet-7a4670.netlify.app/ung-dung/cnn/?dataset=mnist",
+    "new": ""
+  },
+  {
+    "page": 61,
+    "old": "Link sử dụng: https://zingy-sorbet-7a4670.netlify.app/ung-dung/cnn/?dataset=fashion",
+    "new": ""
+  },
+  {
+    "page": 64,
+    "old": "Link sử dụng: https://zingy-sorbet-7a4670.netlify.app/ung-dung/cnn/?dataset=cifar",
+    "new": ""
+  },
+  {
+    "page": 81,
+    "old": "Link sử dụng: https://zingy-sorbet-7a4670.netlify.app/ung-dung/rnn/?dataset=fpt",
+    "new": ""
+  },
+  {
+    "page": 84,
+    "old": "Link sử dụng: https://zingy-sorbet-7a4670.netlify.app/ung-dung/rnn/?dataset=vnm",
+    "new": ""
+  },
+  {
+    "page": 88,
+    "old": "Link sử dụng: https://zingy-sorbet-7a4670.netlify.app/ung-dung/rnn/?dataset=sjc",
+    "new": ""
+  },
+  {
+    "page": 106,
+    "old": "Đường dẫn sau khi deploy: /?domain=diabetes",
+    "new": ""
+  },
+  {
+    "page": 107,
+    "old": "Đường dẫn sau khi deploy: /?domain=stocks",
+    "new": ""
+  },
+  {
+    "page": 108,
+    "old": "Đường dẫn sau khi deploy: /?domain=gold",
+    "new": ""
+  },
+  {
+    "page": 8,
+    "old": "Hình M.1 Quy trình từ dữ liệu gốc đến hệ thống suy luận",
+    "new": "Hình M.1 Quy trình từ dữ liệu gốc đến hệ thống suy luận"
+  },
+  {
+    "page": 36,
+    "old": "Hình 2.18 Ứng dụng online trên Iris",
+    "new": "Hình 2.18 Luồng suy luận phân loại Iris"
+  },
+  {
+    "page": 39,
+    "old": "Hình 2.23 Ứng dụng online trên Breast Cancer Wisconsin",
+    "new": "Hình 2.23 Luồng phân loại đặc trưng Breast Cancer Wisconsin"
+  },
+  {
+    "page": 42,
+    "old": "Hình 2.28 Ứng dụng online trên California Housing",
+    "new": "Hình 2.28 Luồng ước lượng giá trung vị khu vực California"
+  },
+  {
+    "page": 59,
+    "old": "Hình 3.15 Ứng dụng online trên MNIST",
+    "new": "Hình 3.15 Luồng xử lý một ảnh chữ số MNIST"
+  },
+  {
+    "page": 62,
+    "old": "Hình 3.20 Ứng dụng online trên Fashion-MNIST",
+    "new": "Hình 3.20 Luồng xử lý ảnh trang phục Fashion-MNIST"
+  },
+  {
+    "page": 65,
+    "old": "Hình 3.25 Ứng dụng online trên CIFAR-10",
+    "new": "Hình 3.25 Luồng phân loại ảnh màu CIFAR-10"
+  },
+  {
+    "page": 65,
+    "old": "Hình 3.26 Dòng tensor và vùng cảm nhận của CNN sáu lớp tích chập",
+    "new": "Hình 3.26 Dòng tensor của CNN sáu lớp tích chập"
+  },
+  {
+    "page": 82,
+    "old": "Hình 4.17 Ứng dụng online trên Cổ phiếu FPT",
+    "new": "Hình 4.17 Luồng dự báo FPT từ cửa sổ 30 quan sát"
+  },
+  {
+    "page": 85,
+    "old": "Hình 4.22 Ứng dụng online trên Cổ phiếu VNM",
+    "new": "Hình 4.22 Luồng dự báo VNM từ cửa sổ 30 quan sát"
+  },
+  {
+    "page": 88,
+    "old": "Hình 4.27 Ứng dụng online trên Giá vàng SJC",
+    "new": "Hình 4.27 Luồng dự báo vàng SJC từ cửa sổ 30 quan sát"
+  },
+  {
+    "page": 107,
+    "old": "Hình 5.13 Minh họa giao diện tiểu đường với dữ kiện BMI đã tính",
+    "new": "Hình 5.13 Tra cứu BMI và đối chiếu bằng chứng khảo sát"
+  },
+  {
+    "page": 108,
+    "old": "Hình 5.14 Minh họa giao diện chứng khoán và bằng chứng nguồn FPT",
+    "new": "Hình 5.14 Tra cứu mã FPT và nguồn dữ liệu lịch sử"
+  },
+  {
+    "page": 108,
+    "old": "Hình 5.15 Minh họa giao diện vàng với tài liệu năm 2020",
+    "new": "Hình 5.15 Truy xuất tài liệu vàng theo thực thể năm"
+  },
+  {
+    "page": 112,
+    "old": "Hình 5.17 Một phần đồ thị được rút từ năm quan hệ có trong seed [20].",
+    "new": "Hình 5.17 Năm quan hệ nghiệp vụ được biểu diễn lại từ seed [20]"
+  },
+  {
+    "page": 115,
+    "old": "Hình 5.18 Giao diện xem đồ thị Neo4j và phần tri thức đã dùng cho hồ sơ, trích [21, Hình 5.7, trang 40].",
+    "new": "Hình 5.18 Minh họa đường truy nguồn tri thức cho một hồ sơ"
+  },
+  {
+    "page": 116,
+    "old": "Hình 5.19 Hỏi đáp tự do có trích dẫn cho câu về béo phì, trích [21, Hình 5.8, trang 41].",
+    "new": "Hình 5.19 Minh họa quy trình hỏi đáp có trích dẫn"
+  },
+  {
+    "page": 146,
+    "old": "Hình 6.8 Trang kết quả gồm nguy cơ, hướng xử trí và câu hỏi bổ sung, chụp ngày 27/11/2026 từ ứng dụng chạy cục bộ.",
+    "new": "Hình 6.8 Minh họa cấu trúc kết quả hỗ trợ sàng lọc"
+  },
+  {
+    "page": 147,
+    "old": "Hình 6.9 Các đoạn bằng chứng và luật an toàn trên giao diện, chụp ngày 27/11/2026 từ ứng dụng chạy cục bộ.",
+    "new": "Hình 6.9 Minh họa kết hợp bằng chứng và kiểm tra luật"
+  },
+  {
+    "page": 148,
+    "old": "Hình 6.10 Dòng thời gian xử lý và thông tin mô hình, chụp ngày 27/11/2026 từ ứng dụng chạy cục bộ.",
+    "new": "Hình 6.10 Minh họa các bước xử lý và thông tin phiên bản"
+  },
+  {
+    "page": 115,
+    "old": "Giao diện KG cho biết quy mô tri thức, tô nổi phần đã dùng cho hồ sơ và mở các quan hệ/nguồn. Đây là minh chứng khác với hình đồ thị toàn cục: nó cho thấy một lần sử dụng lấy phần nào của KB.",
+    "new": "Sơ đồ trình bày cách nối yếu tố, quan hệ, Evidence và Source. Việc kiểm tra một kết luận cần theo được ID bằng chứng tới tài liệu gốc; hình minh họa không đại diện cho một phiên truy vấn vừa thực hiện."
+  },
+  {
+    "page": 116,
+    "old": "Chat hiển thị đoạn trả lời, nguồn và vết truy xuất. Người xem cần mở đúng tài liệu và đối chiếu điều kiện của đoạn. Phần này đã nối được bốn lớp: khái niệm y khoa → quan hệ → đoạn bằng chứng → tài liệu gốc. Chương 6 dùng kết quả này cùng dự báo và luật để chọn bước hỗ trợ.",
+    "new": "Luồng hỏi đáp liên kết khái niệm, quan hệ, đoạn bằng chứng và tài liệu gốc. Sau truy xuất, cần kiểm tra nội dung trả lời có giữ đúng điều kiện và đơn vị của nguồn. Chương 6 kết hợp đầu ra này với dự báo và luật hỗ trợ."
+  },
+  {
+    "page": 148,
+    "old": "Ba hình trên được chụp ngày 27/11/2026 từ ứng dụng chạy cục bộ, với artifact screening- 20261126154435 (tổ hợp MLP–LightGBM), nhánh lối sống, không gọi LLM và KB đọc từ Neo4j. Hồ sơ nhập là nữ 45 tuổi, cao 170 cm, nặng 82,4 kg, huyết áp tâm thu 130 mmHg; các mục còn lại giữ giá trị mặc định của giao diện. Ảnh cho thấy xác suất 12%, mức Thấp với các mốc 14% và 40%, khớp ngưỡng 0,14147 và 0,39742 ở mục 2.35.2; đây là hồ sơ khác A, B, C nên không ghép xác suất hoặc thời gian của Bảng 6.17 vào những ảnh này. Thời gian 728 ms của lượt xử lý trong Hình 6.10 được đo trên máy chủ phát triển, không dùng làm số đo độ trễ triển khai.",
+    "new": "Ba sơ đồ trên tóm tắt cấu trúc xử lý: kiểm tra hồ sơ, dự báo theo nhánh, truy xuất bằng chứng, áp dụng luật và lưu dấu vết. Chúng minh họa thiết kế, không biểu diễn một lượt chạy mới.\nKết quả mô hình, ngưỡng và thời gian phản hồi phải được đọc từ artifact hoặc log của cùng phiên bản. Các lượt API ở Bảng 6.17 được trích từ báo cáo [21] và cần được phân biệt với sơ đồ chức năng.\nKhi đánh giá triển khai, cần ghi cấu hình, môi trường, đầu vào và thời điểm đo. Một ảnh giao diện hay một lượt phản hồi chưa đủ để xác nhận độ trễ hoặc chất lượng của toàn hệ thống."
+  },
+  {
+    "page": 85,
+    "old": "Kết quả suy luận: 71313.5353 đồng/cổ phiếu. Chọn VNM, nhập 30 giá từ cũ đến mới hoặc tải CSV có cột Close rồi dự báo. Có thể xuất kết quả cùng cửa sổ đầu vào thành CSV. Luồng xử lý giống FPT nhưng dùng trọng số và thống kê chuẩn hóa riêng của VNM. VNM và FPT cùng nguồn VN30. Chuỗi ví dụ VNM kết thúc 30/06/2023; sai số mạng cần đối chiếu với baseline giữ Close gần nhất.",
+    "new": "Chuỗi VNM sử dụng 30 quan sát từ cũ tới mới, với bộ trọng số và thống kê chuẩn hóa riêng. Mô hình dự báo delta rồi khôi phục giá ở bước kế tiếp.\nFPT và VNM cùng thuộc nguồn VN30; chuỗi ví dụ kết thúc 30/06/2023. Chất lượng dự báo cần được đối chiếu với baseline giữ giá cuối trên cùng tập test."
+  },
+  {
+    "page": 88,
+    "old": "Kết quả suy luận: 144.2234 triệu đồng/lượng. Nhập 30 giá bán SJC dương theo đơn vị triệu đồng/lượng hoặc tải CSV có cột sell_1l. Ứng dụng dự báo một bước, hiển thị chênh lệch và cho tải CSV. RNN dùng biểu diễn delta cùng thống kê chuẩn hóa train. Dữ liệu mẫu kết thúc 08/10/2026; giao diện hiển thị mốc này và đơn vị giá. Ứng dụng giữ nguyên khoảng trống dữ liệu. Một bước là quan sát tiếp theo, không nhất thiết là ngày lịch tiếp theo. Baseline giá gần nhất vẫn tốt hơn các mạng trong test hiện tại.",
+    "new": "Đầu vào SJC gồm 30 giá bán dương theo đơn vị triệu đồng/lượng. RNN chuẩn hóa theo train, dự báo delta và khôi phục giá. Dữ liệu mẫu kết thúc 08/10/2026.\nKhoảng trống dữ liệu được giữ nguyên, nên bước dự báo là quan sát kế tiếp, không nhất thiết là ngày lịch kế tiếp. Trong phép đánh giá đã lưu, các mạng chưa vượt baseline giá gần nhất."
+  }
+]

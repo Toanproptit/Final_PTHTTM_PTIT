@@ -294,11 +294,36 @@ function KnowledgePage({ health }) {
 function LLMAgentPage({ predictionAdvice, clearPredictionAdvice }) {
   const [status, setStatus] = useState(null);
   const [messages, setMessages] = useState([]);
+  const [chatHistory, setChatHistory] = useState([]);
+  const [activeChatId, setActiveChatId] = useState(null);
+  const [historyBusy, setHistoryBusy] = useState(false);
   const [text, setText] = useState('');
   const [busy, setBusy] = useState(false);
   const [localError, setLocalError] = useState('');
   const processedAdvice = useRef(null);
-  useEffect(() => { api('/api/agent/status').then(setStatus).catch((e) => setLocalError(e.message)); }, []);
+  const chatScrollRef = useRef(null);
+  const refreshChatHistory = useCallback(async () => {
+    setHistoryBusy(true);
+    try { setChatHistory(await api('/api/agent/history')); }
+    catch (e) { setLocalError(e.message); }
+    finally { setHistoryBusy(false); }
+  }, []);
+  useEffect(() => {
+    api('/api/agent/status').then(setStatus).catch((e) => setLocalError(e.message));
+    refreshChatHistory();
+  }, [refreshChatHistory]);
+  const openChat = async (chatId) => {
+    setHistoryBusy(true); setLocalError('');
+    try {
+      const chat = await api(`/api/agent/history/${chatId}`);
+      setMessages(chat.messages || []); setActiveChatId(chat.id);
+    } catch (e) { setLocalError(e.message); }
+    finally { setHistoryBusy(false); }
+  };
+  const newChat = () => { setMessages([]); setActiveChatId(null); setText(''); setLocalError(''); };
+  useEffect(() => {
+    if (chatScrollRef.current) chatScrollRef.current.scrollTop = chatScrollRef.current.scrollHeight;
+  }, [messages, busy]);
   useEffect(() => {
     if (!predictionAdvice || processedAdvice.current === predictionAdvice.token) return;
     processedAdvice.current = predictionAdvice.token;
@@ -319,11 +344,14 @@ function LLMAgentPage({ predictionAdvice, clearPredictionAdvice }) {
   const submit = async (event) => {
     event?.preventDefault();
     const message = text.trim(); if (!message || busy) return;
+    const conversationId = activeChatId || crypto.randomUUID();
     const prior = messages.filter((m) => m.role === 'user' || m.role === 'assistant').slice(-8).map(({ role, content }) => ({ role, content }));
-    setMessages((old) => [...old, { role: 'user', content: message }]); setText(''); setBusy(true); setLocalError('');
+    setActiveChatId(conversationId); setMessages((old) => [...old, { role: 'user', content: message }]); setText(''); setBusy(true); setLocalError('');
     try {
-      const response = await api('/api/agent/chat', { method: 'POST', body: JSON.stringify({ message, history: prior }) });
+      const response = await api('/api/agent/chat', { method: 'POST', body: JSON.stringify({ message, history: prior, conversation_id: conversationId }) });
       setMessages((old) => [...old, { role: 'assistant', content: response.answer, calls: response.tool_calls || [], model: response.model }]);
+      setActiveChatId(response.run_id);
+      await refreshChatHistory();
     } catch (e) { setLocalError(e.message); setMessages((old) => [...old, { role: 'error', content: e.message }]); }
     finally { setBusy(false); }
   };
@@ -331,14 +359,14 @@ function LLMAgentPage({ predictionAdvice, clearPredictionAdvice }) {
   return <>
     <PageHeading eyebrow="MODEL-PLANNED TOOLS" title="LLM Agent workspace" description="Đặt câu hỏi tự nhiên. Model sẽ tự quyết định có cần tìm kiến thức, chạy mô hình nghiên cứu hay đọc kết quả dự án." action={<span className={cx('soft-tag', configured ? 'soft-green' : 'soft-amber')}><span className={cx('status-dot', configured && 'online')} />{configured ? 'OpenRouter connected' : 'Cần cấu hình API'}</span>} />
     <div className="agent-layout"><section className="panel chat-panel"><div className="chat-header"><div className="assistant-avatar"><Sparkles size={18} /></div><div><b>Diabetes Research Assistant</b><small>{configured ? `${status.model} · ${status.tools?.length || 3} tools available` : 'Local tool-calling agent'}</small></div><span className="live-tag"><i /> READY</span></div>
-      <div className="chat-scroll"><div className="chat-intro"><span className="chat-orb"><Sparkles size={22} /></span><h2>Xin chào, mình có thể giúp gì?</h2><p>Mình có thể tra cứu tài liệu, xem kết quả thực nghiệm hoặc chạy mô hình trên hồ sơ giả định.</p><div className="prompt-grid">{DEMO_PROMPTS.map((prompt, i) => <button key={prompt} className="prompt-card" onClick={() => setText(prompt)}><span>{i === 0 ? <BookOpen size={15} /> : i === 1 ? <FlaskConical size={15} /> : <BrainCircuit size={15} />}</span>{prompt}<ArrowUpRight size={14} /></button>)}</div></div>
+      <div className="chat-scroll" ref={chatScrollRef}><div className="chat-intro"><span className="chat-orb"><Sparkles size={22} /></span><h2>Xin chào, mình có thể giúp gì?</h2><p>Mình có thể tra cứu tài liệu, xem kết quả thực nghiệm hoặc chạy mô hình trên hồ sơ giả định.</p><div className="prompt-grid">{DEMO_PROMPTS.map((prompt, i) => <button key={prompt} className="prompt-card" onClick={() => setText(prompt)}><span>{i === 0 ? <BookOpen size={15} /> : i === 1 ? <FlaskConical size={15} /> : <BrainCircuit size={15} />}</span>{prompt}<ArrowUpRight size={14} /></button>)}</div></div>
         {messages.map((message, index) => <div key={index} className={cx('chat-message-row', message.role)}><div className={cx('chat-bubble', message.role)}>{message.role !== 'user' && <div className="bubble-label"><Sparkles size={13} /> {message.role === 'error' ? 'Kết nối gặp lỗi' : 'Research Assistant'}</div>}<p>{message.content}</p>{message.sources?.length > 0 && <div className="advice-source-list"><b>Nguồn đã dùng</b>{message.sources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>{source.publisher} · {source.title}<ExternalLink size={12} /></a>)}</div>}{message.calls?.length > 0 && <div className="tool-trace"><div className="trace-caption"><Workflow size={14} /> TOOL CALLS · {message.calls.length}</div>{message.calls.map((call, callIndex) => <details className="tool-call-card" key={`${call.name}-${callIndex}`}><summary><span className="tool-success"><Check size={12} /></span><b>{call.name}</b><span className="trace-state">{call.status}</span><ChevronDown size={14} /></summary><div className="tool-call-content"><small>Tham số</small><pre>{JSON.stringify(call.arguments, null, 2)}</pre><small>Kết quả tóm tắt</small><pre>{JSON.stringify(call.summary, null, 2)}</pre></div></details>)}</div>}</div></div>)}
         {busy && <div className="chat-message-row assistant"><div className="chat-bubble assistant"><div className="typing-dots"><i /><i /><i /><span>Đang suy nghĩ và chọn công cụ…</span></div></div></div>}
       </div>
       <form className="chat-composer" onSubmit={submit}><textarea value={text} onChange={(e) => setText(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); submit(e); } }} rows={2} maxLength={2000} placeholder="Nhắn tin cho agent…" /><div className="composer-bottom"><span><ShieldCheck size={13} /> Không nhập dữ liệu định danh</span><button className="send-button" disabled={busy || !text.trim()} aria-label="Gửi"><Send size={17} /></button></div></form>
       <div className="chat-footnote">AI có thể trả lời chưa chính xác. Kiểm tra nguồn và giới hạn của từng kết quả.</div>
     </section>
-      <aside className="agent-side"><article className="panel agent-status-panel"><div className="eyebrow">AGENT CONFIGURATION</div><h3>Runtime status</h3><div className="runtime-row"><span>Framework</span><b>{status?.framework || 'LangChain'}</b></div><div className="runtime-row"><span>Integration</span><b>{status?.integration || 'ChatOpenRouter'}</b></div><div className="runtime-row"><span>Provider</span><b>{status?.provider || 'OpenRouter'}</b></div><div className="runtime-row"><span>Model</span><b className="model-name">{status?.model || 'Chưa cấu hình'}</b></div><div className="runtime-row"><span>API key</span><b className={configured ? 'text-green' : 'text-amber'}>{configured ? 'Đã nạp ở backend' : 'Chưa phát hiện'}</b></div><div className="tool-list-title">TOOLS AVAILABLE</div>{(status?.tools || ['search_health_knowledge', 'run_research_prediction', 'get_experiment_summary']).map((tool) => <div className="tool-list-item" key={tool}><span><Check size={12} /></span>{tool}</div>)}{!configured && <div className="config-hint">Đặt <code>OPENROUTER_API_KEY</code> trong file `.env` ở thư mục dự án rồi khởi động lại server.</div>}</article><article className="agent-safety-card"><ShieldCheck size={17} /><div><b>Tool access is limited</b><p>Agent chỉ gọi ba hàm nội bộ được khai báo. Không có quyền chạy lệnh hay truy cập file tùy ý.</p></div></article><div className="agent-limit-note">Điểm dự đoán thuộc nhãn dataset nghiên cứu; không thay thế đánh giá của nhân viên y tế.</div></aside>
+      <aside className="agent-side"><article className="panel agent-history-panel"><div className="agent-history-heading"><div><div className="eyebrow">SAVED CHATS</div><h3>Lịch sử chat</h3></div><button className="new-chat-button" onClick={newChat} title="Tạo cuộc chat mới"><Plus size={14} /> Mới</button></div>{historyBusy && !chatHistory.length ? <div className="loading-inline"><LoaderCircle className="spin" size={14} /> Đang tải...</div> : chatHistory.length ? <div className="agent-history-list">{chatHistory.map((chat) => <button key={chat.id} className={cx('agent-history-item', activeChatId === chat.id && 'selected')} onClick={() => openChat(chat.id)}><span>{chat.title || 'Cuộc trò chuyện'}</span><small><Clock3 size={11} /> {dateTime(chat.created_at)}</small></button>)}</div> : <p className="agent-history-empty">Chưa có cuộc chat nào được lưu.</p>}</article><article className="panel agent-status-panel"><div className="eyebrow">AGENT CONFIGURATION</div><h3>Runtime status</h3><div className="runtime-row"><span>Framework</span><b>{status?.framework || 'LangChain'}</b></div><div className="runtime-row"><span>Integration</span><b>{status?.integration || 'ChatOpenRouter'}</b></div><div className="runtime-row"><span>Provider</span><b>{status?.provider || 'OpenRouter'}</b></div><div className="runtime-row"><span>Model</span><b className="model-name">{status?.model || 'Chưa cấu hình'}</b></div><div className="runtime-row"><span>API key</span><b className={configured ? 'text-green' : 'text-amber'}>{configured ? 'Đã nạp ở backend' : 'Chưa phát hiện'}</b></div><div className="tool-list-title">TOOLS AVAILABLE</div>{(status?.tools || ['search_health_knowledge', 'run_research_prediction', 'get_experiment_summary']).map((tool) => <div className="tool-list-item" key={tool}><span><Check size={12} /></span>{tool}</div>)}{!configured && <div className="config-hint">Đặt <code>OPENROUTER_API_KEY</code> trong file `.env` ở thư mục dự án rồi khởi động lại server.</div>}</article><article className="agent-safety-card"><ShieldCheck size={17} /><div><b>Tool access is limited</b><p>Agent chỉ gọi ba hàm nội bộ được khai báo. Không có quyền chạy lệnh hay truy cập file tùy ý.</p></div></article><div className="agent-limit-note">Điểm dự đoán thuộc nhãn dataset nghiên cứu; không thay thế đánh giá của nhân viên y tế.</div></aside>
     </div>
     {localError && <div className="inline-error agent-error"><CircleHelp size={16} />{localError}</div>}
   </>;
