@@ -118,6 +118,56 @@ class DemoStore:
             rows = session.scalars(select(AgentExecution).order_by(AgentExecution.started_at.desc()).limit(min(limit, 100))).all()
             return [{"id": row.id, "created_at": row.started_at.isoformat(), "kind": row.kind, "payload": row.final_payload or {}} for row in rows]
 
+    def recent_chats(self, limit: int = 30) -> list[dict]:
+        with self.sessions() as session:
+            rows = session.scalars(
+                select(AgentExecution)
+                .where(AgentExecution.kind == "llm_chat")
+                .order_by(AgentExecution.started_at.asc())
+            ).all()
+            grouped: dict[str, dict[str, Any]] = {}
+            for row in rows:
+                payload = row.input_payload or {}
+                conversation_id = payload.get("conversation_id") or row.id
+                if conversation_id not in grouped:
+                    grouped[conversation_id] = {
+                        "id": conversation_id,
+                        "created_at": row.started_at.isoformat(),
+                        "title": payload.get("message", "Cuộc trò chuyện")[:100],
+                    }
+                else:
+                    grouped[conversation_id]["created_at"] = row.started_at.isoformat()
+            return sorted(grouped.values(), key=lambda item: item["created_at"], reverse=True)[:min(limit, 100)]
+
+    def get_chat(self, conversation_id: str) -> dict[str, Any] | None:
+        with self.sessions() as session:
+            runs = session.scalars(
+                select(AgentExecution)
+                .where(AgentExecution.kind == "llm_chat")
+                .order_by(AgentExecution.started_at.desc())
+            ).all()
+            matching = [
+                row for row in runs
+                if (row.input_payload or {}).get("conversation_id", row.id) == conversation_id
+            ]
+            if not matching:
+                return None
+            latest = matching[0]
+            transcripts = session.scalars(
+                select(AgentMessage)
+                .where(AgentMessage.execution_id == latest.id)
+                .order_by(AgentMessage.id.asc())
+            ).all()
+            transcript = [{"role": message.role, "content": message.content} for message in transcripts]
+            calls_by_answer = {
+                (row.final_payload or {}).get("answer"): (row.final_payload or {}).get("tool_calls", [])
+                for row in matching
+            }
+            for message in transcript:
+                if message["role"] == "assistant" and message["content"] in calls_by_answer:
+                    message["calls"] = calls_by_answer[message["content"]]
+            return {"id": conversation_id, "messages": transcript}
+
     def clear(self) -> None:
         with self.sessions.begin() as session:
             session.execute(delete(AgentExecution))

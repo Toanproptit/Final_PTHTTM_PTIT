@@ -1,0 +1,163 @@
+[
+  {
+    "page": 8,
+    "before": "Kết quả được so sánh trong từng dataset trên cùng tập test, kể cả các trường hợp không vượt baseline. Sản phẩm gồm notebook theo dataset và framework, mã thực nghiệm, trọng số, ứng dụng web và API Python.",
+    "after": "Tiểu luận kết nối cơ sở lý thuyết AI với quá trình xây dựng, đánh giá và triển khai mô hình. Các phương pháp được đối chiếu trên cùng tập kiểm tra của từng bộ dữ liệu; kết quả được trình bày cùng notebook, mã nguồn, trọng số, giao diện web và API Python.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 10,
+    "before": "AI xây dựng hệ thống biết suy luận, học, nhận biết hoặc ra quyết định. AI gồm cả hệ luật, tìm kiếm và mô hình xác suất. Học máy tìm quy luật từ dữ liệu; học sâu dùng mạng nơ-ron nhiều tầng.",
+    "after": "Trí tuệ nhân tạo nghiên cứu cách xây dựng hệ thống có khả năng nhận biết, suy luận và lựa chọn hành động. Trong phạm vi đó, học máy ước lượng quy luật từ dữ liệu, còn học sâu sử dụng mạng nơ-ron nhiều tầng để học các biểu diễn phục vụ nhiệm vụ.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 10,
+    "before": "AI thay đổi cả cách lưu tri thức lẫn cách đánh giá kết quả. Hệ luật do người thiết kế viết điều kiện và kết luận; mô hình học máy tìm tham số từ dữ liệu theo một hàm mục tiêu. Khi chuyển sang học, công việc viết luật giảm nhưng yêu cầu về dữ liệu và kiểm thử tăng.",
+    "after": "Sự phát triển của AI gắn với thay đổi trong cách biểu diễn tri thức và kiểm chứng kết quả. Hệ luật mã hóa điều kiện do con người xác định; học máy điều chỉnh tham số theo dữ liệu và hàm mục tiêu. Chất lượng dữ liệu vì thế trở thành yêu cầu xuyên suốt.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 10,
+    "before": "Kiến trúc được chọn theo cấu trúc dữ liệu: MLP xử lý các đặc trưng dạng bảng của Iris, CNN giữ quan hệ không gian của ảnh MNIST, RNN xử lý thứ tự phiên của chuỗi FPT. Đây là mạch nối giữa lý thuyết và thực nghiệm.",
+    "after": "Cấu trúc đầu vào định hướng lựa chọn kiến trúc: MLP phù hợp với các thuộc tính dạng bảng của Iris, CNN khai thác lân cận pixel trong MNIST, còn RNN mô hình hóa thứ tự quan sát của FPT. Các ví dụ này giúp liên hệ nguyên lý với thiết kế thực nghiệm.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 13,
+    "before": "Mỗi hàng là một quan sát, mỗi cột là một đặc trưng hoặc mục tiêu. Iris có một hàng cho mỗi mẫu hoa; Breast Cancer có một hàng cho mỗi mẫu khối u; Housing có một hàng cho mỗi khu vực thống kê, không phải từng căn nhà. Hiểu đúng đơn vị quan sát giúp diễn giải đúng dự báo.",
+    "after": "Dữ liệu bảng tổ chức các quan sát theo hàng và các thuộc tính theo cột. Một hàng của Iris mô tả mẫu hoa, của Breast Cancer mô tả mẫu khối u, còn Housing mô tả khu vực thống kê. Xác định đúng đơn vị quan sát là cơ sở để diễn giải đầu ra của mô hình.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 13,
+    "before": "Học có giám sát dùng đầu vào x và mục tiêu y. Phân loại dự báo nhãn; hồi quy dự báo giá trị số. Cross-entropy phù hợp nhãn lớp, MSE phù hợp mục tiêu liên tục. Nhãn Iris 0, 1, 2 chỉ là mã ba loài, không phải một đại lượng cần hồi quy.",
+    "after": "Trong học có giám sát, mô hình học ánh xạ từ đầu vào x tới mục tiêu y. Phân loại sử dụng nhãn lớp và thường tối ưu cross-entropy; hồi quy dự báo đại lượng liên tục và có thể dùng MSE. Với Iris, các giá trị 0, 1, 2 biểu thị loài, không biểu thị mức độ lớn nhỏ.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 13,
+    "before": "Hồi quy tuyến tính tính tổng có trọng số của đặc trưng và cộng hệ số chặn. Nó dễ kiểm tra và làm đối chứng cho hồi quy. Mô hình vẫn cần được chấm trên test vì dữ liệu có thể có quan hệ phi tuyến.",
+    "after": "Hồi quy tuyến tính kết hợp tuyến tính các đặc trưng với một hệ số chặn để ước lượng mục tiêu. Tính đơn giản giúp mô hình trở thành mốc đối chiếu dễ phân tích. Sai số trên tập kiểm tra vẫn cần được đo, nhất là khi quan hệ giữa các biến có tính phi tuyến.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 13,
+    "before": "Ridge thêm mức phạt L2 để hạn chế trọng số lớn. Chuẩn hóa giúp các cột khác đơn vị có thang tương đối đồng đều khi chịu phạt. Trong thí nghiệm Housing, alpha bằng 1 và đầu vào dùng bộ tiền xử lý chung với các mô hình còn lại.",
+    "after": "Ridge bổ sung phạt L2 vào hàm mất mát nhằm kiểm soát độ lớn trọng số. Các đặc trưng cần được chuẩn hóa để chênh lệch đơn vị đo không chi phối mức phạt. Cấu hình Housing giữ alpha bằng 1 và sử dụng cùng quy trình tiền xử lý với các mô hình đối chứng.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 46,
+    "before": "Ảnh số được lưu bằng các giá trị pixel theo chiều cao, chiều rộng và kênh. Ảnh xám có một kênh, ảnh RGB có ba kênh. Bài toán trong chương nhận ảnh và dự báo nhãn, nên phải giữ đúng cấu trúc không gian khi đưa vào CNN.",
+    "after": "Ảnh được biểu diễn dưới dạng tensor gồm chiều cao, chiều rộng và số kênh. Ảnh xám sử dụng một kênh, trong khi RGB có ba kênh màu. Vì nhiệm vụ là phân loại ảnh, cách tổ chức tensor phải bảo toàn quan hệ không gian giữa các pixel trước khi đưa vào CNN.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 46,
+    "before": "Conv trong các thư viện thường là tương quan chéo: kernel trượt qua ảnh mà không lật; tại mỗi vị trí lấy tổng tích rồi cộng bias. Dùng chung một kernel ở mọi vị trí tạo một feature map.",
+    "after": "Phép Conv thường được thư viện hiện thực bằng tương quan chéo: kernel dịch trên ảnh, nhân các phần tử tương ứng rồi cộng bias. Các vị trí cùng dùng một bộ trọng số để tạo feature map.",
+    "original_lines": 2,
+    "revised_lines": 2
+  },
+  {
+    "page": 46,
+    "before": "Pooling gộp một vùng nhỏ của feature map để giảm kích thước. Average pooling lấy trung bình, max pooling lấy giá trị lớn nhất. Khi backprop, average pooling chia gradient đều; max pooling chỉ chuyển gradient về phần tử đã lớn nhất.",
+    "after": "Pooling rút gọn feature map bằng cách tổng hợp từng vùng lân cận. Average pooling tính giá trị trung bình; max pooling chọn phần tử lớn nhất. Khi lan truyền ngược, gradient được chia đều ở average pooling hoặc chuyển tới vị trí cực đại ở max pooling.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 67,
+    "before": "Chuỗi thời gian có thứ tự và đơn vị thời gian cần được hiểu rõ. Với cổ phiếu, một bước là một phiên có dữ liệu; cuối tuần không được thêm thành một phiên giả. Với vàng SJC, một bước là một ngày quan sát trong tệp sau khi loại trùng ngày. Nếu có ngày thiếu, báo cáo ghi số lượng thiếu theo lịch và không khẳng định chuỗi đã liên tục hoàn toàn.",
+    "after": "Phân tích chuỗi giá cần xác định rõ một bước quan sát. Với cổ phiếu, bước thời gian tương ứng một phiên giao dịch có dữ liệu, không bao gồm phiên giả vào cuối tuần. Với vàng SJC, mỗi bước là ngày quan sát sau khi loại bản ghi trùng; số ngày thiếu theo lịch được ghi nhận riêng.",
+    "original_lines": 4,
+    "revised_lines": 4
+  },
+  {
+    "page": 67,
+    "before": "Cấu hình many to one trong báo cáo nhận 30 mức giá trước và dự báo một giá trị ở bước quan sát kế tiếp. Input có hình dạng batch, 30, 1. Mục tiêu không nằm trong cửa sổ đầu vào. Với mẫu có chỉ số i, input lấy đoạn từ i trừ 30 đến i trừ 1, còn target là mức giá tại i. Giữ đúng biên này là điều kiện để tránh nhìn trước kết quả.",
+    "after": "Mô hình many to one sử dụng cửa sổ 30 mức giá để ước lượng giá tại quan sát tiếp theo, với tensor đầu vào dạng (batch, 30, 1). Ở mẫu i, cửa sổ chỉ chứa các chỉ số từ i - 30 tới i - 1; giá tại i là mục tiêu. Ranh giới này cần được giữ nhất quán để tránh rò rỉ thông tin tương lai.",
+    "original_lines": 4,
+    "revised_lines": 3
+  },
+  {
+    "page": 67,
+    "before": "Simple RNN cập nhật trạng thái ẩn bằng tanh của tổng biến đổi đầu vào, biến đổi trạng thái trước và bias. Cùng một bộ trọng số được dùng ở tất cả các bước. Số tham số vì vậy không tăng theo chiều dài cửa sổ, dù số phép tính và độ dài đường gradient tăng.",
+    "after": "Ở mỗi bước, Simple RNN kết hợp đầu vào hiện tại, trạng thái ẩn trước đó và bias qua hàm tanh. Các bước thời gian sử dụng chung bộ trọng số. Kéo dài cửa sổ làm tăng số phép tính và đường truyền gradient, nhưng không làm tăng số tham số của lớp hồi quy.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 89,
+    "before": "Chương này xây dựng hệ tra cứu từ dữ liệu, Knowledge Graph và bộ truy xuất đến câu trả lời có nguồn và ứng dụng web.",
+    "after": "Nội dung chương đi từ tổ chức dữ liệu và đồ thị tri thức đến truy xuất bằng chứng, hình thành câu trả lời có nguồn và xây dựng giao diện tra cứu trên web.",
+    "original_lines": 2,
+    "revised_lines": 2
+  },
+  {
+    "page": 89,
+    "before": "Câu hỏi có thể dùng tên Việt thay cho HighBP, hỏi một năm hoặc yêu cầu đơn vị. Khớp từ đơn thuần dễ chọn sai thực thể; chỉ dùng đồ thị lại có thể thiếu giải thích về đơn vị và dữ liệu thiếu. Vì vậy cần phối hợp cả hai.",
+    "after": "Người dùng có thể hỏi bằng tiếng Việt, sử dụng tên khác của HighBP hoặc giới hạn câu hỏi theo năm và đơn vị. Bộ truy xuất cần nhận diện đúng thực thể, đồng thời tìm được phần giải thích liên quan. Kết hợp văn bản với đồ thị giúp xử lý các yêu cầu này.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 89,
+    "before": "KG lưu các quan hệ kiểm tra được, như miền của tài liệu hoặc năm được mô tả. RAG dùng tài liệu khi trả lời. Đầu ra phải có nội dung, ID bằng chứng và nguồn; điểm tương đồng cao không thay được các thông tin này.",
+    "after": "Knowledge Graph biểu diễn những quan hệ có thể kiểm tra, chẳng hạn miền dữ liệu và năm của tài liệu. Quá trình trả lời cần gắn nội dung với mã bằng chứng và nguồn tương ứng. Điểm tương đồng chỉ hỗ trợ xếp hạng tài liệu, không xác nhận độ đúng của kết luận.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 89,
+    "before": "KG làm rõ ràng buộc thực thể, thời gian và đơn vị. Tài liệu năm 2020 phải gắn year:2020; vàng quốc tế phải tách khỏi SJC. Quan hệ đúng giúp giảm tài liệu sai ngữ cảnh trước khi trả lời.",
+    "after": "Đồ thị ràng buộc thực thể, thời gian và đơn vị. Tài liệu năm 2020 gắn với year:2020; vàng quốc tế và vàng SJC được phân biệt để tránh chọn sai bằng chứng.",
+    "original_lines": 2,
+    "revised_lines": 2
+  },
+  {
+    "page": 117,
+    "before": "Chương trình bày khái niệm agent, hai thực nghiệm Q-learning bổ trợ và hệ Diabetes_Agent tại 6.6. Mê cung và cạnh tranh giảm giá minh họa học qua phần thưởng; chúng không thay cho kiến trúc phối hợp agent trong ứng dụng tiểu đường.",
+    "after": "Chương giới thiệu mô hình agent, hai bài thực hành Q-learning và hệ Diabetes_Agent ở mục 6.6. Bài mê cung và mô phỏng cạnh tranh giảm giá làm rõ cơ chế học từ phần thưởng; phần ứng dụng tiểu đường trình bày cách phân vai và phối hợp các agent chuyên môn.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 117,
+    "before": "AI Agent, hay agent trí tuệ nhân tạo, là hệ thống tiếp nhận thông tin từ môi trường, lựa chọn và thực hiện hành động nhằm đạt mục tiêu xác định. Chu trình quan sát → quyết định → hành động → nhận phản hồi giúp agent điều chỉnh bước xử lý tiếp theo. Tính tự chủ nằm trong phạm vi mục tiêu và quyền hành động được giao, không đồng nghĩa với quyền tự quyết mọi vấn đề.",
+    "after": "AI Agent là hệ thống quan sát môi trường và lựa chọn hành động hướng tới mục tiêu được giao. Vòng tương tác gồm tiếp nhận thông tin, ra quyết định, thực hiện hành động và nhận phản hồi. Mức tự chủ cần gắn với nhiệm vụ cùng giới hạn quyền hành động, đồng thời cho phép kiểm tra kết quả từng bước.",
+    "original_lines": 4,
+    "revised_lines": 4
+  },
+  {
+    "page": 117,
+    "before": "Trạng thái cần biểu diễn đủ thông tin phục vụ lựa chọn. Trong bài mê cung, trạng thái là tọa độ hàng–cột của robot. Trong bài giảm giá, agent quan sát nhu cầu và hành động trước của đối thủ. Bộ nhớ và việc học có vai trò khác nhau: biến trạng thái thay đổi theo từng bước, còn bảng Q được cập nhật từ kinh nghiệm để thay đổi cách đánh giá hành động.",
+    "after": "Biểu diễn trạng thái phải giữ các thông tin cần cho quyết định. Trong mê cung, đó là tọa độ robot; trong mô phỏng giảm giá, đó là nhu cầu cùng hành động trước của đối thủ. Trạng thái mô tả tình huống đang gặp, còn bảng Q tích lũy kinh nghiệm để điều chỉnh đánh giá hành động.",
+    "original_lines": 4,
+    "revised_lines": 4
+  },
+  {
+    "page": 150,
+    "before": "Báo cáo trình bày sáu nội dung: lịch sử AI, ML, CNN, RNN, KG/RAG và AI Agent. Các thực nghiệm nối công thức và mã với kết quả trên dữ liệu bảng, ảnh, chuỗi giá, tra cứu tài liệu và hai môi trường agent.",
+    "after": "Sáu chương liên kết tiến trình phát triển AI với các phương pháp ML, CNN, RNN, Knowledge Graph, RAG và agent. Qua dữ liệu bảng, ảnh, chuỗi giá và các môi trường mô phỏng, tiểu luận làm rõ quan hệ giữa giả định mô hình, cách hiện thực và phạm vi đánh giá.",
+    "original_lines": 3,
+    "revised_lines": 3
+  },
+  {
+    "page": 150,
+    "before": "Các chỉ số được đánh giá riêng theo nhiệm vụ. Kết quả không vượt baseline giúp nhận biết giới hạn; điểm cao trên bộ hỏi đáp nhỏ chưa đại diện câu hỏi mới. Kết quả agent phụ thuộc cách trích xuất đường đi, khám phá, seed và trạng thái đã gặp.",
+    "after": "Việc đánh giá cần bám sát từng nhiệm vụ và mô hình đối chứng. Điểm số tốt trên bộ hỏi đáp nhỏ chưa đủ chứng minh khả năng tổng quát hóa. Với agent, kết quả còn chịu ảnh hưởng của seed, cơ chế khám phá, trạng thái đã gặp và phương pháp trích xuất chính sách.",
+    "original_lines": 3,
+    "revised_lines": 3
+  }
+]

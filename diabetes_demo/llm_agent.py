@@ -122,15 +122,23 @@ class LLMToolAgent:
             summary = {"status": result.get("status")}
         return result, summary
 
-    def chat(self, message: str, history: list[dict] | None = None) -> dict:
+    def chat(self, message: str, history: list[dict] | None = None, conversation_id: str | None = None) -> dict:
         if not self.configured:
             raise RuntimeError(
                 "LLM chưa được cấu hình. Hãy đặt OPENROUTER_API_KEY và khởi động lại server."
             )
 
         run_id = str(uuid4())
+        conversation_id = conversation_id or str(uuid4())
+        saved_chat = self.orchestrator.store.get_chat(conversation_id)
+        transcript = saved_chat["messages"] if saved_chat else [
+            {"role": turn.get("role"), "content": turn.get("content")}
+            for turn in (history or [])
+            if turn.get("role") in {"user", "assistant"} and isinstance(turn.get("content"), str)
+        ]
+        transcript.append({"role": "user", "content": message})
         conversation: list[BaseMessage] = [SystemMessage(content=INSTRUCTIONS)]
-        for turn in (history or [])[-8:]:
+        for turn in transcript[:-1][-8:]:
             role = turn.get("role")
             content = turn.get("content")
             if not isinstance(content, str):
@@ -157,9 +165,10 @@ class LLMToolAgent:
                     "answer": answer,
                     "tool_calls": tool_trace,
                     "rounds": round_number,
-                    "input": {"message": message},
+                    "conversation_id": conversation_id,
+                    "input": {"message": message, "conversation_id": conversation_id},
                 }
-                self._persist_chat(result, conversation, answer)
+                self._persist_chat(result, conversation, answer, transcript)
                 return result
 
             if round_number == self.max_tool_rounds:
@@ -183,9 +192,10 @@ class LLMToolAgent:
                     "answer": answer,
                     "tool_calls": tool_trace,
                     "rounds": self.max_tool_rounds,
-                    "input": {"message": message},
+                    "conversation_id": conversation_id,
+                    "input": {"message": message, "conversation_id": conversation_id},
                 }
-                self._persist_chat(result, conversation, answer)
+                self._persist_chat(result, conversation, answer, transcript)
                 return result
 
             conversation.append(assistant_message)
@@ -233,9 +243,10 @@ class LLMToolAgent:
             "answer": answer,
             "tool_calls": tool_trace,
             "rounds": self.max_tool_rounds,
-            "input": {"message": message},
+            "conversation_id": conversation_id,
+            "input": {"message": message, "conversation_id": conversation_id},
         }
-        self._persist_chat(result, conversation, answer)
+        self._persist_chat(result, conversation, answer, transcript)
         return result
 
     def advise_from_prediction(self, source_run_id: str) -> dict:
@@ -323,7 +334,7 @@ class LLMToolAgent:
         self.orchestrator.store.save_retrieval(run_id, knowledge_query, knowledge)
         return result
 
-    def _persist_chat(self, result: dict, conversation: list[BaseMessage], answer: str) -> None:
+    def _persist_chat(self, result: dict, conversation: list[BaseMessage], answer: str, transcript: list[dict]) -> None:
         """Persist the plan/tool audit only after an execution row exists."""
         run_id = result["run_id"]
         payload = {**result, "trace": []}
@@ -342,12 +353,5 @@ class LLMToolAgent:
                     retrieval_result,
                     call.get("duration_ms", 0.0),
                 )
-        messages = []
-        for item in conversation:
-            if isinstance(item, HumanMessage) and isinstance(item.content, str):
-                messages.append({"role": "user", "content": item.content})
-            elif isinstance(item, AIMessage) and isinstance(item.content, str) and item.content:
-                messages.append({"role": "assistant", "content": item.content})
-        if not messages or messages[-1] != {"role": "assistant", "content": answer}:
-            messages.append({"role": "assistant", "content": answer})
-        self.orchestrator.store.save_messages(run_id, messages)
+        transcript.append({"role": "assistant", "content": answer})
+        self.orchestrator.store.save_messages(run_id, transcript)

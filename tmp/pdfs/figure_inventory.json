@@ -1,0 +1,4530 @@
+[
+  {
+    "page": 8,
+    "images": [
+      {
+        "x0": 78.0,
+        "x1": 531.4300000000001,
+        "width": 453.43000000000006,
+        "height": 136.45000000000005,
+        "name": "Image398",
+        "top": 138.4699999999999,
+        "bottom": 274.91999999999996
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Mở đầu",
+        "x0": 70.944,
+        "top": 71.02735999999993,
+        "x1": 124.66536000000002,
+        "bottom": 86.98735999999997
+      },
+      {
+        "text": "Tiểu luận kết nối cơ sở lý thuyết AI với quá trình xây dựng, đánh giá và triển khai mô hình.",
+        "x0": 70.944,
+        "top": 92.72984359999998,
+        "x1": 510.3971255999999,
+        "bottom": 104.72984359999998
+      },
+      {
+        "text": "Các phương pháp được đối chiếu trên cùng tập kiểm tra của từng bộ dữ liệu; kết quả được",
+        "x0": 70.944,
+        "top": 107.84984359999999,
+        "x1": 503.049474,
+        "bottom": 119.84984359999999
+      },
+      {
+        "text": "trình bày cùng notebook, mã nguồn, trọng số, giao diện web và API Python.",
+        "x0": 70.944,
+        "top": 123.0898436,
+        "x1": 436.56314159999994,
+        "bottom": 135.0898436
+      },
+      {
+        "text": "Hình M.1 Quy trình từ dữ liệu gốc đến hệ thống suy luận",
+        "x0": 174.14,
+        "top": 282.75464,
+        "x1": 435.24703999999997,
+        "bottom": 293.79463999999996
+      },
+      {
+        "text": "Mục tiêu và phạm vi nghiên cứu",
+        "x0": 70.944,
+        "top": 299.72935999999993,
+        "x1": 249.81792000000002,
+        "bottom": 312.68935999999997
+      },
+      {
+        "text": "Bảng M.1 Phạm vi dữ liệu và mô hình",
+        "x0": 217.61,
+        "top": 317.79463999999996,
+        "x1": 392.06408,
+        "bottom": 328.8346399999999
+      },
+      {
+        "text": "Chương Dataset Đối chứng",
+        "x0": 76.344,
+        "top": 332.81095999999997,
+        "x1": 434.5717599999999,
+        "bottom": 343.37095999999997
+      },
+      {
+        "text": "Lịch sử AI Iris MNIST FPT dùng lại Liên hệ dữ liệu và phương pháp",
+        "x0": 76.344,
+        "top": 347.33095999999995,
+        "x1": 522.4309599999999,
+        "bottom": 357.89095999999995
+      },
+      {
+        "text": "ML Iris Breast Cancer Housing Tuyến tính RF SVM MLP",
+        "x0": 76.344,
+        "top": 361.97095999999993,
+        "x1": 499.09335999999996,
+        "bottom": 372.53095999999994
+      },
+      {
+        "text": "MNIST Fashion-MNIST CIFAR-",
+        "x0": 232.25,
+        "top": 376.49096,
+        "x1": 374.14648,
+        "bottom": 387.05096
+      },
+      {
+        "text": "CNN Cơ sở VGG Mobile ResNet nhỏ",
+        "x0": 76.344,
+        "top": 382.61096,
+        "x1": 523.22296,
+        "bottom": 393.17096
+      },
+      {
+        "text": "10",
+        "x0": 232.25,
+        "top": 388.61096,
+        "x1": 242.81,
+        "bottom": 399.17096
+      },
+      {
+        "text": "RNN LSTM GRU BiLSTM và",
+        "x0": 388.15,
+        "top": 403.13095999999996,
+        "x1": 518.7666399999999,
+        "bottom": 413.69095999999996
+      },
+      {
+        "text": "RNN FPT VNM SJC",
+        "x0": 76.344,
+        "top": 409.25095999999996,
+        "x1": 297.13064,
+        "bottom": 419.81095999999997
+      },
+      {
+        "text": "last value",
+        "x0": 388.15,
+        "top": 415.25095999999996,
+        "x1": 428.13016,
+        "bottom": 425.81095999999997
+      },
+      {
+        "text": "BRFSS 2015, 7 cổ phiếu Việt Word TF-IDF, char TF-IDF và",
+        "x0": 232.25,
+        "top": 429.77095999999995,
+        "x1": 518.60848,
+        "bottom": 440.33095999999995
+      },
+      {
+        "text": "Knowledge Graph và RAG",
+        "x0": 76.344,
+        "top": 435.91095999999993,
+        "x1": 190.98336,
+        "bottom": 446.47095999999993
+      },
+      {
+        "text": "Nam, vàng LBMA kết hợp thực thể KG",
+        "x0": 232.25,
+        "top": 441.91095999999993,
+        "x1": 474.11896,
+        "bottom": 452.47095999999993
+      },
+      {
+        "text": "Mê cung 10 × 10; thị trường giảm Q-learning, luật cố định và đánh",
+        "x0": 232.25,
+        "top": 456.43095999999997,
+        "x1": 524.13976,
+        "bottom": 466.99096
+      },
+      {
+        "text": "AI Agent",
+        "x0": 76.344,
+        "top": 462.55096,
+        "x1": 115.87008,
+        "bottom": 473.11096
+      },
+      {
+        "text": "giá mô phỏng giá ghép cặp",
+        "x0": 232.25,
+        "top": 468.55096,
+        "x1": 441.3195999999999,
+        "bottom": 479.11096
+      },
+      {
+        "text": "FPT và VNM cùng thuộc nguồn VN30. Chương lịch sử dùng lại Iris, MNIST và FPT để minh",
+        "x0": 70.944,
+        "top": 484.3419999999999,
+        "x1": 538.3919999999998,
+        "bottom": 496.3419999999999
+      },
+      {
+        "text": "họa. Các tập ảnh lấy từ nguồn chuẩn; liên kết Kaggle dùng để giới thiệu và đối chiếu.",
+        "x0": 70.944,
+        "top": 499.58199999999994,
+        "x1": 480.54,
+        "bottom": 511.58199999999994
+      },
+      {
+        "text": "Trong các thực nghiệm cơ sở, CNN dùng 6.000 ảnh train mỗi tập do giới hạn CPU; bản web",
+        "x0": 70.944,
+        "top": 516.742,
+        "x1": 538.2599999999999,
+        "bottom": 528.742
+      },
+      {
+        "text": "dùng mô hình NumPy và API hỗ trợ thêm Keras/PyTorch. Hệ Diabetes_Agent là cấu hình riêng",
+        "x0": 70.944,
+        "top": 531.862,
+        "x1": 538.4639999999999,
+        "bottom": 543.862
+      },
+      {
+        "text": "gồm hai nhánh dự đoán độc lập: tổ hợp MLP–LightGBM huấn luyện trên BRFSS 2015 và",
+        "x0": 70.944,
+        "top": 547.1019999999999,
+        "x1": 538.5459999999999,
+        "bottom": 559.1019999999999
+      },
+      {
+        "text": "Random Forest hiệu chuẩn trên dữ liệu triệu chứng UCI; mô hình và ngưỡng được chọn theo",
+        "x0": 70.944,
+        "top": 562.222,
+        "x1": 538.284,
+        "bottom": 574.222
+      },
+      {
+        "text": "validation, embedding dùng BAAI/bge-m3 đã huấn luyện trước. Không gộp cấu hình này với các",
+        "x0": 70.944,
+        "top": 577.462,
+        "x1": 538.5619999999999,
+        "bottom": 589.462
+      },
+      {
+        "text": "mạng sâu đối chứng của báo cáo.",
+        "x0": 70.944,
+        "top": 592.582,
+        "x1": 230.28000000000003,
+        "bottom": 604.582
+      },
+      {
+        "text": "Phương pháp nghiên cứu và môi trường",
+        "x0": 70.944,
+        "top": 612.01936,
+        "x1": 293.46720000000005,
+        "bottom": 624.9793599999999
+      },
+      {
+        "text": "Bảng M.2 Môi trường chạy thực nghiệm",
+        "x0": 212.21,
+        "top": 630.2046399999999,
+        "x1": 397.28455999999994,
+        "bottom": 641.2446399999999
+      },
+      {
+        "text": "Thành phần Giá trị",
+        "x0": 76.344,
+        "top": 645.22096,
+        "x1": 340.43048,
+        "bottom": 655.7809599999999
+      },
+      {
+        "text": "Python 3.12.14",
+        "x0": 76.344,
+        "top": 659.74096,
+        "x1": 341.92999999999995,
+        "bottom": 670.3009599999999
+      },
+      {
+        "text": "Thiết bị CPU",
+        "x0": 76.344,
+        "top": 674.38096,
+        "x1": 330.69416,
+        "bottom": 684.9409599999999
+      },
+      {
+        "text": "Seed 510",
+        "x0": 76.344,
+        "top": 688.9009599999999,
+        "x1": 326.09,
+        "bottom": 699.4609599999999
+      },
+      {
+        "text": "Số thread tính toán 1",
+        "x0": 76.344,
+        "top": 703.5409599999999,
+        "x1": 315.53,
+        "bottom": 714.10096
+      },
+      {
+        "text": "NumPy 2.3.5",
+        "x0": 76.344,
+        "top": 718.06096,
+        "x1": 331.36999999999995,
+        "bottom": 728.62096
+      },
+      {
+        "text": "PyTorch 2.14.1+cpu",
+        "x0": 76.344,
+        "top": 732.58096,
+        "x1": 357.64328,
+        "bottom": 743.14096
+      },
+      {
+        "text": "Keras 3.15.1",
+        "x0": 76.344,
+        "top": 747.21696,
+        "x1": 336.65,
+        "bottom": 757.7769599999999
+      },
+      {
+        "text": "TensorFlow CPU 2.21.0",
+        "x0": 76.344,
+        "top": 761.73696,
+        "x1": 336.65,
+        "bottom": 772.2969599999999
+      },
+      {
+        "text": "Trang 8",
+        "x0": 288.53,
+        "top": 793.992,
+        "x1": 321.07,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 36,
+    "images": [
+      {
+        "x0": 163.02,
+        "x1": 446.46000000000004,
+        "width": 283.44000000000005,
+        "height": 211.39999999999998,
+        "name": "Image458",
+        "top": 56.69999999999993,
+        "bottom": 268.0999999999999
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 2.18 Ứng dụng online trên Iris",
+        "x0": 221.81,
+        "top": 275.91463999999996,
+        "x1": 387.81847999999997,
+        "bottom": 286.9546399999999
+      },
+      {
+        "text": "Kết quả suy luận: Iris-virginica [0.0099 0.1210 0.8691 ].",
+        "x0": 70.944,
+        "top": 289.5619999999999,
+        "x1": 342.824,
+        "bottom": 301.5619999999999
+      },
+      {
+        "text": "Nhập bốn số đo rồi chọn Dự báo để xem loài Iris và xác suất từng lớp; có thể dùng mẫu điền sẵn",
+        "x0": 70.944,
+        "top": 306.842,
+        "x1": 538.4280000000001,
+        "bottom": 318.842
+      },
+      {
+        "text": "để thử nhanh.",
+        "x0": 70.944,
+        "top": 321.962,
+        "x1": 136.344,
+        "bottom": 333.96199999999993
+      },
+      {
+        "text": "MLP chuẩn hóa theo train, qua lớp ẩn ReLU 32 nơ-ron rồi softmax. Đầu vào là số đo, không",
+        "x0": 70.944,
+        "top": 339.12199999999996,
+        "x1": 538.654,
+        "bottom": 351.12199999999996
+      },
+      {
+        "text": "phải ảnh hoa.",
+        "x0": 70.944,
+        "top": 354.36199999999997,
+        "x1": 135.144,
+        "bottom": 366.36199999999997
+      },
+      {
+        "text": "Ứng dụng chỉ được huấn luyện trên ba loài Iris. Mẫu ngoài phân bố vẫn có thể nhận nhãn và xác",
+        "x0": 70.944,
+        "top": 371.52199999999993,
+        "x1": 538.236,
+        "bottom": 383.52199999999993
+      },
+      {
+        "text": "suất softmax cao.",
+        "x0": 70.944,
+        "top": 386.64199999999994,
+        "x1": 154.452,
+        "bottom": 398.64199999999994
+      },
+      {
+        "text": "2.25 Đánh giá đối chứng trên Breast Cancer Wisconsin",
+        "x0": 70.944,
+        "top": 406.16936,
+        "x1": 375.0633600000001,
+        "bottom": 419.12935999999996
+      },
+      {
+        "text": "Bảng 2.20 Kết quả test Breast Cancer Wisconsin",
+        "x0": 194.69,
+        "top": 424.23464,
+        "x1": 414.83863999999994,
+        "bottom": 435.27464
+      },
+      {
+        "text": "Mô hình Accuracy Precision Recall Macro F1",
+        "x0": 76.224,
+        "top": 439.27095999999995,
+        "x1": 494.71023999999994,
+        "bottom": 449.83095999999995
+      },
+      {
+        "text": "numpy baseline 0.9649 0.9672 0.9573 0.9619",
+        "x0": 76.224,
+        "top": 453.7909599999999,
+        "x1": 479.61999999999995,
+        "bottom": 464.35095999999993
+      },
+      {
+        "text": "sklearn linear 0.9825 0.9865 0.9762 0.9810",
+        "x0": 76.224,
+        "top": 468.43095999999997,
+        "x1": 479.61999999999995,
+        "bottom": 478.99096
+      },
+      {
+        "text": "torch baseline 0.9825 0.9865 0.9762 0.9810",
+        "x0": 76.224,
+        "top": 482.95095999999995,
+        "x1": 479.61999999999995,
+        "bottom": 493.51095999999995
+      },
+      {
+        "text": "sklearn forest 0.9737 0.9800 0.9643 0.9713",
+        "x0": 76.224,
+        "top": 497.59095999999994,
+        "x1": 479.61999999999995,
+        "bottom": 508.15095999999994
+      },
+      {
+        "text": "keras baseline 0.9825 0.9865 0.9762 0.9810",
+        "x0": 76.224,
+        "top": 512.11096,
+        "x1": 479.61999999999995,
+        "bottom": 522.6709599999999
+      },
+      {
+        "text": "sklearn svm 0.9737 0.9741 0.9692 0.9716",
+        "x0": 76.224,
+        "top": 526.75096,
+        "x1": 479.61999999999995,
+        "bottom": 537.31096
+      },
+      {
+        "text": "Tập test có 114 mẫu. Các dự báo được lấy từ checkpoint có validation loss nhỏ nhất. Precision,",
+        "x0": 70.944,
+        "top": 542.5419999999999,
+        "x1": 538.4280000000002,
+        "bottom": 554.5419999999999
+      },
+      {
+        "text": "recall và F1 được tính macro, mỗi lớp có trọng số như nhau.",
+        "x0": 70.944,
+        "top": 557.6619999999999,
+        "x1": 359.8320000000001,
+        "bottom": 569.6619999999999
+      },
+      {
+        "text": "sklearn linear đạt macro F1 cao nhất, 0.9810, trên tập test 114 mẫu của lần chia này.",
+        "x0": 70.944,
+        "top": 574.8219999999999,
+        "x1": 474.63599999999997,
+        "bottom": 586.822
+      },
+      {
+        "text": "2.26 Chi phí và trực quan kết quả Breast Cancer Wisconsin",
+        "x0": 70.944,
+        "top": 594.2293599999999,
+        "x1": 400.98336000000006,
+        "bottom": 607.18936
+      },
+      {
+        "text": "Bảng 2.21 Chi phí đo thực Breast Cancer Wisconsin",
+        "x0": 185.81,
+        "top": 612.4446399999999,
+        "x1": 423.85447999999997,
+        "bottom": 623.4846399999999
+      },
+      {
+        "text": "Mô hình Tham số Train giây KB trọng số ms mỗi mẫu",
+        "x0": 76.224,
+        "top": 627.4609599999999,
+        "x1": 505.53423999999995,
+        "bottom": 638.02096
+      },
+      {
+        "text": "numpy baseline 1058 0.02 4.6 0.009",
+        "x0": 76.224,
+        "top": 641.98096,
+        "x1": 474.34,
+        "bottom": 652.5409599999999
+      },
+      {
+        "text": "sklearn linear Theo cây/SV 0.00 0.9 0.031",
+        "x0": 76.224,
+        "top": 656.62096,
+        "x1": 474.34,
+        "bottom": 667.1809599999999
+      },
+      {
+        "text": "torch baseline 1058 0.37 6.8 0.018",
+        "x0": 76.224,
+        "top": 671.14096,
+        "x1": 474.34,
+        "bottom": 681.7009599999999
+      },
+      {
+        "text": "sklearn forest Theo cây/SV 0.10 234.5 2.949",
+        "x0": 76.224,
+        "top": 685.7809599999999,
+        "x1": 474.34,
+        "bottom": 696.34096
+      },
+      {
+        "text": "keras baseline 1058 1.03 33.2 1.110",
+        "x0": 76.224,
+        "top": 700.3009599999999,
+        "x1": 474.34,
+        "bottom": 710.86096
+      },
+      {
+        "text": "sklearn svm Theo cây/SV 0.00 24.6 0.047",
+        "x0": 76.224,
+        "top": 714.82096,
+        "x1": 474.34,
+        "bottom": 725.38096
+      },
+      {
+        "text": "Trang 36",
+        "x0": 285.53,
+        "top": 793.992,
+        "x1": 324.07,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 39,
+    "images": [
+      {
+        "x0": 163.02,
+        "x1": 446.46000000000004,
+        "width": 283.44000000000005,
+        "height": 236.20000000000005,
+        "name": "Image466",
+        "top": 56.69999999999993,
+        "bottom": 292.9
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 2.23 Ứng dụng online trên Breast Cancer Wisconsin",
+        "x0": 172.22,
+        "top": 300.63464,
+        "x1": 437.2131199999999,
+        "bottom": 311.67463999999995
+      },
+      {
+        "text": "Kết quả suy luận: B [0.8684 0.1316].",
+        "x0": 70.944,
+        "top": 314.40199999999993,
+        "x1": 249.236,
+        "bottom": 326.40199999999993
+      },
+      {
+        "text": "Chọn dataset, nhập 30 đặc trưng hoặc dùng mẫu có sẵn rồi bấm Dự báo. Kết quả gồm nhãn B",
+        "x0": 70.944,
+        "top": 331.56199999999995,
+        "x1": 538.1639999999998,
+        "bottom": 343.56199999999995
+      },
+      {
+        "text": "(lành tính), M (ác tính) và xác suất hai lớp.",
+        "x0": 70.944,
+        "top": 346.80199999999996,
+        "x1": 276.7920000000001,
+        "bottom": 358.80199999999996
+      },
+      {
+        "text": "MLP dùng bộ chuẩn hóa và thứ tự 30 đặc trưng đã lưu; loại id và cột Unnamed. Bảng benchmark",
+        "x0": 70.944,
+        "top": 363.96199999999993,
+        "x1": 538.4879999999998,
+        "bottom": 375.96199999999993
+      },
+      {
+        "text": "đối chiếu các cấu hình trên cùng tập test.",
+        "x0": 70.944,
+        "top": 379.08199999999994,
+        "x1": 266.35200000000003,
+        "bottom": 391.08199999999994
+      },
+      {
+        "text": "Phạm vi kết quả. Đây là ứng dụng nghiên cứu trên đặc trưng dataset; chưa được kiểm định lâm",
+        "x0": 70.944,
+        "top": 396.36199999999997,
+        "x1": 538.44,
+        "bottom": 408.36199999999997
+      },
+      {
+        "text": "sàng. Không sử dụng kết quả để tự chẩn đoán hoặc thay thế đánh giá chuyên môn.",
+        "x0": 70.944,
+        "top": 411.48199999999997,
+        "x1": 465.888,
+        "bottom": 423.48199999999997
+      },
+      {
+        "text": "2.30 Đánh giá đối chứng trên California Housing",
+        "x0": 70.944,
+        "top": 430.90935999999994,
+        "x1": 341.484,
+        "bottom": 443.8693599999999
+      },
+      {
+        "text": "Bảng 2.23 Kết quả test California Housing",
+        "x0": 207.65,
+        "top": 449.09463999999997,
+        "x1": 401.88776,
+        "bottom": 460.13463999999993
+      },
+      {
+        "text": "Mô hình MAE RMSE R²",
+        "x0": 76.224,
+        "top": 464.11096,
+        "x1": 437.99802,
+        "bottom": 474.67096
+      },
+      {
+        "text": "numpy baseline 42268.47 60002.82 0.7293",
+        "x0": 76.224,
+        "top": 478.63095999999996,
+        "x1": 456.18999999999994,
+        "bottom": 489.19095999999996
+      },
+      {
+        "text": "sklearn linear 50097.83 69010.69 0.6419",
+        "x0": 76.224,
+        "top": 493.15095999999994,
+        "x1": 456.18999999999994,
+        "bottom": 503.71095999999994
+      },
+      {
+        "text": "sklearn svm 35459.95 54115.14 0.7798",
+        "x0": 76.224,
+        "top": 507.7909599999999,
+        "x1": 456.18999999999994,
+        "bottom": 518.35096
+      },
+      {
+        "text": "sklearn forest 32636.95 49682.83 0.8144",
+        "x0": 76.224,
+        "top": 522.31096,
+        "x1": 456.18999999999994,
+        "bottom": 532.87096
+      },
+      {
+        "text": "torch baseline 41636.13 59457.86 0.7342",
+        "x0": 76.224,
+        "top": 536.9509599999999,
+        "x1": 456.18999999999994,
+        "bottom": 547.51096
+      },
+      {
+        "text": "keras baseline 41697.57 59867.07 0.7305",
+        "x0": 76.224,
+        "top": 551.4709599999999,
+        "x1": 456.18999999999994,
+        "bottom": 562.0309599999999
+      },
+      {
+        "text": "Tập test có 4128 mẫu. Các dự báo được lấy từ checkpoint có validation loss nhỏ nhất. MAE và",
+        "x0": 70.944,
+        "top": 567.262,
+        "x1": 538.5000000000001,
+        "bottom": 579.262
+      },
+      {
+        "text": "RMSE dùng USD.",
+        "x0": 70.944,
+        "top": 582.502,
+        "x1": 160.692,
+        "bottom": 594.502
+      },
+      {
+        "text": "Random Forest của sklearn đạt RMSE thấp nhất, 49682.8258 USD, trên tập test 4128 mẫu của",
+        "x0": 70.944,
+        "top": 599.662,
+        "x1": 538.5239999999998,
+        "bottom": 611.662
+      },
+      {
+        "text": "lần chia này.",
+        "x0": 70.944,
+        "top": 614.812,
+        "x1": 131.784,
+        "bottom": 626.812
+      },
+      {
+        "text": "2.31 Chi phí và trực quan kết quả California Housing",
+        "x0": 70.944,
+        "top": 634.3393599999999,
+        "x1": 367.49472000000003,
+        "bottom": 647.29936
+      },
+      {
+        "text": "Bảng 2.24 Chi phí đo thực California Housing",
+        "x0": 198.77,
+        "top": 652.40464,
+        "x1": 410.78216,
+        "bottom": 663.4446399999999
+      },
+      {
+        "text": "Mô hình Tham số Train giây KB trọng số ms mỗi mẫu",
+        "x0": 76.224,
+        "top": 667.4209599999999,
+        "x1": 505.53423999999995,
+        "bottom": 677.98096
+      },
+      {
+        "text": "numpy baseline 481 0.24 2.5 0.006",
+        "x0": 76.224,
+        "top": 681.9409599999999,
+        "x1": 474.34,
+        "bottom": 692.50096
+      },
+      {
+        "text": "sklearn linear Theo cây/SV 0.00 0.5 0.021",
+        "x0": 76.224,
+        "top": 696.58096,
+        "x1": 474.34,
+        "bottom": 707.14096
+      },
+      {
+        "text": "sklearn svm Theo cây/SV 8.11 1004.7 0.313",
+        "x0": 76.224,
+        "top": 711.10096,
+        "x1": 474.34,
+        "bottom": 721.6609599999999
+      },
+      {
+        "text": "sklearn forest Theo cây/SV 6.94 106168.6 5.009",
+        "x0": 76.224,
+        "top": 725.74096,
+        "x1": 474.34,
+        "bottom": 736.3009599999999
+      },
+      {
+        "text": "torch baseline 481 2.78 4.6 0.016",
+        "x0": 76.224,
+        "top": 740.2569599999999,
+        "x1": 474.34,
+        "bottom": 750.81696
+      },
+      {
+        "text": "keras baseline 481 3.14 26.2 1.016",
+        "x0": 76.224,
+        "top": 754.8969599999999,
+        "x1": 474.34,
+        "bottom": 765.45696
+      },
+      {
+        "text": "Trang 39",
+        "x0": 285.53,
+        "top": 793.992,
+        "x1": 324.07,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 42,
+    "images": [
+      {
+        "x0": 163.02,
+        "x1": 446.44000000000005,
+        "width": 283.4200000000001,
+        "height": 199.10000000000002,
+        "name": "Image474",
+        "top": 56.69999999999993,
+        "bottom": 255.79999999999995
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 2.28 Ứng dụng online trên California Housing",
+        "x0": 185.21,
+        "top": 263.55463999999995,
+        "x1": 424.29224,
+        "bottom": 274.5946399999999
+      },
+      {
+        "text": "Kết quả suy luận: 86390.6328 USD.",
+        "x0": 70.944,
+        "top": 277.3219999999999,
+        "x1": 245.28799999999998,
+        "bottom": 289.3219999999999
+      },
+      {
+        "text": "Nhập dữ liệu hoặc chọn Điền dữ liệu ví dụ, rồi bấm Ước lượng giá. Kết quả hiển thị bằng USD;",
+        "x0": 70.944,
+        "top": 294.48199999999997,
+        "x1": 538.2360000000002,
+        "bottom": 306.48199999999997
+      },
+      {
+        "text": "nút tải CSV lưu đầu vào, ước lượng và tên mô hình.",
+        "x0": 70.944,
+        "top": 309.722,
+        "x1": 320.1360000000001,
+        "bottom": 321.722
+      },
+      {
+        "text": "Đặc trưng số được chuẩn hóa; ocean_proximity được one-hot theo các nhóm đã lưu. Đầu ra MLP",
+        "x0": 70.944,
+        "top": 326.88199999999995,
+        "x1": 538.642,
+        "bottom": 338.88199999999995
+      },
+      {
+        "text": "được khôi phục về USD.",
+        "x0": 70.944,
+        "top": 342.00199999999995,
+        "x1": 189.984,
+        "bottom": 354.00199999999995
+      },
+      {
+        "text": "Dữ liệu thuộc California năm 1990, mô tả giá trung vị khu vực. Đầu ra không đại diện giá nhà",
+        "x0": 70.944,
+        "top": 359.1619999999999,
+        "x1": 538.3439999999997,
+        "bottom": 371.1619999999999
+      },
+      {
+        "text": "hiện tại hay giá nhà Việt Nam; RMSE test không phải khoảng tin cậy của từng dự báo.",
+        "x0": 70.944,
+        "top": 374.40199999999993,
+        "x1": 487.02,
+        "bottom": 386.40199999999993
+      },
+      {
+        "text": "2.35 Ứng dụng mô hình dự đoán trong Diabetes_Agent",
+        "x0": 70.944,
+        "top": 393.80935999999997,
+        "x1": 374.57088000000005,
+        "bottom": 406.76935999999995
+      },
+      {
+        "text": "Phần này nối thực nghiệm dữ liệu bảng với ứng dụng sàng lọc tiểu đường. Hệ có hai nhánh dự",
+        "x0": 70.944,
+        "top": 411.96199999999993,
+        "x1": 524.0039999999999,
+        "bottom": 423.96199999999993
+      },
+      {
+        "text": "đoán độc lập, được đánh giá riêng vì khác dữ liệu, đầu vào, nhãn và tỷ lệ ca dương: nhánh lối",
+        "x0": 70.944,
+        "top": 427.20199999999994,
+        "x1": 518.544,
+        "bottom": 439.20199999999994
+      },
+      {
+        "text": "sống (BRFSS 2015) và nhánh triệu chứng (UCI). Cấu hình và số liệu lấy từ artifacts/metrics.json",
+        "x0": 70.944,
+        "top": 442.3419999999999,
+        "x1": 536.04,
+        "bottom": 454.3419999999999
+      },
+      {
+        "text": "(model_version screening-20261126154435), artifacts/symptom_metrics.json (symptoms-",
+        "x0": 70.944,
+        "top": 457.58199999999994,
+        "x1": 504.736,
+        "bottom": 469.58199999999994
+      },
+      {
+        "text": "20261126162033) và artifacts/symptom_cv_metrics.json của Diabetes_Agent; mã nguồn được",
+        "x0": 70.944,
+        "top": 472.70199999999994,
+        "x1": 525.576,
+        "bottom": 484.70199999999994
+      },
+      {
+        "text": "đối chiếu tại commit 9580cf5b1da88056efdb33bdb2b6c3505f472108 [20]. Báo cáo Project 01 và",
+        "x0": 70.944,
+        "top": 487.94199999999995,
+        "x1": 538.51,
+        "bottom": 499.94199999999995
+      },
+      {
+        "text": "hình minh họa được dẫn riêng ở [21]; các kết quả đã lưu không được coi là một lần huấn luyện",
+        "x0": 70.944,
+        "top": 503.06199999999995,
+        "x1": 526.032,
+        "bottom": 515.0619999999999
+      },
+      {
+        "text": "mới.",
+        "x0": 70.944,
+        "top": 518.3019999999999,
+        "x1": 92.988,
+        "bottom": 530.3019999999999
+      },
+      {
+        "text": "2.35.1 Dữ liệu và quy trình huấn luyện",
+        "x0": 70.944,
+        "top": 537.502,
+        "x1": 267.85200000000003,
+        "bottom": 549.502
+      },
+      {
+        "text": "Nhánh lối sống dùng tệp diabetes_binary_health_indicators_BRFSS2015.csv: 253.680 hồ sơ và",
+        "x0": 70.944,
+        "top": 554.6619999999999,
+        "x1": 530.0880000000001,
+        "bottom": 566.6619999999999
+      },
+      {
+        "text": "21 đặc trưng về sức khỏe, lối sống và nhân khẩu học; target là Diabetes_binary, trong đó nhãn 1",
+        "x0": 70.944,
+        "top": 569.7819999999999,
+        "x1": 531.6479999999999,
+        "bottom": 581.7819999999999
+      },
+      {
+        "text": "gộp tiền tiểu đường với tiểu đường và chiếm 13,9% (nhãn tự khai của người Hoa Kỳ). Cần phân",
+        "x0": 70.944,
+        "top": 585.0219999999999,
+        "x1": 532.608,
+        "bottom": 597.0219999999999
+      },
+      {
+        "text": "biệt cấu hình nhị phân này với tệp ba nhãn Diabetes_012 ở mục 5.4. Tuổi được mã hóa theo",
+        "x0": 70.944,
+        "top": 600.1419999999999,
+        "x1": 512.148,
+        "bottom": 612.1419999999999
+      },
+      {
+        "text": "nhóm BRFSS; glucose không phải đầu vào của mô hình. Dữ liệu được chia có phân tầng",
+        "x0": 70.944,
+        "top": 615.412,
+        "x1": 496.39199999999994,
+        "bottom": 627.412
+      },
+      {
+        "text": "60/20/20 với seed 42: 152.208 mẫu train, 50.736 validation và 50.736 test [20, 21, mục 4.1.1].",
+        "x0": 70.944,
+        "top": 630.5319999999999,
+        "x1": 523.1500000000001,
+        "bottom": 642.5319999999999
+      },
+      {
+        "text": "Nhánh triệu chứng dùng Early Stage Diabetes Risk Prediction của UCI: 520 dòng điều tra tại",
+        "x0": 70.944,
+        "top": 647.692,
+        "x1": 517.608,
+        "bottom": 659.692
+      },
+      {
+        "text": "một bệnh viện Bangladesh. Sau khi loại 269 dòng trùng trước khi chia tập, còn 251 hồ sơ khác",
+        "x0": 70.944,
+        "top": 662.932,
+        "x1": 524.664,
+        "bottom": 674.932
+      },
+      {
+        "text": "nhau với tuổi, giới tính và 14 mục triệu chứng hoặc trạng thái; không có hồ sơ giống nhau nhưng",
+        "x0": 70.944,
+        "top": 678.0519999999999,
+        "x1": 536.2320000000001,
+        "bottom": 690.0519999999999
+      },
+      {
+        "text": "khác nhãn. Chia phân tầng cùng seed thành 150/50/51 hồ sơ, không trùng vector đặc trưng giữa",
+        "x0": 70.944,
+        "top": 693.2919999999999,
+        "x1": 529.476,
+        "bottom": 705.2919999999999
+      },
+      {
+        "text": "các tập. Hai nguồn có nhãn, đầu vào và tỷ lệ ca dương khác nhau nên không gộp chỉ số.",
+        "x0": 70.944,
+        "top": 708.412,
+        "x1": 491.5439999999999,
+        "bottom": 720.4119999999999
+      },
+      {
+        "text": "Với BRFSS, pipeline so sánh Logistic Regression, Random Forest, LightGBM,",
+        "x0": 70.944,
+        "top": 725.692,
+        "x1": 452.17200000000014,
+        "bottom": 737.692
+      },
+      {
+        "text": "HistGradientBoosting và MLP. CV phân tầng 5 lần chỉ chạy trên train; hai ứng viên đầu được",
+        "x0": 70.944,
+        "top": 740.808,
+        "x1": 521.0279999999999,
+        "bottom": 752.808
+      },
+      {
+        "text": "tìm tham số với 12 cấu hình và CV 3 lần. MLP có hai tầng ẩn 64 và 32 nơ-ron, ReLU, dropout",
+        "x0": 70.944,
+        "top": 756.048,
+        "x1": 525.022,
+        "bottom": 768.048
+      },
+      {
+        "text": "0,2, BCE có trọng số lớp dương; tối ưu AdamW với learning rate 0,001, weight decay 10⁻⁵; xác",
+        "x0": 70.944,
+        "top": 771.168,
+        "x1": 529.4159999999998,
+        "bottom": 783.168
+      },
+      {
+        "text": "Trang 42",
+        "x0": 285.53,
+        "top": 793.992,
+        "x1": 324.07,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 59,
+    "images": [
+      {
+        "x0": 163.02,
+        "x1": 446.46000000000004,
+        "width": 283.44000000000005,
+        "height": 236.20000000000005,
+        "name": "Image507",
+        "top": 88.19999999999993,
+        "bottom": 324.4
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "z = model.forward(d['X_test'][:1])",
+        "x0": 70.944,
+        "top": 58.023000000000025,
+        "x1": 228.78600000000006,
+        "bottom": 67.02300000000002
+      },
+      {
+        "text": "probability = softmax(z)[0]",
+        "x0": 70.944,
+        "top": 68.46299999999997,
+        "x1": 195.55800000000005,
+        "bottom": 77.46299999999997
+      },
+      {
+        "text": "print(d['labels'][int(probability.argmax())], probability)",
+        "x0": 70.944,
+        "top": 79.043,
+        "x1": 320.6490000000001,
+        "bottom": 88.043
+      },
+      {
+        "text": "Hình 3.15 Ứng dụng online trên MNIST",
+        "x0": 212.33,
+        "top": 332.19464,
+        "x1": 397.37143999999995,
+        "bottom": 343.23463999999996
+      },
+      {
+        "text": "Kết quả suy luận: 9 [1.4731e-06 4.6508e-04 1.7775e-05 3.3538e-04 1.1713e-02",
+        "x0": 70.944,
+        "top": 345.96199999999993,
+        "x1": 454.78,
+        "bottom": 357.96199999999993
+      },
+      {
+        "text": "6.7921e-04 3.9351e-05 1.5195e-03 4.1073e-03 9.8112e-01].",
+        "x0": 73.944,
+        "top": 361.08199999999994,
+        "x1": 364.426,
+        "bottom": 373.08199999999994
+      },
+      {
+        "text": "Thao tác sử dụng. Mở link để chọn chế độ chữ số. Vẽ nét sáng trên nền tối bằng chuột hoặc cảm",
+        "x0": 70.944,
+        "top": 378.24199999999996,
+        "x1": 538.2119999999999,
+        "bottom": 390.24199999999996
+      },
+      {
+        "text": "ứng, chọn một ảnh mẫu, hoặc tải ảnh của bạn. Bấm Nhận dạng ảnh để xem nhãn và phân bố xác",
+        "x0": 70.944,
+        "top": 393.48199999999997,
+        "x1": 538.476,
+        "bottom": 405.48199999999997
+      },
+      {
+        "text": "suất; tải CSV nếu cần lưu kết quả.",
+        "x0": 70.944,
+        "top": 408.6019999999999,
+        "x1": 234.73200000000003,
+        "bottom": 420.6019999999999
+      },
+      {
+        "text": "Kiến thức được ứng dụng. Ảnh đưa vào mô hình được hiển thị ở vùng xem trước. Pixel được",
+        "x0": 70.944,
+        "top": 425.76199999999994,
+        "x1": 538.5119999999998,
+        "bottom": 437.76199999999994
+      },
+      {
+        "text": "chia 255, giữ một kênh và đưa qua convolution, ReLU, average pooling và lớp đầu ra. Trọng số",
+        "x0": 70.944,
+        "top": 441.02199999999993,
+        "x1": 538.2719999999999,
+        "bottom": 453.02199999999993
+      },
+      {
+        "text": "dùng lại từ thí nghiệm NumPy, không học lại khi người dùng vẽ.",
+        "x0": 70.944,
+        "top": 456.14199999999994,
+        "x1": 382.30800000000005,
+        "bottom": 468.14199999999994
+      },
+      {
+        "text": "Phạm vi kết quả. Ảnh mẫu có bố cục gần chuẩn MNIST. Chữ lệch, nhiều chữ số trong một ảnh",
+        "x0": 70.944,
+        "top": 473.42199999999997,
+        "x1": 538.2600000000001,
+        "bottom": 485.42199999999997
+      },
+      {
+        "text": "hoặc nền khác nguồn có thể làm dự báo sai. Hệ thống xử lý một ảnh chứa một chữ số, không",
+        "x0": 70.944,
+        "top": 488.5419999999999,
+        "x1": 538.212,
+        "bottom": 500.5419999999999
+      },
+      {
+        "text": "thực hiện OCR toàn bộ tài liệu.",
+        "x0": 70.944,
+        "top": 503.7819999999999,
+        "x1": 221.05200000000002,
+        "bottom": 515.7819999999999
+      },
+      {
+        "text": "3.23 Đánh giá đối chứng trên Fashion-MNIST",
+        "x0": 70.944,
+        "top": 523.18936,
+        "x1": 326.08952,
+        "bottom": 536.1493599999999
+      },
+      {
+        "text": "Bảng 3.15 Kết quả test Fashion-MNIST",
+        "x0": 214.01,
+        "top": 541.25464,
+        "x1": 395.75368,
+        "bottom": 552.29464
+      },
+      {
+        "text": "Mô hình Accuracy Precision Recall Macro F1",
+        "x0": 76.224,
+        "top": 556.27096,
+        "x1": 494.71023999999994,
+        "bottom": 566.83096
+      },
+      {
+        "text": "numpy baseline 0.8025 0.8210 0.8025 0.8047",
+        "x0": 76.224,
+        "top": 570.7909599999999,
+        "x1": 479.61999999999995,
+        "bottom": 581.35096
+      },
+      {
+        "text": "keras baseline 0.7865 0.7841 0.7865 0.7826",
+        "x0": 76.224,
+        "top": 585.4309599999999,
+        "x1": 479.61999999999995,
+        "bottom": 595.99096
+      },
+      {
+        "text": "torch vgg 0.8230 0.8307 0.8230 0.8215",
+        "x0": 76.224,
+        "top": 599.9509599999999,
+        "x1": 479.61999999999995,
+        "bottom": 610.51096
+      },
+      {
+        "text": "torch mobile 0.5700 0.5860 0.5700 0.5590",
+        "x0": 76.224,
+        "top": 614.62096,
+        "x1": 479.61999999999995,
+        "bottom": 625.1809599999999
+      },
+      {
+        "text": "torch baseline 0.8025 0.8270 0.8025 0.8054",
+        "x0": 76.224,
+        "top": 629.14096,
+        "x1": 479.61999999999995,
+        "bottom": 639.7009599999999
+      },
+      {
+        "text": "torch resnet 0.7130 0.7165 0.7130 0.7092",
+        "x0": 76.224,
+        "top": 643.7809599999999,
+        "x1": 479.61999999999995,
+        "bottom": 654.34096
+      },
+      {
+        "text": "Trong lần chia đã cố định, torch vgg đạt f1_macro tốt nhất là 0.8215. Kết quả áp dụng cho cách",
+        "x0": 70.944,
+        "top": 659.572,
+        "x1": 538.296,
+        "bottom": 671.572
+      },
+      {
+        "text": "chia tập và ngân sách đã chạy.",
+        "x0": 70.944,
+        "top": 674.692,
+        "x1": 216.46800000000002,
+        "bottom": 686.692
+      },
+      {
+        "text": "3.24 Chi phí và trực quan kết quả Fashion-MNIST",
+        "x0": 70.944,
+        "top": 694.0993599999999,
+        "x1": 352.01288,
+        "bottom": 707.05936
+      },
+      {
+        "text": "Bảng 3.16 Chi phí đo thực Fashion-MNIST",
+        "x0": 205.01,
+        "top": 712.28464,
+        "x1": 404.63367999999997,
+        "bottom": 723.3246399999999
+      },
+      {
+        "text": "Mô hình Tham số Train giây KB trọng số ms mỗi mẫu",
+        "x0": 76.224,
+        "top": 727.3009599999999,
+        "x1": 505.53423999999995,
+        "bottom": 737.86096
+      },
+      {
+        "text": "numpy baseline 13610 13.54 50.2 0.217",
+        "x0": 76.224,
+        "top": 741.81696,
+        "x1": 474.34,
+        "bottom": 752.3769599999999
+      },
+      {
+        "text": "keras baseline 13610 2.90 184.7 2.688",
+        "x0": 76.224,
+        "top": 756.45696,
+        "x1": 474.34,
+        "bottom": 767.0169599999999
+      },
+      {
+        "text": "torch vgg 22810 18.70 92.9 0.240",
+        "x0": 76.224,
+        "top": 770.97696,
+        "x1": 474.34,
+        "bottom": 781.5369599999999
+      },
+      {
+        "text": "Trang 59",
+        "x0": 285.53,
+        "top": 793.992,
+        "x1": 324.07,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 62,
+    "images": [
+      {
+        "x0": 163.02,
+        "x1": 446.46000000000004,
+        "width": 283.44000000000005,
+        "height": 236.20000000000005,
+        "name": "Image515",
+        "top": 56.69999999999993,
+        "bottom": 292.9
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 3.20 Ứng dụng online trên Fashion-MNIST",
+        "x0": 191.57,
+        "top": 300.63464,
+        "x1": 418.19368,
+        "bottom": 311.67463999999995
+      },
+      {
+        "text": "Kết quả suy luận: Pullover [6.4440e-02 2.8694e-03 6.1395e-01 3.3667e-04 1.7060e-02",
+        "x0": 70.944,
+        "top": 314.40199999999993,
+        "x1": 489.46,
+        "bottom": 326.40199999999993
+      },
+      {
+        "text": "2.1471e-09 2.9729e-01 1.9968e-09 4.0332e-03 1.8505e-05].",
+        "x0": 73.944,
+        "top": 329.64199999999994,
+        "x1": 364.426,
+        "bottom": 341.64199999999994
+      },
+      {
+        "text": "Thao tác sử dụng. Mở link để chọn đúng chế độ trang phục. Chọn ảnh mẫu hoặc tải ảnh, sau đó",
+        "x0": 70.944,
+        "top": 346.80199999999996,
+        "x1": 538.152,
+        "bottom": 358.80199999999996
+      },
+      {
+        "text": "xem ảnh thu nhỏ và bấm Nhận dạng ảnh. Kết quả gồm nhãn có xác suất cao nhất, xác suất các",
+        "x0": 70.944,
+        "top": 361.92199999999997,
+        "x1": 538.3919999999995,
+        "bottom": 373.92199999999997
+      },
+      {
+        "text": "lớp và chức năng xuất CSV.",
+        "x0": 70.944,
+        "top": 377.1619999999999,
+        "x1": 206.39999999999998,
+        "bottom": 389.1619999999999
+      },
+      {
+        "text": "Kiến thức được ứng dụng. Ảnh được chuyển về ảnh xám một kênh 28 × 28. Cấu trúc CNN cơ sở",
+        "x0": 70.944,
+        "top": 394.32199999999995,
+        "x1": 538.092,
+        "bottom": 406.32199999999995
+      },
+      {
+        "text": "giống MNIST nhưng sử dụng bộ trọng số huấn luyện riêng cho Fashion-MNIST; không dùng",
+        "x0": 70.944,
+        "top": 409.44199999999995,
+        "x1": 538.582,
+        "bottom": 421.44199999999995
+      },
+      {
+        "text": "trọng số nhận chữ số để dự báo trang phục.",
+        "x0": 70.944,
+        "top": 424.68199999999996,
+        "x1": 277.69200000000006,
+        "bottom": 436.68199999999996
+      },
+      {
+        "text": "Phạm vi kết quả. Các nhãn Shirt, Coat và Pullover có hình dạng gần nhau ở độ phân giải này.",
+        "x0": 70.944,
+        "top": 441.86199999999997,
+        "x1": 538.4159999999998,
+        "bottom": 453.86199999999997
+      },
+      {
+        "text": "Ảnh thời trang có người mặc, nhiều vật thể hoặc nền phức tạp khác đáng kể ảnh nguồn và có thể",
+        "x0": 70.944,
+        "top": 457.1019999999999,
+        "x1": 538.3439999999999,
+        "bottom": 469.1019999999999
+      },
+      {
+        "text": "làm giảm chất lượng.",
+        "x0": 70.944,
+        "top": 472.2219999999999,
+        "x1": 173.06400000000002,
+        "bottom": 484.2219999999999
+      },
+      {
+        "text": "3.28 Đánh giá đối chứng trên CIFAR-10",
+        "x0": 70.944,
+        "top": 491.62935999999996,
+        "x1": 293.57000000000005,
+        "bottom": 504.58935999999994
+      },
+      {
+        "text": "Bảng 3.18 Kết quả test CIFAR-10",
+        "x0": 228.05,
+        "top": 509.81464,
+        "x1": 381.54999999999995,
+        "bottom": 520.85464
+      },
+      {
+        "text": "Mô hình Accuracy Precision Recall Macro F1",
+        "x0": 76.224,
+        "top": 524.7109599999999,
+        "x1": 494.71023999999994,
+        "bottom": 535.27096
+      },
+      {
+        "text": "torch mobile 0.2190 0.2287 0.2190 0.1635",
+        "x0": 76.224,
+        "top": 539.35096,
+        "x1": 479.61999999999995,
+        "bottom": 549.9109599999999
+      },
+      {
+        "text": "numpy baseline 0.4335 0.4311 0.4335 0.4256",
+        "x0": 76.224,
+        "top": 553.87096,
+        "x1": 479.61999999999995,
+        "bottom": 564.4309599999999
+      },
+      {
+        "text": "torch vgg 0.4815 0.4863 0.4815 0.4703",
+        "x0": 76.224,
+        "top": 568.51096,
+        "x1": 479.61999999999995,
+        "bottom": 579.07096
+      },
+      {
+        "text": "torch baseline 0.4090 0.4207 0.4090 0.3921",
+        "x0": 76.224,
+        "top": 583.0309599999999,
+        "x1": 479.61999999999995,
+        "bottom": 593.59096
+      },
+      {
+        "text": "keras baseline 0.3880 0.3834 0.3880 0.3776",
+        "x0": 76.224,
+        "top": 597.6709599999999,
+        "x1": 479.61999999999995,
+        "bottom": 608.23096
+      },
+      {
+        "text": "torch resnet 0.2750 0.3383 0.2750 0.2276",
+        "x0": 76.224,
+        "top": 612.22096,
+        "x1": 479.61999999999995,
+        "bottom": 622.7809599999999
+      },
+      {
+        "text": "Trong lần chia đã cố định, torch vgg đạt f1_macro tốt nhất là 0.4703. Kết quả áp dụng cho cách",
+        "x0": 70.944,
+        "top": 628.012,
+        "x1": 538.296,
+        "bottom": 640.012
+      },
+      {
+        "text": "chia tập và ngân sách đã chạy.",
+        "x0": 70.944,
+        "top": 643.252,
+        "x1": 216.46800000000002,
+        "bottom": 655.252
+      },
+      {
+        "text": "3.29 Chi phí và trực quan kết quả CIFAR-10",
+        "x0": 70.944,
+        "top": 662.65936,
+        "x1": 319.61,
+        "bottom": 675.6193599999999
+      },
+      {
+        "text": "Bảng 3.19 Chi phí đo thực CIFAR-10",
+        "x0": 219.17,
+        "top": 680.7246399999999,
+        "x1": 390.54999999999995,
+        "bottom": 691.76464
+      },
+      {
+        "text": "Mô hình Tham số Train giây KB trọng số ms mỗi mẫu",
+        "x0": 76.224,
+        "top": 695.74096,
+        "x1": 505.53423999999995,
+        "bottom": 706.3009599999999
+      },
+      {
+        "text": "torch mobile 4234 28.92 21.5 0.383",
+        "x0": 76.224,
+        "top": 710.38096,
+        "x1": 474.34,
+        "bottom": 720.9409599999999
+      },
+      {
+        "text": "numpy baseline 18234 9.24 67.0 0.145",
+        "x0": 76.224,
+        "top": 724.9009599999999,
+        "x1": 474.34,
+        "bottom": 735.46096
+      },
+      {
+        "text": "torch vgg 27898 27.05 112.7 0.301",
+        "x0": 76.224,
+        "top": 739.5369599999999,
+        "x1": 474.34,
+        "bottom": 750.09696
+      },
+      {
+        "text": "torch baseline 18234 6.86 73.9 0.058",
+        "x0": 76.224,
+        "top": 754.05696,
+        "x1": 474.34,
+        "bottom": 764.61696
+      },
+      {
+        "text": "keras baseline 18234 6.34 238.9 2.231",
+        "x0": 76.224,
+        "top": 768.57696,
+        "x1": 474.34,
+        "bottom": 779.1369599999999
+      },
+      {
+        "text": "Trang 62",
+        "x0": 285.53,
+        "top": 793.992,
+        "x1": 324.07,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 65,
+    "images": [
+      {
+        "x0": 163.02,
+        "x1": 446.46000000000004,
+        "width": 283.44000000000005,
+        "height": 236.20000000000005,
+        "name": "Image523",
+        "top": 56.69999999999993,
+        "bottom": 292.9
+      },
+      {
+        "x0": 80.825,
+        "x1": 528.645,
+        "width": 447.82,
+        "height": 155.2,
+        "name": "Image524",
+        "top": 589.9209999999999,
+        "bottom": 745.121
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 3.25 Ứng dụng online trên CIFAR-10",
+        "x0": 205.61,
+        "top": 300.63464,
+        "x1": 404.10999999999996,
+        "bottom": 311.67463999999995
+      },
+      {
+        "text": "Kết quả suy luận: automobile [0.1076 0.4720 0.0449 0.0406 0.0096 0.0371",
+        "x0": 70.944,
+        "top": 314.40199999999993,
+        "x1": 432.236,
+        "bottom": 326.40199999999993
+      },
+      {
+        "text": "0.0041 0.0061 0.1608 0.1173].",
+        "x0": 73.944,
+        "top": 329.64199999999994,
+        "x1": 221.904,
+        "bottom": 341.64199999999994
+      },
+      {
+        "text": "Thao tác sử dụng. Mở link để chọn chế độ đối tượng. Tải ảnh hoặc chọn ảnh mẫu; vùng xem",
+        "x0": 70.944,
+        "top": 346.80199999999996,
+        "x1": 538.1519999999997,
+        "bottom": 358.80199999999996
+      },
+      {
+        "text": "trước cho biết ảnh 32 × 32 đã được đưa vào CNN. Chọn Nhận dạng ảnh, xem nhãn và xác suất,",
+        "x0": 70.944,
+        "top": 361.92199999999997,
+        "x1": 538.2359999999999,
+        "bottom": 373.92199999999997
+      },
+      {
+        "text": "rồi xuất kết quả CSV khi cần.",
+        "x0": 70.944,
+        "top": 377.1619999999999,
+        "x1": 213.12,
+        "bottom": 389.1619999999999
+      },
+      {
+        "text": "Kiến thức được ứng dụng. Ảnh màu giữ ba kênh RGB và được chia 255. Kiến trúc cơ sở có tám",
+        "x0": 70.944,
+        "top": 394.32199999999995,
+        "x1": 538.452,
+        "bottom": 406.32199999999995
+      },
+      {
+        "text": "kernel convolution; mỗi kernel nhận đủ ba kênh. Bộ trọng số CIFAR-10 riêng biệt với hai tập",
+        "x0": 70.944,
+        "top": 409.44199999999995,
+        "x1": 538.7139999999999,
+        "bottom": 421.44199999999995
+      },
+      {
+        "text": "ảnh xám được chọn tự động theo dataset.",
+        "x0": 70.944,
+        "top": 424.68199999999996,
+        "x1": 268.06800000000004,
+        "bottom": 436.68199999999996
+      },
+      {
+        "text": "Phạm vi kết quả. Độ phân giải thấp làm mất chi tiết và bối cảnh. Mô hình chỉ biết mười lớp của",
+        "x0": 70.944,
+        "top": 441.86199999999997,
+        "x1": 538.4640000000002,
+        "bottom": 453.86199999999997
+      },
+      {
+        "text": "dataset, không có lớp unknown. Một đối tượng ngoài danh sách vẫn có thể bị gán nhãn trong",
+        "x0": 70.944,
+        "top": 457.1019999999999,
+        "x1": 538.2599999999998,
+        "bottom": 469.1019999999999
+      },
+      {
+        "text": "mười lớp.",
+        "x0": 70.944,
+        "top": 472.2219999999999,
+        "x1": 118.2,
+        "bottom": 484.2219999999999
+      },
+      {
+        "text": "3.33 Phân tích đặc trưng CNN",
+        "x0": 70.944,
+        "top": 491.62935999999996,
+        "x1": 238.86672000000004,
+        "bottom": 504.58935999999994
+      },
+      {
+        "text": "3.33.1 Dòng đặc trưng của kiến trúc thực nghiệm",
+        "x0": 70.944,
+        "top": 511.94199999999995,
+        "x1": 321.92400000000004,
+        "bottom": 523.942
+      },
+      {
+        "text": "Phần này phân tích kiến trúc sáu lớp tích chập ở mục 3.14, không dùng cấu hình CNN cơ sở một",
+        "x0": 70.944,
+        "top": 528.982,
+        "x1": 534.8520000000001,
+        "bottom": 540.982
+      },
+      {
+        "text": "lớp để giải thích mạng sâu. Mỗi cặp Conv 3 × 3, padding 1 và ReLU được nối với average",
+        "x0": 70.944,
+        "top": 544.222,
+        "x1": 504.58799999999997,
+        "bottom": 556.222
+      },
+      {
+        "text": "pooling 2 × 2. Ba khối có lần lượt 4, 6 và 8 kênh. Conv giữ kích thước không gian; pooling giảm",
+        "x0": 70.944,
+        "top": 559.3419999999999,
+        "x1": 535.8720000000001,
+        "bottom": 571.3419999999999
+      },
+      {
+        "text": "kích thước và gộp thông tin lân cận.",
+        "x0": 70.944,
+        "top": 574.5819999999999,
+        "x1": 243.72000000000003,
+        "bottom": 586.582
+      },
+      {
+        "text": "Hình 3.26 Dòng tensor và vùng cảm nhận của CNN sáu lớp tích chập",
+        "x0": 146.18,
+        "top": 752.96064,
+        "x1": 463.2598399999998,
+        "bottom": 764.00064
+      },
+      {
+        "text": "Trang 65",
+        "x0": 285.53,
+        "top": 793.992,
+        "x1": 324.07,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 82,
+    "images": [
+      {
+        "x0": 163.02,
+        "x1": 446.45000000000005,
+        "width": 283.43000000000006,
+        "height": 227.45000000000005,
+        "name": "Image558",
+        "top": 56.69999999999993,
+        "bottom": 284.15
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 4.17 Ứng dụng online trên Cổ phiếu FPT",
+        "x0": 197.33,
+        "top": 291.87464,
+        "x1": 412.2567199999999,
+        "bottom": 302.91463999999996
+      },
+      {
+        "text": "Kết quả suy luận: 86023.9642 đồng/cổ phiếu.",
+        "x0": 70.944,
+        "top": 305.64199999999994,
+        "x1": 289.61,
+        "bottom": 317.64199999999994
+      },
+      {
+        "text": "Nhập 30 giá FPT từ cũ đến mới hoặc tải CSV có cột Close; tệp dài hơn dùng 30 dòng cuối. Chọn",
+        "x0": 70.944,
+        "top": 322.802,
+        "x1": 538.3920000000002,
+        "bottom": 334.80199999999996
+      },
+      {
+        "text": "Dự báo giá tiếp theo để xem giá, chênh lệch, biểu đồ và tải CSV.",
+        "x0": 70.944,
+        "top": 338.0419999999999,
+        "x1": 382.4160000000001,
+        "bottom": 350.0419999999999
+      },
+      {
+        "text": "RNN chuẩn hóa chuỗi bằng thống kê train, dự báo chênh lệch rồi khôi phục và cộng vào giá",
+        "x0": 70.944,
+        "top": 355.20199999999994,
+        "x1": 538.2359999999998,
+        "bottom": 367.20199999999994
+      },
+      {
+        "text": "cuối. Biểu đồ gồm 30 quan sát lịch sử và một điểm dự báo.",
+        "x0": 70.944,
+        "top": 370.44199999999995,
+        "x1": 354.2160000000001,
+        "bottom": 382.44199999999995
+      },
+      {
+        "text": "Chuỗi ví dụ kết thúc 30/06/2023, không cập nhật trực tiếp và chưa xác nhận điều chỉnh corporate",
+        "x0": 70.944,
+        "top": 387.6019999999999,
+        "x1": 538.2359999999998,
+        "bottom": 399.6019999999999
+      },
+      {
+        "text": "actions. Chưa có đánh giá lợi nhuận giao dịch.",
+        "x0": 70.944,
+        "top": 402.7219999999999,
+        "x1": 293.64000000000004,
+        "bottom": 414.7219999999999
+      },
+      {
+        "text": "4.24 Đánh giá đối chứng trên Cổ phiếu VNM",
+        "x0": 70.944,
+        "top": 422.12935999999996,
+        "x1": 319.50384,
+        "bottom": 435.08935999999994
+      },
+      {
+        "text": "Bảng 4.20 Kết quả test Cổ phiếu VNM chế độ delta và baseline",
+        "x0": 162.5,
+        "top": 440.33464,
+        "x1": 446.92351999999994,
+        "bottom": 451.37463999999994
+      },
+      {
+        "text": "Mô hình MAE RMSE R²",
+        "x0": 76.224,
+        "top": 455.35095999999993,
+        "x1": 437.99802,
+        "bottom": 465.91095999999993
+      },
+      {
+        "text": "keras lstm 831.64 1135.08 0.9759",
+        "x0": 76.224,
+        "top": 469.87095999999997,
+        "x1": 456.18999999999994,
+        "bottom": 480.43095999999997
+      },
+      {
+        "text": "torch baseline 966.39 1225.04 0.9720",
+        "x0": 76.224,
+        "top": 484.51095999999995,
+        "x1": 456.18999999999994,
+        "bottom": 495.07095999999996
+      },
+      {
+        "text": "torch lstm 843.78 1122.08 0.9765",
+        "x0": 76.224,
+        "top": 499.03095999999994,
+        "x1": 456.18999999999994,
+        "bottom": 509.59095999999994
+      },
+      {
+        "text": "torch gru 866.95 1136.45 0.9759",
+        "x0": 76.224,
+        "top": 513.55096,
+        "x1": 456.18999999999994,
+        "bottom": 524.11096
+      },
+      {
+        "text": "torch bilstm 826.62 1118.10 0.9767",
+        "x0": 76.224,
+        "top": 528.1909599999999,
+        "x1": 456.18999999999994,
+        "bottom": 538.75096
+      },
+      {
+        "text": "keras baseline 1035.94 1293.18 0.9688",
+        "x0": 76.224,
+        "top": 542.7109599999999,
+        "x1": 456.18999999999994,
+        "bottom": 553.27096
+      },
+      {
+        "text": "numpy baseline 881.25 1148.56 0.9754",
+        "x0": 76.224,
+        "top": 557.35096,
+        "x1": 456.18999999999994,
+        "bottom": 567.9109599999999
+      },
+      {
+        "text": "keras gru 911.82 1231.22 0.9717",
+        "x0": 76.224,
+        "top": 571.87096,
+        "x1": 456.18999999999994,
+        "bottom": 582.4309599999999
+      },
+      {
+        "text": "numpy lstm 851.78 1130.69 0.9761",
+        "x0": 76.224,
+        "top": 586.51096,
+        "x1": 456.18999999999994,
+        "bottom": 597.07096
+      },
+      {
+        "text": "baseline last_value 819.66 1109.92 0.9770",
+        "x0": 76.224,
+        "top": 601.0309599999999,
+        "x1": 456.18999999999994,
+        "bottom": 611.59096
+      },
+      {
+        "text": "keras bilstm 979.19 1253.43 0.9707",
+        "x0": 76.224,
+        "top": 615.7009599999999,
+        "x1": 456.18999999999994,
+        "bottom": 626.26096
+      },
+      {
+        "text": "Bảng 4.21 Đối chứng dự báo mức giá trực tiếp Cổ phiếu VNM",
+        "x0": 162.74,
+        "top": 632.36464,
+        "x1": 446.71088,
+        "bottom": 643.40464
+      },
+      {
+        "text": "Mô hình trực tiếp RMSE R²",
+        "x0": 76.344,
+        "top": 647.38096,
+        "x1": 398.99802,
+        "bottom": 657.9409599999999
+      },
+      {
+        "text": "numpy lstm 10885.18 -1.2127",
+        "x0": 76.344,
+        "top": 661.9009599999999,
+        "x1": 420.66999999999996,
+        "bottom": 672.4609599999999
+      },
+      {
+        "text": "Baseline giữ giá gần nhất đạt RMSE thấp nhất trong bảng delta: 1109.92 đồng/cổ phiếu. Các",
+        "x0": 70.944,
+        "top": 677.692,
+        "x1": 538.5,
+        "bottom": 689.692
+      },
+      {
+        "text": "mạng chưa vượt được đối chứng này.",
+        "x0": 70.944,
+        "top": 692.932,
+        "x1": 250.56,
+        "bottom": 704.932
+      },
+      {
+        "text": "4.25 Chi phí và trực quan kết quả Cổ phiếu VNM",
+        "x0": 70.944,
+        "top": 712.3393599999999,
+        "x1": 345.51456,
+        "bottom": 725.29936
+      },
+      {
+        "text": "Bảng 4.22 Chi phí đo thực Cổ phiếu VNM",
+        "x0": 208.73,
+        "top": 730.40464,
+        "x1": 400.91432,
+        "bottom": 741.4446399999999
+      },
+      {
+        "text": "Mô hình Tham số Train giây KB trọng số ms mỗi mẫu",
+        "x0": 76.224,
+        "top": 745.41696,
+        "x1": 505.53423999999995,
+        "bottom": 755.97696
+      },
+      {
+        "text": "keras lstm 1169 7.64 37.4 43.494",
+        "x0": 76.224,
+        "top": 760.05696,
+        "x1": 479.61999999999995,
+        "bottom": 770.61696
+      },
+      {
+        "text": "Trang 82",
+        "x0": 285.53,
+        "top": 793.992,
+        "x1": 324.07,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 85,
+    "images": [
+      {
+        "x0": 163.02,
+        "x1": 446.45000000000005,
+        "width": 283.43000000000006,
+        "height": 227.45000000000005,
+        "name": "Image566",
+        "top": 56.69999999999993,
+        "bottom": 284.15
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 4.22 Ứng dụng online trên Cổ phiếu VNM",
+        "x0": 195.17,
+        "top": 291.87464,
+        "x1": 414.3360799999999,
+        "bottom": 302.91463999999996
+      },
+      {
+        "text": "Kết quả suy luận: 71313.5353 đồng/cổ phiếu.",
+        "x0": 70.944,
+        "top": 305.64199999999994,
+        "x1": 289.61,
+        "bottom": 317.64199999999994
+      },
+      {
+        "text": "Chọn VNM, nhập 30 giá từ cũ đến mới hoặc tải CSV có cột Close rồi dự báo. Có thể xuất kết",
+        "x0": 70.944,
+        "top": 322.802,
+        "x1": 538.0079999999998,
+        "bottom": 334.80199999999996
+      },
+      {
+        "text": "quả cùng cửa sổ đầu vào thành CSV.",
+        "x0": 70.944,
+        "top": 338.0419999999999,
+        "x1": 248.15999999999997,
+        "bottom": 350.0419999999999
+      },
+      {
+        "text": "Luồng xử lý giống FPT nhưng dùng trọng số và thống kê chuẩn hóa riêng của VNM.",
+        "x0": 70.944,
+        "top": 355.20199999999994,
+        "x1": 478.6439999999998,
+        "bottom": 367.20199999999994
+      },
+      {
+        "text": "VNM và FPT cùng nguồn VN30. Chuỗi ví dụ VNM kết thúc 30/06/2023; sai số mạng cần đối",
+        "x0": 70.944,
+        "top": 372.36199999999997,
+        "x1": 538.3079999999998,
+        "bottom": 384.36199999999997
+      },
+      {
+        "text": "chiếu với baseline giữ Close gần nhất.",
+        "x0": 70.944,
+        "top": 387.6019999999999,
+        "x1": 253.89600000000002,
+        "bottom": 399.6019999999999
+      },
+      {
+        "text": "4.29 Đánh giá đối chứng trên Giá vàng SJC",
+        "x0": 70.944,
+        "top": 407.00935999999996,
+        "x1": 311.48159999999996,
+        "bottom": 419.96935999999994
+      },
+      {
+        "text": "Bảng 4.24 Kết quả test Giá vàng SJC chế độ delta và baseline",
+        "x0": 165.5,
+        "top": 425.07464,
+        "x1": 444.07232000000005,
+        "bottom": 436.11463999999995
+      },
+      {
+        "text": "Mô hình MAE RMSE R²",
+        "x0": 76.224,
+        "top": 440.11096,
+        "x1": 437.99802,
+        "bottom": 450.67096
+      },
+      {
+        "text": "numpy baseline 0.87 1.45 0.9985",
+        "x0": 76.224,
+        "top": 454.75095999999996,
+        "x1": 456.18999999999994,
+        "bottom": 465.31095999999997
+      },
+      {
+        "text": "torch bilstm 0.58 1.21 0.9989",
+        "x0": 76.224,
+        "top": 469.27095999999995,
+        "x1": 456.18999999999994,
+        "bottom": 479.83095999999995
+      },
+      {
+        "text": "numpy lstm 0.76 1.26 0.9988",
+        "x0": 76.224,
+        "top": 483.7909599999999,
+        "x1": 456.18999999999994,
+        "bottom": 494.35095999999993
+      },
+      {
+        "text": "keras baseline 1.37 1.97 0.9971",
+        "x0": 76.224,
+        "top": 498.43095999999997,
+        "x1": 456.18999999999994,
+        "bottom": 508.99096
+      },
+      {
+        "text": "keras bilstm 1.03 1.48 0.9984",
+        "x0": 76.224,
+        "top": 512.9509599999999,
+        "x1": 456.18999999999994,
+        "bottom": 523.51096
+      },
+      {
+        "text": "torch lstm 0.68 1.27 0.9988",
+        "x0": 76.224,
+        "top": 527.59096,
+        "x1": 456.18999999999994,
+        "bottom": 538.1509599999999
+      },
+      {
+        "text": "baseline last_value 0.54 1.19 0.9990",
+        "x0": 76.224,
+        "top": 542.11096,
+        "x1": 456.18999999999994,
+        "bottom": 552.6709599999999
+      },
+      {
+        "text": "keras gru 1.51 2.32 0.9961",
+        "x0": 76.224,
+        "top": 556.75096,
+        "x1": 456.18999999999994,
+        "bottom": 567.31096
+      },
+      {
+        "text": "keras lstm 1.42 1.79 0.9977",
+        "x0": 76.224,
+        "top": 571.27096,
+        "x1": 456.18999999999994,
+        "bottom": 581.83096
+      },
+      {
+        "text": "torch baseline 0.71 1.30 0.9988",
+        "x0": 76.224,
+        "top": 585.9109599999999,
+        "x1": 456.18999999999994,
+        "bottom": 596.47096
+      },
+      {
+        "text": "torch gru 0.82 1.35 0.9987",
+        "x0": 76.224,
+        "top": 600.4309599999999,
+        "x1": 456.18999999999994,
+        "bottom": 610.99096
+      },
+      {
+        "text": "Tập test có 1242 mẫu. Các dự báo được lấy từ checkpoint có validation loss nhỏ nhất. MAE và",
+        "x0": 70.944,
+        "top": 616.252,
+        "x1": 538.5000000000001,
+        "bottom": 628.252
+      },
+      {
+        "text": "RMSE dùng triệu đồng/lượng.",
+        "x0": 70.944,
+        "top": 631.492,
+        "x1": 217.09199999999998,
+        "bottom": 643.492
+      },
+      {
+        "text": "Bảng 4.25 Đối chứng dự báo mức giá trực tiếp Giá vàng SJC",
+        "x0": 165.74,
+        "top": 648.5646399999999,
+        "x1": 443.6719999999999,
+        "bottom": 659.60464
+      },
+      {
+        "text": "Mô hình trực tiếp RMSE R²",
+        "x0": 76.344,
+        "top": 663.58096,
+        "x1": 398.99802,
+        "bottom": 674.14096
+      },
+      {
+        "text": "numpy lstm 71.31 -2.7350",
+        "x0": 76.344,
+        "top": 678.10096,
+        "x1": 420.66999999999996,
+        "bottom": 688.6609599999999
+      },
+      {
+        "text": "Baseline giữ giá gần nhất đạt RMSE thấp nhất trong bảng delta: 1.19 triệu đồng/lượng. Các",
+        "x0": 70.944,
+        "top": 693.8919999999999,
+        "x1": 538.356,
+        "bottom": 705.8919999999999
+      },
+      {
+        "text": "mạng chưa vượt được đối chứng này.",
+        "x0": 70.944,
+        "top": 709.132,
+        "x1": 250.56,
+        "bottom": 721.132
+      },
+      {
+        "text": "Trang 85",
+        "x0": 285.53,
+        "top": 793.992,
+        "x1": 324.07,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 88,
+    "images": [
+      {
+        "x0": 163.02,
+        "x1": 446.45000000000005,
+        "width": 283.43000000000006,
+        "height": 227.44999999999993,
+        "name": "Image574",
+        "top": 73.88,
+        "bottom": 301.3299999999999
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Link sử dụng: https://zingy-sorbet-7a4670.netlify.app/ung-dung/rnn/?dataset=sjc",
+        "x0": 70.944,
+        "top": 58.39199999999994,
+        "x1": 459.094,
+        "bottom": 70.39199999999994
+      },
+      {
+        "text": "Hình 4.27 Ứng dụng online trên Giá vàng SJC",
+        "x0": 198.29,
+        "top": 309.15464,
+        "x1": 411.4171999999999,
+        "bottom": 320.19463999999994
+      },
+      {
+        "text": "Kết quả suy luận: 144.2234 triệu đồng/lượng.",
+        "x0": 70.944,
+        "top": 322.802,
+        "x1": 289.85,
+        "bottom": 334.80199999999996
+      },
+      {
+        "text": "Nhập 30 giá bán SJC dương theo đơn vị triệu đồng/lượng hoặc tải CSV có cột sell_1l. Ứng dụng",
+        "x0": 70.944,
+        "top": 340.08199999999994,
+        "x1": 538.4280000000001,
+        "bottom": 352.08199999999994
+      },
+      {
+        "text": "dự báo một bước, hiển thị chênh lệch và cho tải CSV.",
+        "x0": 70.944,
+        "top": 355.20199999999994,
+        "x1": 328.66800000000006,
+        "bottom": 367.20199999999994
+      },
+      {
+        "text": "RNN dùng biểu diễn delta cùng thống kê chuẩn hóa train. Dữ liệu mẫu kết thúc 08/10/2026; giao",
+        "x0": 70.944,
+        "top": 372.36199999999997,
+        "x1": 538.44,
+        "bottom": 384.36199999999997
+      },
+      {
+        "text": "diện hiển thị mốc này và đơn vị giá.",
+        "x0": 70.944,
+        "top": 387.6019999999999,
+        "x1": 243.58800000000002,
+        "bottom": 399.6019999999999
+      },
+      {
+        "text": "Ứng dụng giữ nguyên khoảng trống dữ liệu. Một bước là quan sát tiếp theo, không nhất thiết là",
+        "x0": 70.944,
+        "top": 404.76199999999994,
+        "x1": 538.1760000000002,
+        "bottom": 416.76199999999994
+      },
+      {
+        "text": "ngày lịch tiếp theo. Baseline giá gần nhất vẫn tốt hơn các mạng trong test hiện tại.",
+        "x0": 70.944,
+        "top": 419.88199999999995,
+        "x1": 464.472,
+        "bottom": 431.88199999999995
+      },
+      {
+        "text": "Trang 88",
+        "x0": 285.53,
+        "top": 793.992,
+        "x1": 324.07,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 98,
+    "images": [],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "5.4.7 Chuyển kết quả phân tích thành tài liệu",
+        "x0": 70.944,
+        "top": 58.511999999999944,
+        "x1": 301.65600000000006,
+        "bottom": 70.51199999999994
+      },
+      {
+        "text": "Kết quả EDA được lưu theo chủ đề: d_summary về quy mô, d_labels về nhãn, d_bmi và d_bp về",
+        "x0": 70.944,
+        "top": 75.6919999999999,
+        "x1": 538.332,
+        "bottom": 87.6919999999999
+      },
+      {
+        "text": "thống kê nhóm, d_quality về thiếu và trùng, d_scope về phạm vi sử dụng.",
+        "x0": 70.944,
+        "top": 90.8119999999999,
+        "x1": 423.9600000000001,
+        "bottom": 102.8119999999999
+      },
+      {
+        "text": "Đoạn mã cũng tạo tài liệu chứng khoán và vàng ở mục 5.5. Số liệu tính trên DataFrame đã kiểm",
+        "x0": 70.944,
+        "top": 107.97199999999998,
+        "x1": 538.272,
+        "bottom": 119.97199999999998
+      },
+      {
+        "text": "tra; facts và rows lưu dữ kiện và phạm vi nguồn để đối chiếu.",
+        "x0": 70.944,
+        "top": 123.21199999999999,
+        "x1": 365.136,
+        "bottom": 135.212
+      },
+      {
+        "text": "Mã 5.13. Xây dựng tài liệu có nguồn và dữ kiện",
+        "x0": 70.944,
+        "top": 140.37199999999996,
+        "x1": 312.744,
+        "bottom": 152.37199999999996
+      },
+      {
+        "text": "# Trần Hải Long | B23DCCN510 | Nhóm 6",
+        "x0": 70.944,
+        "top": 157.163,
+        "x1": 538.4360000000001,
+        "bottom": 166.163
+      },
+      {
+        "text": "docs=[]",
+        "x0": 70.944,
+        "top": 167.60300000000007,
+        "x1": 106.93500000000002,
+        "bottom": 176.60300000000007
+      },
+      {
+        "text": "def document(id,domain,title,text,entities,facts,rows):",
+        "x0": 70.944,
+        "top": 178.163,
+        "x1": 538.5659999999999,
+        "bottom": 187.163
+      },
+      {
+        "text": "source={'diabetes':'diabetes_012_health_indicators_BRFSS2015.csv','gold':'gold_price.csv','stocks':'p",
+        "x0": 70.944,
+        "top": 199.163,
+        "x1": 535.8030000000001,
+        "bottom": 208.163
+      },
+      {
+        "text": "reprocessed_*_price.csv'}[domain]",
+        "x0": 70.944,
+        "top": 209.60300000000007,
+        "x1": 232.269,
+        "bottom": 218.60300000000007
+      },
+      {
+        "text": "if domain=='stocks' and id.startswith('s_') and id[2:] in stock_summary.index:",
+        "x0": 83.424,
+        "top": 220.163,
+        "x1": 538.374,
+        "bottom": 229.163
+      },
+      {
+        "text": "source=f'preprocessed_{id[2:]}_price.csv'",
+        "x0": 96.144,
+        "top": 230.60300000000007,
+        "x1": 290.35499999999996,
+        "bottom": 239.60300000000007
+      },
+      {
+        "text": "docs.append(dict(id=id,domain=domain,title=title,text=text,entities=entities,",
+        "x0": 83.424,
+        "top": 241.163,
+        "x1": 437.63699999999966,
+        "bottom": 250.163
+      },
+      {
+        "text": "facts=facts,source=source,rows=rows))",
+        "x0": 137.3,
+        "top": 251.60300000000007,
+        "x1": 319.39700000000005,
+        "bottom": 260.60300000000007
+      },
+      {
+        "text": "document('d_summary','diabetes','Tổng quan BRFSS',",
+        "x0": 70.944,
+        "top": 262.193,
+        "x1": 538.67,
+        "bottom": 271.193
+      },
+      {
+        "text": "f'BRFSS 2015 có {len(diabetes)} phản hồi và {diabetes.shape[1]} biến. Đây là khảo sát cộng đồng.',",
+        "x0": 74.064,
+        "top": 272.63300000000004,
+        "x1": 538.942,
+        "bottom": 281.63300000000004
+      },
+      {
+        "text": "['summary','diabetes'],{'rows':len(diabetes),'columns':diabetes.shape[1]},'Toàn bộ CSV')",
+        "x0": 74.064,
+        "top": 283.193,
+        "x1": 538.654,
+        "bottom": 292.193
+      },
+      {
+        "text": "document('d_labels','diabetes','Phân bố nhãn Diabetes_012',",
+        "x0": 70.944,
+        "top": 293.63300000000004,
+        "x1": 538.7529999999999,
+        "bottom": 302.63300000000004
+      },
+      {
+        "text": "'Diabetes_012: 0 không tiểu đường; 1 tiền tiểu đường; 2 tiểu đường. '+",
+        "x0": 74.064,
+        "top": 304.193,
+        "x1": 538.7139999999999,
+        "bottom": 313.193
+      },
+      {
+        "text": "'; '.join(f'nhãn {int(i)} có {int(n)} phản hồi ({n/len(diabetes):.2%})' for i,n in labels.items()),",
+        "x0": 74.064,
+        "top": 314.63300000000004,
+        "x1": 538.5860000000001,
+        "bottom": 323.63300000000004
+      },
+      {
+        "text": "['label','diabetes'],labels.to_dict(),'Tổng hợp toàn bộ CSV')",
+        "x0": 74.064,
+        "top": 325.193,
+        "x1": 538.6840000000001,
+        "bottom": 334.193
+      },
+      {
+        "text": "document('d_bmi','diabetes','BMI theo nhãn',",
+        "x0": 70.944,
+        "top": 335.633,
+        "x1": 538.548,
+        "bottom": 344.633
+      },
+      {
+        "text": "'Chỉ số BMI: '+ '; '.join(f'nhãn {int(i)} có trung vị BMI {v:.1f}' for i,v in bmi['median'].items()),",
+        "x0": 74.064,
+        "top": 346.193,
+        "x1": 538.648,
+        "bottom": 355.193
+      },
+      {
+        "text": "['bmi','diabetes'],bmi['median'].to_dict(),'Tổng hợp toàn bộ CSV')",
+        "x0": 74.064,
+        "top": 356.633,
+        "x1": 538.8040000000001,
+        "bottom": 365.633
+      },
+      {
+        "text": "document('d_bp','diabetes','Chỉ báo HighBP',",
+        "x0": 70.944,
+        "top": 367.193,
+        "x1": 538.54,
+        "bottom": 376.193
+      },
+      {
+        "text": "'HighBP 0/1 là chỉ báo huyết áp cao. '+ '; '.join(f'nhãn {int(i)} có {v:.2f}% HighBP=1' for i,v in",
+        "x0": 74.064,
+        "top": 377.633,
+        "x1": 538.3430000000001,
+        "bottom": 386.633
+      },
+      {
+        "text": "bp.items()),",
+        "x0": 70.944,
+        "top": 388.193,
+        "x1": 125.925,
+        "bottom": 397.193
+      },
+      {
+        "text": "['bp','diabetes'],bp.to_dict(),'Tổng hợp toàn bộ CSV')",
+        "x0": 74.064,
+        "top": 398.633,
+        "x1": 538.6840000000001,
+        "bottom": 407.633
+      },
+      {
+        "text": "document('d_age','diabetes','Mã nhóm tuổi Age',",
+        "x0": 70.944,
+        "top": 409.193,
+        "x1": 538.687,
+        "bottom": 418.193
+      },
+      {
+        "text": "'Age gồm 13 mã nhóm tuổi từ 1 đến 13; đây là mã phân nhóm, không phải số tuổi chính xác. Không",
+        "x0": 74.064,
+        "top": 419.633,
+        "x1": 538.6719999999999,
+        "bottom": 428.633
+      },
+      {
+        "text": "coi 13 là 13 tuổi.',",
+        "x0": 70.944,
+        "top": 430.193,
+        "x1": 538.684,
+        "bottom": 439.193
+      },
+      {
+        "text": "['age','diabetes'],{'age_codes':13},'Cột Age')",
+        "x0": 74.064,
+        "top": 440.77299999999997,
+        "x1": 280.61600000000004,
+        "bottom": 449.77299999999997
+      },
+      {
+        "text": "# Ví dụ tạo tài liệu truy xuất; cùng cấu trúc được dùng cho ba miền.",
+        "x0": 70.944,
+        "top": 454.693,
+        "x1": 538.8159999999999,
+        "bottom": 463.693
+      },
+      {
+        "text": "document('d_quality', 'diabetes', 'Chất lượng CSV BRFSS',",
+        "x0": 70.944,
+        "top": 466.693,
+        "x1": 538.5219999999999,
+        "bottom": 475.693
+      },
+      {
+        "text": "f'CSV không có ô thiếu; có {int(diabetes.duplicated().sum())} hàng trùng giá trị. Không có định danh",
+        "x0": 74.064,
+        "top": 478.81299999999993,
+        "x1": 538.687,
+        "bottom": 487.81299999999993
+      },
+      {
+        "text": "nên không suy ra trùng người.',",
+        "x0": 70.944,
+        "top": 490.81299999999993,
+        "x1": 538.708,
+        "bottom": 499.81299999999993
+      },
+      {
+        "text": "['quality', 'diabetes'],",
+        "x0": 74.064,
+        "top": 502.81299999999993,
+        "x1": 538.626,
+        "bottom": 511.81299999999993
+      },
+      {
+        "text": "{'missing': 0, 'duplicate_values': int(diabetes.duplicated().sum())},",
+        "x0": 74.064,
+        "top": 514.8129999999999,
+        "x1": 538.5269999999999,
+        "bottom": 523.8129999999999
+      },
+      {
+        "text": "'Toàn bộ CSV')",
+        "x0": 74.064,
+        "top": 526.933,
+        "x1": 141.044,
+        "bottom": 535.933
+      },
+      {
+        "text": "Kết quả thực thi của Mã 5.13",
+        "x0": 70.944,
+        "top": 541.8219999999999,
+        "x1": 220.452,
+        "bottom": 553.8219999999999
+      },
+      {
+        "text": "Số tài liệu theo miền: {'gold': 58, 'stocks': 10, 'diabetes': 7}",
+        "x0": 70.944,
+        "top": 558.89428,
+        "x1": 316.29763999999994,
+        "bottom": 566.93428
+      },
+      {
+        "text": "5.4.8 Đồ thị và ví dụ hỏi đáp",
+        "x0": 70.944,
+        "top": 573.742,
+        "x1": 214.58399999999997,
+        "bottom": 585.742
+      },
+      {
+        "text": "Hình chỉ hiển thị ba chủ đề của đồ thị. Mỗi nút document là tài liệu tổng hợp có nguồn, không",
+        "x0": 70.944,
+        "top": 590.9019999999999,
+        "x1": 538.4279999999999,
+        "bottom": 602.9019999999999
+      },
+      {
+        "text": "phải từng người tham gia khảo sát.",
+        "x0": 70.944,
+        "top": 606.0219999999999,
+        "x1": 237.81600000000003,
+        "bottom": 618.0219999999999
+      },
+      {
+        "text": "Trang 98",
+        "x0": 285.53,
+        "top": 793.992,
+        "x1": 324.07,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 99,
+    "images": [
+      {
+        "x0": 70.9,
+        "x1": 513.04,
+        "width": 442.14,
+        "height": 158.64999999999998,
+        "name": "Image590",
+        "top": 56.69999999999993,
+        "bottom": 215.3499999999999
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 5.5 Lát cắt đồ thị tài liệu và thực thể của miền tiểu đường",
+        "x0": 160.94,
+        "top": 223.08464000000004,
+        "x1": 448.6423999999999,
+        "bottom": 234.12464
+      },
+      {
+        "text": "Câu hỏi BMI được gắn thực thể bmi, truy xuất d_bmi qua described_by rồi kết hợp điểm tương",
+        "x0": 70.944,
+        "top": 236.85199999999998,
+        "x1": 538.4280000000001,
+        "bottom": 248.85199999999998
+      },
+      {
+        "text": "đồng từ. Câu trả lời trích xuất trả trung vị theo nhóm và ID nguồn.",
+        "x0": 70.944,
+        "top": 251.97199999999998,
+        "x1": 389.62800000000004,
+        "bottom": 263.972
+      },
+      {
+        "text": "Câu hỏi số dòng thiếu cần d_quality, không phải d_summary. Yêu cầu điều trị được chuyển tới",
+        "x0": 70.944,
+        "top": 269.2819999999999,
+        "x1": 538.272,
+        "bottom": 281.2819999999999
+      },
+      {
+        "text": "d_scope. Các trường hợp này dùng để kiểm tra phân biệt chủ đề và phạm vi.",
+        "x0": 70.944,
+        "top": 284.40199999999993,
+        "x1": 436.98,
+        "bottom": 296.40199999999993
+      },
+      {
+        "text": "5.5 Ứng dụng cho chứng khoán và vàng",
+        "x0": 70.944,
+        "top": 303.80935999999986,
+        "x1": 290.48639999999995,
+        "bottom": 316.7693599999999
+      },
+      {
+        "text": "5.5.1 Nguồn đơn vị và giới hạn thời gian",
+        "x0": 70.944,
+        "top": 324.12199999999996,
+        "x1": 275.66400000000004,
+        "bottom": 336.12199999999996
+      },
+      {
+        "text": "Tệp gold_price.csv của Gold and Silver Prices Dataset trên Kaggle [2] gồm 13.461 dòng. Báo",
+        "x0": 70.944,
+        "top": 341.1619999999999,
+        "x1": 538.4639999999998,
+        "bottom": 353.1619999999999
+      },
+      {
+        "text": "cáo dùng date và price, loại 141 dòng thiếu giá, còn 13.320 quan sát từ 01/04/1968 đến",
+        "x0": 70.944,
+        "top": 356.40199999999993,
+        "x1": 538.3080000000001,
+        "bottom": 368.40199999999993
+      },
+      {
+        "text": "07/04/2021.",
+        "x0": 70.944,
+        "top": 371.52199999999993,
+        "x1": 128.652,
+        "bottom": 383.52199999999993
+      },
+      {
+        "text": "Giữ đơn vị LBMA là USD/ounce. Dữ liệu này không phải SJC; phép quy đổi sang triệu",
+        "x0": 70.944,
+        "top": 388.80199999999996,
+        "x1": 538.296,
+        "bottom": 400.80199999999996
+      },
+      {
+        "text": "đồng/lượng cần tỷ giá, hệ số đơn vị và thời điểm tương ứng, chưa có trong thực nghiệm.",
+        "x0": 70.944,
+        "top": 403.92199999999997,
+        "x1": 494.68800000000005,
+        "bottom": 415.92199999999997
+      },
+      {
+        "text": "Ứng dụng tra cứu lịch sử, không dự báo giá. Câu hỏi theo năm dùng dữ liệu năm đó; câu hỏi giá",
+        "x0": 70.944,
+        "top": 421.08199999999994,
+        "x1": 538.104,
+        "bottom": 433.08199999999994
+      },
+      {
+        "text": "hôm nay được trả kèm mốc kết thúc nguồn năm 2021.",
+        "x0": 70.944,
+        "top": 436.3419999999999,
+        "x1": 330.6960000000001,
+        "bottom": 448.3419999999999
+      },
+      {
+        "text": "Bảng 5.2 Thống kê chuỗi giá vàng LBMA",
+        "x0": 209.45,
+        "top": 453.41463999999996,
+        "x1": 400.24327999999997,
+        "bottom": 464.4546399999999
+      },
+      {
+        "text": "Chỉ tiêu Giá trị thực thi",
+        "x0": 89.064,
+        "top": 468.43095999999997,
+        "x1": 298.79528,
+        "bottom": 478.99096
+      },
+      {
+        "text": "Dòng CSV gốc 13461",
+        "x0": 89.064,
+        "top": 482.95095999999995,
+        "x1": 257.21,
+        "bottom": 493.51095999999995
+      },
+      {
+        "text": "Giá hợp lệ 13320",
+        "x0": 89.064,
+        "top": 497.59095999999994,
+        "x1": 257.21,
+        "bottom": 508.15095999999994
+      },
+      {
+        "text": "Giá thiếu 141",
+        "x0": 89.064,
+        "top": 512.11096,
+        "x1": 246.65,
+        "bottom": 522.6709599999999
+      },
+      {
+        "text": "Khoảng hợp lệ 1968-04-01 đến 2021-04-07",
+        "x0": 89.064,
+        "top": 526.75096,
+        "x1": 349.38999999999993,
+        "bottom": 537.31096
+      },
+      {
+        "text": "Min toàn chuỗi 34.75 USD/ounce",
+        "x0": 89.064,
+        "top": 541.27096,
+        "x1": 306.16616000000005,
+        "bottom": 551.83096
+      },
+      {
+        "text": "Max toàn chuỗi 2,067.15 USD/ounce",
+        "x0": 89.064,
+        "top": 555.7909599999999,
+        "x1": 319.23944,
+        "bottom": 566.35096
+      },
+      {
+        "text": "5.5.2 Chuỗi giá và thống kê theo năm",
+        "x0": 70.944,
+        "top": 575.6619999999999,
+        "x1": 260.64,
+        "bottom": 587.6619999999999
+      },
+      {
+        "text": "Hình trên vẽ toàn bộ giá hợp lệ theo thời gian; hình dưới vẽ trung vị và min–max từng năm. Dải",
+        "x0": 70.944,
+        "top": 592.822,
+        "x1": 538.72,
+        "bottom": 604.822
+      },
+      {
+        "text": "min–max là phạm vi giá quan sát, không phải khoảng tin cậy. Giá chưa điều chỉnh lạm phát.",
+        "x0": 70.944,
+        "top": 608.062,
+        "x1": 513.9119999999999,
+        "bottom": 620.062
+      },
+      {
+        "text": "Trang 99",
+        "x0": 285.53,
+        "top": 793.992,
+        "x1": 324.07,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 101,
+    "images": [
+      {
+        "x0": 70.9,
+        "x1": 513.1,
+        "width": 442.20000000000005,
+        "height": 181.3,
+        "name": "Image595",
+        "top": 170.94999999999993,
+        "bottom": 352.24999999999994
+      },
+      {
+        "x0": 70.9,
+        "x1": 513.1,
+        "width": 442.20000000000005,
+        "height": 159.24999999999997,
+        "name": "Image596",
+        "top": 503.4,
+        "bottom": 662.65
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "g_quality lưu số dòng gốc, số thiếu và quy tắc loại bỏ. Tài liệu từng năm giữ số giá hợp lệ; bộ",
+        "x0": 70.944,
+        "top": 58.39199999999994,
+        "x1": 538.3919999999998,
+        "bottom": 70.39199999999994
+      },
+      {
+        "text": "truy xuất phân biệt câu hỏi chất lượng toàn nguồn với quy mô của một năm.",
+        "x0": 70.944,
+        "top": 73.63199999999995,
+        "x1": 435.9120000000001,
+        "bottom": 85.63199999999995
+      },
+      {
+        "text": "5.5.4 Biến động và phân phối",
+        "x0": 70.944,
+        "top": 92.85199999999998,
+        "x1": 219.39600000000002,
+        "bottom": 104.85199999999998
+      },
+      {
+        "text": "Biến động phần trăm được tính giữa hai giá hợp lệ liên tiếp: r_t = 100 × (P_t / P_(t−1) − 1). Vì",
+        "x0": 70.944,
+        "top": 110.01199999999994,
+        "x1": 538.2240000000003,
+        "bottom": 122.01199999999994
+      },
+      {
+        "text": "không bổ sung ngày vắng, đây là biến động giữa hai quan sát liên tiếp, không bảo đảm mọi cặp",
+        "x0": 70.944,
+        "top": 125.13199999999995,
+        "x1": 538.44,
+        "bottom": 137.13199999999995
+      },
+      {
+        "text": "cách nhau một ngày lịch. Độ lệch chuẩn trong từng năm được báo theo điểm phần trăm trên mỗi",
+        "x0": 70.944,
+        "top": 140.37199999999996,
+        "x1": 538.44,
+        "bottom": 152.37199999999996
+      },
+      {
+        "text": "quan sát và chưa annualize.",
+        "x0": 70.944,
+        "top": 155.49199999999996,
+        "x1": 202.90800000000002,
+        "bottom": 167.49199999999996
+      },
+      {
+        "text": "Hình 5.8 Phân phối biến động và độ lệch chuẩn trong từng năm",
+        "x0": 158.54,
+        "top": 360.03463999999997,
+        "x1": 451.01167999999984,
+        "bottom": 371.07463999999993
+      },
+      {
+        "text": "Histogram cho thấy nhiều biến động nhỏ và một số ngoại lệ lớn. Ngoại lệ được giữ lại; hình chưa",
+        "x0": 70.944,
+        "top": 373.80199999999996,
+        "x1": 538.428,
+        "bottom": 385.80199999999996
+      },
+      {
+        "text": "đủ để kết luận phân phối chuẩn.",
+        "x0": 70.944,
+        "top": 388.92199999999997,
+        "x1": 223.8,
+        "bottom": 400.92199999999997
+      },
+      {
+        "text": "Độ lệch chuẩn từng năm được đọc cùng số quan sát để đánh giá độ phân tán. Chỉ số mô tả lịch",
+        "x0": 70.944,
+        "top": 406.08199999999994,
+        "x1": 538.4160000000003,
+        "bottom": 418.08199999999994
+      },
+      {
+        "text": "sử, không đo hiệu quả đầu tư.",
+        "x0": 70.944,
+        "top": 421.32199999999995,
+        "x1": 213.252,
+        "bottom": 433.32199999999995
+      },
+      {
+        "text": "5.5.5 Đồ thị thời gian và tài liệu bằng chứng",
+        "x0": 70.944,
+        "top": 440.5419999999999,
+        "x1": 294.504,
+        "bottom": 452.5419999999999
+      },
+      {
+        "text": "Mỗi năm được nhận một thực thể chuẩn hóa như year:2020. Tài liệu g_2020 chứa count, mean,",
+        "x0": 70.944,
+        "top": 457.70199999999994,
+        "x1": 538.332,
+        "bottom": 469.70199999999994
+      },
+      {
+        "text": "median, min và max; quan hệ described_by nối thực thể với tài liệu. Các tài liệu g_units và",
+        "x0": 70.944,
+        "top": 472.82199999999995,
+        "x1": 538.3440000000002,
+        "bottom": 484.82199999999995
+      },
+      {
+        "text": "g_quality vẫn riêng biệt vì chúng có phạm vi toàn nguồn, không chỉ thuộc một năm.",
+        "x0": 70.944,
+        "top": 488.06199999999995,
+        "x1": 474.5280000000001,
+        "bottom": 500.06199999999995
+      },
+      {
+        "text": "Hình 5.9 Lát cắt các thực thể năm và tài liệu giá vàng",
+        "x0": 182.42,
+        "top": 670.52464,
+        "x1": 427.05535999999995,
+        "bottom": 681.5646399999999
+      },
+      {
+        "text": "Các tài liệu năm có nhiều từ giống nhau; thực thể thời gian giúp ưu tiên đúng năm. Câu hỏi so",
+        "x0": 70.944,
+        "top": 684.172,
+        "x1": 538.4159999999998,
+        "bottom": 696.172
+      },
+      {
+        "text": "hai năm hoặc khoảng ngày tùy ý vẫn cần công cụ tổng hợp bổ sung.",
+        "x0": 70.944,
+        "top": 699.412,
+        "x1": 396.9120000000001,
+        "bottom": 711.412
+      },
+      {
+        "text": "Bộ chọn năm và câu hỏi tự nhiên dùng chung dữ kiện. Người dùng có thể đối chiếu tài liệu truy",
+        "x0": 70.944,
+        "top": 716.572,
+        "x1": 538.4520000000001,
+        "bottom": 728.572
+      },
+      {
+        "text": "xuất với đồ thị và thống kê của năm đã chọn.",
+        "x0": 70.944,
+        "top": 731.8119999999999,
+        "x1": 286.788,
+        "bottom": 743.8119999999999
+      },
+      {
+        "text": "Trang 101",
+        "x0": 282.53,
+        "top": 793.992,
+        "x1": 327.05,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 107,
+    "images": [
+      {
+        "x0": 70.9,
+        "x1": 513.0600000000001,
+        "width": 442.1600000000001,
+        "height": 218.94999999999993,
+        "name": "Image608",
+        "top": 136.59000000000003,
+        "bottom": 355.53999999999996
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Nhận diện thực thể bmi giúp tài liệu đúng chủ đề được ưu tiên; thống kê có sẵn trong facts giữ",
+        "x0": 70.944,
+        "top": 58.39199999999994,
+        "x1": 538.2720000000002,
+        "bottom": 70.39199999999994
+      },
+      {
+        "text": "nguồn tính toán trên toàn bộ khảo sát.",
+        "x0": 70.944,
+        "top": 73.63199999999995,
+        "x1": 252.108,
+        "bottom": 85.63199999999995
+      },
+      {
+        "text": "Phạm vi kết quả. Ứng dụng phục vụ đọc và hỏi dữ liệu khảo sát, không nhận hồ sơ cá nhân để",
+        "x0": 70.944,
+        "top": 90.8119999999999,
+        "x1": 538.4639999999996,
+        "bottom": 102.8119999999999
+      },
+      {
+        "text": "chẩn đoán. Nếu người dùng hỏi kê thuốc hoặc mắc bệnh, quy tắc phạm vi trả thông tin giới hạn",
+        "x0": 70.944,
+        "top": 106.05199999999991,
+        "x1": 538.4760000000001,
+        "bottom": 118.05199999999991
+      },
+      {
+        "text": "kèm d_scope. Người đọc cần giữ ý nghĩa mã nhóm tuổi và các nhãn theo dữ liệu BRFSS.",
+        "x0": 70.944,
+        "top": 121.17199999999991,
+        "x1": 499.70400000000006,
+        "bottom": 133.1719999999999
+      },
+      {
+        "text": "Hình 5.13 Minh họa giao diện tiểu đường với dữ kiện BMI đã tính",
+        "x0": 153.14,
+        "top": 363.27464,
+        "x1": 456.32047999999975,
+        "bottom": 374.31463999999994
+      },
+      {
+        "text": "5.7.3 Triển khai trên chứng khoán Việt Nam",
+        "x0": 70.944,
+        "top": 380.0419999999999,
+        "x1": 298.512,
+        "bottom": 392.0419999999999
+      },
+      {
+        "text": "Đường dẫn sau khi deploy: /?domain=stocks",
+        "x0": 70.944,
+        "top": 397.20199999999994,
+        "x1": 285.554,
+        "bottom": 409.20199999999994
+      },
+      {
+        "text": "Tab Cổ phiếu Việt Nam hiển thị 7.000 quan sát và bảy mã FPT, GAS, HPG, IMP, MSN, MWG,",
+        "x0": 70.944,
+        "top": 414.36199999999997,
+        "x1": 538.2240000000003,
+        "bottom": 426.36199999999997
+      },
+      {
+        "text": "VNM. Người dùng có thể hỏi về giá đóng cửa cuối chuỗi, khoảng thời gian, đơn vị, chất lượng",
+        "x0": 70.944,
+        "top": 429.6019999999999,
+        "x1": 538.4760000000002,
+        "bottom": 441.6019999999999
+      },
+      {
+        "text": "và khối lượng của từng mã. Bộ chọn mã bên dưới vùng bằng chứng đổi đường giá đóng cửa và",
+        "x0": 70.944,
+        "top": 444.74199999999996,
+        "x1": 538.344,
+        "bottom": 456.74199999999996
+      },
+      {
+        "text": "phần tóm tắt của chính mã được chọn.",
+        "x0": 70.944,
+        "top": 459.98199999999997,
+        "x1": 254.28000000000003,
+        "bottom": 471.98199999999997
+      },
+      {
+        "text": "Thao tác sử dụng. Quy trình gồm chọn tab chứng khoán, đặt câu hỏi có tên mã, bấm Tra cứu rồi",
+        "x0": 70.944,
+        "top": 477.14199999999994,
+        "x1": 538.3199999999999,
+        "bottom": 489.14199999999994
+      },
+      {
+        "text": "kiểm tra ID dạng s_FPT. Sau đó chọn FPT trong danh sách mã để đối chiếu đường giá và mốc",
+        "x0": 70.944,
+        "top": 492.38199999999995,
+        "x1": 538.4519999999997,
+        "bottom": 504.38199999999995
+      },
+      {
+        "text": "cuối 14/03/2025. Giá đóng cửa cuối chuỗi FPT là 131.400 VND/cổ phiếu; VNM là 62.100",
+        "x0": 70.944,
+        "top": 507.50199999999995,
+        "x1": 538.5119999999998,
+        "bottom": 519.502
+      },
+      {
+        "text": "VND/cổ phiếu. IMP có mốc cuối khác nên giao diện luôn ghi ngày riêng thay vì gọi chung là giá",
+        "x0": 70.944,
+        "top": 522.742,
+        "x1": 538.356,
+        "bottom": 534.742
+      },
+      {
+        "text": "hôm nay.",
+        "x0": 70.944,
+        "top": 537.862,
+        "x1": 115.608,
+        "bottom": 549.862
+      },
+      {
+        "text": "Kiến thức được ứng dụng. Hệ thống chuẩn hóa mã thành thực thể ticker, phân vùng chỉ mục",
+        "x0": 70.944,
+        "top": 555.0219999999999,
+        "x1": 538.2839999999999,
+        "bottom": 567.0219999999999
+      },
+      {
+        "text": "stocks, truy xuất kết hợp và dẫn tệp preprocessed_<mã>_price.csv. Chuỗi giá do Python xuất ra",
+        "x0": 70.944,
+        "top": 570.262,
+        "x1": 538.572,
+        "bottom": 582.262
+      },
+      {
+        "text": "và tài liệu hỏi đáp cùng dùng một DataFrame đã sắp xếp. Các hình chuẩn hóa giá, biến động và",
+        "x0": 70.944,
+        "top": 585.382,
+        "x1": 538.236,
+        "bottom": 597.382
+      },
+      {
+        "text": "khối lượng giúp người dùng kiểm tra bối cảnh trước khi đọc câu trả lời.",
+        "x0": 70.944,
+        "top": 600.622,
+        "x1": 413.95200000000006,
+        "bottom": 612.622
+      },
+      {
+        "text": "Phạm vi kết quả. Ứng dụng phân tích lịch sử nguồn Kaggle. Không có dữ liệu trực tiếp, dự báo",
+        "x0": 70.944,
+        "top": 617.812,
+        "x1": 538.2720000000002,
+        "bottom": 629.812
+      },
+      {
+        "text": "hay khuyến nghị mua bán; chưa xác minh đầy đủ điều chỉnh cổ tức và chia tách. Khi hỏi giá hiện",
+        "x0": 70.944,
+        "top": 632.932,
+        "x1": 538.4639999999999,
+        "bottom": 644.932
+      },
+      {
+        "text": "tại hoặc nên mua bán, hệ thống nêu giới hạn nguồn và dẫn s_summary, s_units.",
+        "x0": 70.944,
+        "top": 648.172,
+        "x1": 452.2200000000001,
+        "bottom": 660.172
+      },
+      {
+        "text": "Trang 107",
+        "x0": 282.53,
+        "top": 793.992,
+        "x1": 327.05,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 108,
+    "images": [
+      {
+        "x0": 70.9,
+        "x1": 513.0600000000001,
+        "width": 442.1600000000001,
+        "height": 218.95000000000005,
+        "name": "Image611",
+        "top": 56.69999999999993,
+        "bottom": 275.65
+      },
+      {
+        "x0": 70.9,
+        "x1": 513.0600000000001,
+        "width": 442.1600000000001,
+        "height": 218.95000000000002,
+        "name": "Image612",
+        "top": 505.68999999999994,
+        "bottom": 724.64
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 5.14 Minh họa giao diện chứng khoán và bằng chứng nguồn FPT",
+        "x0": 140.9,
+        "top": 283.47464,
+        "x1": 468.7548799999999,
+        "bottom": 294.51464
+      },
+      {
+        "text": "5.7.4 Triển khai trên dữ liệu vàng",
+        "x0": 70.944,
+        "top": 300.12199999999996,
+        "x1": 242.808,
+        "bottom": 312.12199999999996
+      },
+      {
+        "text": "Đường dẫn sau khi deploy: /?domain=gold",
+        "x0": 70.944,
+        "top": 317.40199999999993,
+        "x1": 276.89,
+        "bottom": 329.40199999999993
+      },
+      {
+        "text": "Tab vàng giữ 13.320 quan sát hợp lệ giai đoạn 1968–2021 và đơn vị USD/ounce. Người dùng",
+        "x0": 70.944,
+        "top": 334.56199999999995,
+        "x1": 538.558,
+        "bottom": 346.56199999999995
+      },
+      {
+        "text": "đặt câu hỏi theo năm, kiểm tra đơn vị hoặc dòng thiếu, rồi đối chiếu tài liệu g_YYYY. Danh sách",
+        "x0": 70.944,
+        "top": 349.68199999999996,
+        "x1": 538.4639999999999,
+        "bottom": 361.68199999999996
+      },
+      {
+        "text": "năm và đồ thị chuỗi trong năm cung cấp cách chọn có cấu trúc bên cạnh câu hỏi tự nhiên.",
+        "x0": 70.944,
+        "top": 364.92199999999997,
+        "x1": 500.56799999999987,
+        "bottom": 376.92199999999997
+      },
+      {
+        "text": "Thao tác sử dụng. Ví dụ câu hỏi trung bình vàng năm 2020 nhận tài liệu g_2020; bộ chọn năm",
+        "x0": 70.944,
+        "top": 382.08199999999994,
+        "x1": 538.2120000000002,
+        "bottom": 394.08199999999994
+      },
+      {
+        "text": "2020 hiển thị cùng thống kê và các giá quan sát trong năm đó. Kiến thức được ứng dụng. Thực",
+        "x0": 70.944,
+        "top": 397.20199999999994,
+        "x1": 538.3800000000002,
+        "bottom": 409.20199999999994
+      },
+      {
+        "text": "thể year:2020 góp phần phân biệt các tài liệu có nội dung gần giống nhau. Nút xuất JSON giữ lại",
+        "x0": 70.944,
+        "top": 412.44199999999995,
+        "x1": 538.2840000000002,
+        "bottom": 424.44199999999995
+      },
+      {
+        "text": "nguồn để kiểm tra phép tổng hợp groupby trong notebook.",
+        "x0": 70.944,
+        "top": 427.56199999999995,
+        "x1": 351.87600000000003,
+        "bottom": 439.56199999999995
+      },
+      {
+        "text": "Phạm vi kết quả. Năm 2021 chỉ có dữ liệu tới 07/04, không được hiểu là một năm đầy đủ. Nguồn",
+        "x0": 70.944,
+        "top": 444.74199999999996,
+        "x1": 538.4280000000001,
+        "bottom": 456.74199999999996
+      },
+      {
+        "text": "LBMA quốc tế không đại diện vàng SJC Việt Nam. Câu hỏi giá hôm nay được trả bằng mốc kết",
+        "x0": 70.944,
+        "top": 459.98199999999997,
+        "x1": 538.2840000000001,
+        "bottom": 471.98199999999997
+      },
+      {
+        "text": "thúc nguồn, không tạo một mức giá mới. Những giới hạn này được đặt cả trong tài liệu đơn vị và",
+        "x0": 70.944,
+        "top": 475.1019999999999,
+        "x1": 538.452,
+        "bottom": 487.1019999999999
+      },
+      {
+        "text": "trên giao diện.",
+        "x0": 70.944,
+        "top": 490.3419999999999,
+        "x1": 139.824,
+        "bottom": 502.3419999999999
+      },
+      {
+        "text": "Hình 5.15 Minh họa giao diện vàng với tài liệu năm 2020",
+        "x0": 174.02,
+        "top": 732.4446399999999,
+        "x1": 435.43616,
+        "bottom": 743.48464
+      },
+      {
+        "text": "Trang 108",
+        "x0": 282.53,
+        "top": 793.992,
+        "x1": 327.05,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 110,
+    "images": [
+      {
+        "x0": 92.175,
+        "x1": 517.3249999999999,
+        "width": 425.1499999999999,
+        "height": 315.23,
+        "name": "Image615",
+        "top": 56.69999999999993,
+        "bottom": 371.92999999999995
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 5.16 Đồ thị 20 thực thể và 35 quan hệ nghiệp vụ, trích [21, Hình 4.7, trang 22].",
+        "x0": 70.944,
+        "top": 379.71464,
+        "x1": 456.5601599999996,
+        "bottom": 390.75463999999994
+      },
+      {
+        "text": "Hình trên ẩn Evidence và Source để nhìn các quan hệ y khoa. Vì vậy không thể dùng số nút nhìn",
+        "x0": 70.944,
+        "top": 393.48199999999997,
+        "x1": 535.02,
+        "bottom": 405.48199999999997
+      },
+      {
+        "text": "thấy trong hình để kết luận Neo4j chỉ có 20 nút. Đường truy nguồn được mô tả riêng ở mục",
+        "x0": 70.944,
+        "top": 408.6019999999999,
+        "x1": 510.108,
+        "bottom": 420.6019999999999
+      },
+      {
+        "text": "5.9.3.",
+        "x0": 70.944,
+        "top": 423.8419999999999,
+        "x1": 97.944,
+        "bottom": 435.8419999999999
+      },
+      {
+        "text": "Bảng 5.8 Danh sách 20 thực thể trong bản seed đối chiếu",
+        "x0": 70.944,
+        "top": 440.93464,
+        "x1": 331.78607999999997,
+        "bottom": 451.97463999999997
+      },
+      {
+        "text": "Nhóm ID thực thể Tên hiển thị",
+        "x0": 83.424,
+        "top": 455.95095999999995,
+        "x1": 356.01512,
+        "bottom": 466.51095999999995
+      },
+      {
+        "text": "Condition cardiovascular_disease Bệnh tim mạch",
+        "x0": 83.424,
+        "top": 470.47095999999993,
+        "x1": 365.94151999999997,
+        "bottom": 481.03095999999994
+      },
+      {
+        "text": "Condition prediabetes Tiền đái tháo đường",
+        "x0": 83.424,
+        "top": 485.11096,
+        "x1": 386.80808,
+        "bottom": 495.67096
+      },
+      {
+        "text": "Condition type2_diabetes Đái tháo đường típ 2",
+        "x0": 83.424,
+        "top": 499.63095999999996,
+        "x1": 388.8356,
+        "bottom": 510.19095999999996
+      },
+      {
+        "text": "Intervention bp_control Kiểm soát huyết áp",
+        "x0": 83.424,
+        "top": 514.27096,
+        "x1": 383.10152,
+        "bottom": 524.83096
+      },
+      {
+        "text": "Intervention clinician_review Khám bác sĩ và xét nghiệm xác nhận",
+        "x0": 83.424,
+        "top": 528.7909599999999,
+        "x1": 456.6836,
+        "bottom": 539.35096
+      },
+      {
+        "text": "Intervention lifestyle_program Chương trình thay đổi lối sống",
+        "x0": 83.424,
+        "top": 543.4309599999999,
+        "x1": 431.11784,
+        "bottom": 553.99096
+      },
+      {
+        "text": "Intervention metformin_prevention Metformin để phòng ngừa đái tháo đường",
+        "x0": 83.424,
+        "top": 557.9509599999999,
+        "x1": 478.0148,
+        "bottom": 568.51096
+      },
+      {
+        "text": "Intervention physical_activity_150 Vận động 150 phút mỗi tuần",
+        "x0": 83.424,
+        "top": 572.59096,
+        "x1": 422.22632,
+        "bottom": 583.1509599999999
+      },
+      {
+        "text": "Intervention smoking_cessation Bỏ thuốc lá",
+        "x0": 83.424,
+        "top": 587.11096,
+        "x1": 350.09096000000005,
+        "bottom": 597.6709599999999
+      },
+      {
+        "text": "Intervention weight_loss Giảm cân vừa phải",
+        "x0": 83.424,
+        "top": 601.63096,
+        "x1": 381.21128000000004,
+        "bottom": 612.1909599999999
+      },
+      {
+        "text": "RiskFactor family_history Tiền sử gia đình mắc đái tháo đường",
+        "x0": 83.424,
+        "top": 616.3009599999999,
+        "x1": 456.04999999999995,
+        "bottom": 626.86096
+      },
+      {
+        "text": "RiskFactor high_bmi Thừa cân hoặc béo phì",
+        "x0": 83.424,
+        "top": 630.82096,
+        "x1": 397.18856,
+        "bottom": 641.38096
+      },
+      {
+        "text": "RiskFactor high_bp Tăng huyết áp",
+        "x0": 83.424,
+        "top": 645.4609599999999,
+        "x1": 361.85479999999995,
+        "bottom": 656.02096
+      },
+      {
+        "text": "RiskFactor high_glucose Đường huyết cao",
+        "x0": 83.424,
+        "top": 659.98096,
+        "x1": 374.21,
+        "bottom": 670.5409599999999
+      },
+      {
+        "text": "RiskFactor older_age Tuổi cao",
+        "x0": 83.424,
+        "top": 674.62096,
+        "x1": 338.82344,
+        "bottom": 685.1809599999999
+      },
+      {
+        "text": "RiskFactor physical_inactivity Ít vận động thể lực",
+        "x0": 83.424,
+        "top": 689.14096,
+        "x1": 380.93672000000004,
+        "bottom": 699.7009599999999
+      },
+      {
+        "text": "RiskFactor smoking Hút thuốc lá",
+        "x0": 83.424,
+        "top": 703.7809599999999,
+        "x1": 353.57576000000006,
+        "bottom": 714.34096
+      },
+      {
+        "text": "Test a1c_test Xét nghiệm HbA1c",
+        "x0": 83.424,
+        "top": 718.3009599999999,
+        "x1": 383.9252,
+        "bottom": 728.86096
+      },
+      {
+        "text": "Test fasting_plasma_glucose Glucose huyết tương lúc đói",
+        "x0": 83.424,
+        "top": 732.82096,
+        "x1": 420.94856000000004,
+        "bottom": 743.38096
+      },
+      {
+        "text": "Test ogtt Nghiệm pháp dung nạp glucose đường uống",
+        "x0": 83.424,
+        "top": 747.45696,
+        "x1": 487.9728799999999,
+        "bottom": 758.0169599999999
+      },
+      {
+        "text": "Trang 110",
+        "x0": 282.53,
+        "top": 793.992,
+        "x1": 327.05,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 112,
+    "images": [
+      {
+        "x0": 106.32,
+        "x1": 503.15,
+        "width": 396.83,
+        "height": 327.09999999999997,
+        "name": "Image618",
+        "top": 226.13,
+        "bottom": 553.23
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "MATCH (a:Entity)-[r]->(b:Entity)",
+        "x0": 70.944,
+        "top": 58.023000000000025,
+        "x1": 222.11,
+        "bottom": 67.02300000000002
+      },
+      {
+        "text": "RETURN type(r) AS quan_he, count(*) AS so_luong;",
+        "x0": 70.944,
+        "top": 68.46299999999997,
+        "x1": 309.72300000000007,
+        "bottom": 77.46299999999997
+      },
+      {
+        "text": "MATCH (e:Evidence)-[:FROM]->(s:Source)",
+        "x0": 70.944,
+        "top": 79.043,
+        "x1": 266.29100000000005,
+        "bottom": 88.043
+      },
+      {
+        "text": "R ETURN count(e) AS so_doan, count(DISTINCT s) AS so_nguon;",
+        "x0": 70.944,
+        "top": 89.48300000000006,
+        "x1": 365.5860000000001,
+        "bottom": 98.48300000000006
+      },
+      {
+        "text": "Bản seed có 178 nút; truy vấn quan hệ giữa Entity trả 35 cạnh thuộc năm kiểu nghiệp vụ; số",
+        "x0": 70.944,
+        "top": 102.452,
+        "x1": 512.328,
+        "bottom": 114.452
+      },
+      {
+        "text": "Evidence và Source lần lượt là 146 và 12. Những con số này cũng được ghi trong",
+        "x0": 70.944,
+        "top": 117.6919999999999,
+        "x1": 462.096,
+        "bottom": 129.6919999999999
+      },
+      {
+        "text": "docs/neo4j_verification.json. Kết quả tại đây là đối chiếu dữ liệu đã lưu, không phải ảnh chụp",
+        "x0": 70.944,
+        "top": 132.8119999999999,
+        "x1": 521.004,
+        "bottom": 144.8119999999999
+      },
+      {
+        "text": "một phiên Neo4j vừa chạy.",
+        "x0": 70.944,
+        "top": 148.0519999999999,
+        "x1": 201.108,
+        "bottom": 160.0519999999999
+      },
+      {
+        "text": "Ví dụ cụ thể: high_bmi nối type2_diabetes bằng INCREASES_RISK_OF. Trên cạnh có bốn",
+        "x0": 70.944,
+        "top": 165.212,
+        "x1": 514.332,
+        "bottom": 177.212
+      },
+      {
+        "text": "evidence_ids. Để xem căn cứ, cần mở danh sách ID, tìm Evidence tương ứng rồi đi theo FROM",
+        "x0": 70.944,
+        "top": 180.332,
+        "x1": 530.892,
+        "bottom": 192.332
+      },
+      {
+        "text": "tới Source. evidence_ids là thuộc tính danh sách của cạnh; trong schema thực tế không có một",
+        "x0": 70.944,
+        "top": 195.5719999999999,
+        "x1": 523.0799999999999,
+        "bottom": 207.5719999999999
+      },
+      {
+        "text": "cạnh mới nối quan hệ r với Evidence.",
+        "x0": 70.944,
+        "top": 210.6919999999999,
+        "x1": 250.776,
+        "bottom": 222.6919999999999
+      },
+      {
+        "text": "Hình 5.17 Một phần đồ thị được rút từ năm quan hệ có trong seed [20].",
+        "x0": 70.944,
+        "top": 561.0546400000001,
+        "x1": 396.03887999999984,
+        "bottom": 572.09464
+      },
+      {
+        "text": "Sơ đồ giữ nguyên kiểu quan hệ trong KB. Có thể đi từ thay đổi lối sống đến yếu tố BMI hoặc",
+        "x0": 70.944,
+        "top": 574.8219999999999,
+        "x1": 518.8439999999999,
+        "bottom": 586.822
+      },
+      {
+        "text": "đến bệnh; từ BMI cũng có đường tới xét nghiệm. Những đường nối này cho biết cách tổ chức tri",
+        "x0": 70.944,
+        "top": 589.942,
+        "x1": 533.568,
+        "bottom": 601.942
+      },
+      {
+        "text": "thức, không tự suy ra một người đã mắc bệnh.",
+        "x0": 70.944,
+        "top": 605.182,
+        "x1": 292.32000000000005,
+        "bottom": 617.182
+      },
+      {
+        "text": "Cypher đi từ một quan hệ tới đoạn văn và tài liệu gốc",
+        "x0": 70.944,
+        "top": 622.372,
+        "x1": 343.98,
+        "bottom": 634.372
+      },
+      {
+        "text": "MATCH (f:RiskFactor {id:'high_bmi'})",
+        "x0": 70.944,
+        "top": 639.0429999999999,
+        "x1": 242.28600000000006,
+        "bottom": 648.0429999999999
+      },
+      {
+        "text": "-[r:INCREASES_RISK_OF]->(d:Condition {id:'type2_diabetes'})",
+        "x0": 89.784,
+        "top": 649.603,
+        "x1": 382.1120000000001,
+        "bottom": 658.603
+      },
+      {
+        "text": "UNWIND r.evidence_ids AS eid",
+        "x0": 70.944,
+        "top": 660.0429999999999,
+        "x1": 211.23600000000002,
+        "bottom": 669.0429999999999
+      },
+      {
+        "text": "MATCH (e:Evidence {id:eid})-[:FROM]->(s:Source)",
+        "x0": 70.944,
+        "top": 670.603,
+        "x1": 306.491,
+        "bottom": 679.603
+      },
+      {
+        "text": "RETURN f.name AS yeu_to, d.name AS tinh_trang,",
+        "x0": 70.944,
+        "top": 681.0429999999999,
+        "x1": 302.32500000000005,
+        "bottom": 690.0429999999999
+      },
+      {
+        "text": "e.id AS bang_chung, e.section AS muc,",
+        "x0": 93.024,
+        "top": 691.603,
+        "x1": 271.8810000000001,
+        "bottom": 700.603
+      },
+      {
+        "text": "s.title AS tai_lieu, s.url AS url;",
+        "x0": 93.024,
+        "top": 702.0429999999999,
+        "x1": 231.29100000000005,
+        "bottom": 711.0429999999999
+      },
+      {
+        "text": "Bảng 5.10 Bốn liên kết bằng chứng đọc được từ seed cho high_bmi → type2_diabetes",
+        "x0": 70.944,
+        "top": 715.88464,
+        "x1": 459.3091199999998,
+        "bottom": 726.92464
+      },
+      {
+        "text": "evidence_id trên cạnh Mục trong tài liệu Nguồn",
+        "x0": 83.424,
+        "top": 730.9009599999999,
+        "x1": 467.59312,
+        "bottom": 741.46096
+      },
+      {
+        "text": "Quy trình lâm sàng chẩn đoán và điều",
+        "x0": 259.13,
+        "top": 745.5369599999999,
+        "x1": 418.86055999999996,
+        "bottom": 756.09696
+      },
+      {
+        "text": "ev-moh-qt-2017-cc3fdc82 trị đái tháo đường típ 2 (QĐ 3798/QĐ- Bộ Y tế Việt Nam",
+        "x0": 83.424,
+        "top": 757.5369599999999,
+        "x1": 514.32112,
+        "bottom": 768.09696
+      },
+      {
+        "text": "BYT, 2017)",
+        "x0": 259.13,
+        "top": 769.6569599999999,
+        "x1": 310.0292,
+        "bottom": 780.21696
+      },
+      {
+        "text": "Trang 112",
+        "x0": 282.53,
+        "top": 793.992,
+        "x1": 327.05,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 115,
+    "images": [
+      {
+        "x0": 127.6,
+        "x1": 481.89,
+        "width": 354.28999999999996,
+        "height": 382.95,
+        "name": "Image623",
+        "top": 123.40999999999997,
+        "bottom": 506.35999999999996
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Một hướng mở rộng là Patient nối Measurement, Symptom và RiskFactor; Measurement cần giá",
+        "x0": 70.944,
+        "top": 58.39199999999994,
+        "x1": 534.564,
+        "bottom": 70.39199999999994
+      },
+      {
+        "text": "trị, đơn vị và thời điểm. Kết luận/khuyến nghị cần nguồn và thời điểm tạo. Chưa có bằng chứng",
+        "x0": 70.944,
+        "top": 73.63199999999995,
+        "x1": 530.328,
+        "bottom": 85.63199999999995
+      },
+      {
+        "text": "mã hiện tại triển khai lược đồ hồ sơ này, nên báo cáo giữ nó ở mức đề xuất.",
+        "x0": 70.944,
+        "top": 88.77199999999993,
+        "x1": 433.2600000000001,
+        "bottom": 100.77199999999993
+      },
+      {
+        "text": "5.8.7 Minh chứng sử dụng tri thức trên giao diện",
+        "x0": 70.944,
+        "top": 108.09199999999998,
+        "x1": 320.1720000000001,
+        "bottom": 120.09199999999998
+      },
+      {
+        "text": "Hình 5.18 Giao diện xem đồ thị Neo4j và phần tri thức đã dùng cho hồ sơ, trích [21, Hình 5.7, trang",
+        "x0": 70.944,
+        "top": 514.01464,
+        "x1": 525.9907199999994,
+        "bottom": 525.05464
+      },
+      {
+        "text": "40].",
+        "x0": 70.944,
+        "top": 526.85464,
+        "x1": 88.45344000000001,
+        "bottom": 537.89464
+      },
+      {
+        "text": "Giao diện KG cho biết quy mô tri thức, tô nổi phần đã dùng cho hồ sơ và mở các quan hệ/nguồn.",
+        "x0": 70.944,
+        "top": 540.502,
+        "x1": 536.1959999999999,
+        "bottom": 552.502
+      },
+      {
+        "text": "Đây là minh chứng khác với hình đồ thị toàn cục: nó cho thấy một lần sử dụng lấy phần nào của",
+        "x0": 70.944,
+        "top": 555.742,
+        "x1": 532.4399999999999,
+        "bottom": 567.742
+      },
+      {
+        "text": "KB.",
+        "x0": 70.944,
+        "top": 570.862,
+        "x1": 90.612,
+        "bottom": 582.862
+      },
+      {
+        "text": "Trang 115",
+        "x0": 282.53,
+        "top": 793.992,
+        "x1": 327.05,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 116,
+    "images": [
+      {
+        "x0": 127.6,
+        "x1": 481.9,
+        "width": 354.29999999999995,
+        "height": 399.88000000000005,
+        "name": "Image625",
+        "top": 56.69999999999993,
+        "bottom": 456.58
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 5.19 Hỏi đáp tự do có trích dẫn cho câu về béo phì, trích [21, Hình 5.8, trang 41].",
+        "x0": 70.944,
+        "top": 464.45464,
+        "x1": 466.72799999999967,
+        "bottom": 475.49463999999995
+      },
+      {
+        "text": "Chat hiển thị đoạn trả lời, nguồn và vết truy xuất. Người xem cần mở đúng tài liệu và đối chiếu",
+        "x0": 70.944,
+        "top": 478.1019999999999,
+        "x1": 528.264,
+        "bottom": 490.1019999999999
+      },
+      {
+        "text": "điều kiện của đoạn. Phần này đã nối được bốn lớp: khái niệm y khoa → quan hệ → đoạn bằng",
+        "x0": 70.944,
+        "top": 493.3419999999999,
+        "x1": 523.632,
+        "bottom": 505.3419999999999
+      },
+      {
+        "text": "chứng → tài liệu gốc. Chương 6 dùng kết quả này cùng dự báo và luật để chọn bước hỗ trợ.",
+        "x0": 70.944,
+        "top": 508.46199999999993,
+        "x1": 511.152,
+        "bottom": 520.462
+      },
+      {
+        "text": "5.9 Kết luận chương",
+        "x0": 70.944,
+        "top": 527.8693599999999,
+        "x1": 183.35904,
+        "bottom": 540.82936
+      },
+      {
+        "text": "Chương 5 xây dựng kho tài liệu có nguồn, KG, bộ truy xuất kết hợp và ứng dụng tra cứu cho tiểu",
+        "x0": 70.944,
+        "top": 546.1419999999999,
+        "x1": 538.428,
+        "bottom": 558.1419999999999
+      },
+      {
+        "text": "đường, cổ phiếu Việt Nam và vàng.",
+        "x0": 70.944,
+        "top": 561.262,
+        "x1": 242.29200000000003,
+        "bottom": 573.262
+      },
+      {
+        "text": "Notebook và bản web dùng chung dữ kiện. KG hỗ trợ tìm thực thể, TF-IDF tìm văn bản, còn ID",
+        "x0": 70.944,
+        "top": 578.422,
+        "x1": 538.5699999999999,
+        "bottom": 590.422
+      },
+      {
+        "text": "nguồn cho phép đối chiếu câu trả lời với thống kê và biểu đồ.",
+        "x0": 70.944,
+        "top": 593.662,
+        "x1": 365.5080000000001,
+        "bottom": 605.662
+      },
+      {
+        "text": "Bản kết hợp tìm đúng tài liệu đầu tiên ở 22/22 câu thử. Cần bộ câu hỏi độc lập và phép thử tổng",
+        "x0": 70.944,
+        "top": 610.852,
+        "x1": 538.1160000000002,
+        "bottom": 622.852
+      },
+      {
+        "text": "hợp nhiều bước để đánh giá rộng hơn. Nhánh LLM chưa được đánh giá; dữ liệu không phục vụ",
+        "x0": 70.944,
+        "top": 626.092,
+        "x1": 538.4760000000001,
+        "bottom": 638.092
+      },
+      {
+        "text": "chẩn đoán hay khuyến nghị đầu tư.",
+        "x0": 70.944,
+        "top": 641.212,
+        "x1": 239.06400000000002,
+        "bottom": 653.212
+      },
+      {
+        "text": "Mã, số liệu và hình cùng xuất phát từ lần thực thi đã lưu. Bộ nguồn cho phép chạy lại; giao diện",
+        "x0": 70.944,
+        "top": 658.372,
+        "x1": 538.3200000000002,
+        "bottom": 670.372
+      },
+      {
+        "text": "cho phép thử câu hỏi và kiểm tra tài liệu dẫn nguồn.",
+        "x0": 70.944,
+        "top": 673.612,
+        "x1": 320.7360000000001,
+        "bottom": 685.612
+      },
+      {
+        "text": "Trang 116",
+        "x0": 282.53,
+        "top": 793.992,
+        "x1": 327.05,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 122,
+    "images": [
+      {
+        "x0": 78.0,
+        "x1": 531.5,
+        "width": 453.5,
+        "height": 269.08000000000004,
+        "name": "Image637",
+        "top": 56.69999999999993,
+        "bottom": 325.78
+      },
+      {
+        "x0": 134.67,
+        "x1": 474.81999999999994,
+        "width": 340.15,
+        "height": 352.65,
+        "name": "Image638",
+        "top": 379.4,
+        "bottom": 732.05
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Cell A6 sử dụng cột làm trục ngang, hàng làm trục dọc; invert_yaxis khiến hàng 0 nằm phía dưới",
+        "x0": 70.944,
+        "top": 333.7219999999999,
+        "x1": 538.38,
+        "bottom": 345.7219999999999
+      },
+      {
+        "text": "trong output. Hình 6.1 là output gốc của cell này, sử dụng đường đi do Cell A5 trích xuất từ bảng",
+        "x0": 70.944,
+        "top": 348.8419999999999,
+        "x1": 538.4040000000001,
+        "bottom": 360.8419999999999
+      },
+      {
+        "text": "Q đã học.",
+        "x0": 70.944,
+        "top": 364.08199999999994,
+        "x1": 117.144,
+        "bottom": 376.08199999999994
+      },
+      {
+        "text": "Hình 6.1 Đường đi học được trong mê cung — output gốc của Cell A6",
+        "x0": 144.38,
+        "top": 739.88064,
+        "x1": 465.16887999999994,
+        "bottom": 750.9206399999999
+      },
+      {
+        "text": "Đường xanh trong output nối điểm đầu tới đích qua các ô trống. Báo cáo Agent 01 đối chiếu với",
+        "x0": 70.944,
+        "top": 753.6479999999999,
+        "x1": 538.1880000000001,
+        "bottom": 765.6479999999999
+      },
+      {
+        "text": "BFS và ghi nhận độ dài ngắn nhất 24 bước; tuyến đường trong hình cũng có 24 bước. Với 23",
+        "x0": 70.944,
+        "top": 768.7679999999999,
+        "x1": 538.404,
+        "bottom": 780.7679999999999
+      },
+      {
+        "text": "Trang 122",
+        "x0": 282.53,
+        "top": 793.992,
+        "x1": 327.05,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 123,
+    "images": [
+      {
+        "x0": 78.0,
+        "x1": 531.48,
+        "width": 453.48,
+        "height": 123.95000000000005,
+        "name": "Image640",
+        "top": 139.32999999999993,
+        "bottom": 263.28
+      },
+      {
+        "x0": 78.0,
+        "x1": 531.5,
+        "width": 453.5,
+        "height": 249.87999999999994,
+        "name": "Image641",
+        "top": 269.35,
+        "bottom": 519.23
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "bước thường và một bước vào đích, tổng thưởng không chiết khấu bằng 23 × (−1) + 50 = 27.",
+        "x0": 70.944,
+        "top": 58.39199999999994,
+        "x1": 538.1999999999998,
+        "bottom": 70.39199999999994
+      },
+      {
+        "text": "Đây là đối chiếu cấu trúc đường đi được báo cáo trong tài liệu nguồn, không phải tỷ lệ thành",
+        "x0": 70.944,
+        "top": 73.63199999999995,
+        "x1": 538.1519999999998,
+        "bottom": 85.63199999999995
+      },
+      {
+        "text": "công qua nhiều lần chạy.",
+        "x0": 70.944,
+        "top": 88.77199999999993,
+        "x1": 190.452,
+        "bottom": 100.77199999999993
+      },
+      {
+        "text": "6.3.5 Phần thưởng và giới hạn kết quả",
+        "x0": 70.944,
+        "top": 108.09199999999998,
+        "x1": 265.872,
+        "bottom": 120.09199999999998
+      },
+      {
+        "text": "Cell A7. Mã vẽ tổng phần thưởng theo episode",
+        "x0": 196.25,
+        "top": 125.04463999999996,
+        "x1": 413.3516,
+        "bottom": 136.08463999999992
+      },
+      {
+        "text": "Hình 6.2 Tổng phần thưởng trong 5.000 episode — output gốc của Cell A7",
+        "x0": 134.54,
+        "top": 527.09464,
+        "x1": 475.12888,
+        "bottom": 538.13464
+      },
+      {
+        "text": "Ở giai đoạn đầu, phần thưởng thường âm và có những lần giảm sâu. Về sau, nhiều episode đạt",
+        "x0": 70.944,
+        "top": 540.742,
+        "x1": 538.3799999999998,
+        "bottom": 552.742
+      },
+      {
+        "text": "khoảng 27 nhưng vẫn có các lần giảm mạnh, phù hợp với việc còn khám phá. Biểu đồ là tổng",
+        "x0": 70.944,
+        "top": 555.982,
+        "x1": 538.3559999999999,
+        "bottom": 567.982
+      },
+      {
+        "text": "thưởng thô từng episode, không phải trung bình trượt hoặc tỷ lệ thành công.",
+        "x0": 70.944,
+        "top": 571.1019999999999,
+        "x1": 435.3,
+        "bottom": 583.1019999999999
+      },
+      {
+        "text": "Notebook không đặt seed ngẫu nhiên và không lưu mảng phần thưởng dưới dạng văn bản trong",
+        "x0": 70.944,
+        "top": 588.382,
+        "x1": 538.368,
+        "bottom": 600.382
+      },
+      {
+        "text": "output. Vì vậy, không suy ra trung bình, độ lệch chuẩn hay tỷ lệ đến đích chính xác từ ảnh.",
+        "x0": 70.944,
+        "top": 603.502,
+        "x1": 538.32,
+        "bottom": 615.502
+      },
+      {
+        "text": "Đường cuối cùng còn phụ thuộc bộ lọc hợp lệ và visited của hàm trích xuất. Kiểm thử argmax",
+        "x0": 70.944,
+        "top": 618.7719999999999,
+        "x1": 538.2719999999998,
+        "bottom": 630.7719999999999
+      },
+      {
+        "text": "thuần, nhiều seed và đối chiếu BFS là những hướng đánh giá bổ sung; không xem chúng là thí",
+        "x0": 70.944,
+        "top": 633.8919999999999,
+        "x1": 538.3919999999997,
+        "bottom": 645.8919999999999
+      },
+      {
+        "text": "nghiệm mới đã được thực hiện trong lần biên tập này.",
+        "x0": 70.944,
+        "top": 649.012,
+        "x1": 328.8000000000001,
+        "bottom": 661.012
+      },
+      {
+        "text": "6.4 Thực nghiệm 2: Q-learning và agent luật cạnh tranh giảm giá",
+        "x0": 70.944,
+        "top": 668.53936,
+        "x1": 431.7413599999999,
+        "bottom": 681.49936
+      },
+      {
+        "text": "6.4.1 Mục tiêu và phạm vi thực nghiệm",
+        "x0": 70.944,
+        "top": 688.732,
+        "x1": 270.48,
+        "bottom": 700.732
+      },
+      {
+        "text": "Bài thực hành mô phỏng hai người bán cùng quyết định có giảm giá hay không. Một bên dùng",
+        "x0": 70.944,
+        "top": 705.8919999999999,
+        "x1": 538.4759999999998,
+        "bottom": 717.8919999999999
+      },
+      {
+        "text": "Q-learning: thử các hành động, nhận lợi nhuận rồi điều chỉnh cách lựa chọn. Bên còn lại làm",
+        "x0": 70.944,
+        "top": 721.012,
+        "x1": 538.2959999999998,
+        "bottom": 733.012
+      },
+      {
+        "text": "theo các điều kiện if–else có sẵn và không tự học. Báo cáo kiểm tra hai cách này hoạt động ra",
+        "x0": 70.944,
+        "top": 736.2479999999999,
+        "x1": 538.4479999999999,
+        "bottom": 748.2479999999999
+      },
+      {
+        "text": "sao, tham số nào ảnh hưởng đến kết quả và vì sao giảm giá chưa chắc đem lại nhiều lợi nhuận",
+        "x0": 70.944,
+        "top": 751.3679999999999,
+        "x1": 538.2599999999998,
+        "bottom": 763.3679999999999
+      },
+      {
+        "text": "hơn.",
+        "x0": 70.944,
+        "top": 766.608,
+        "x1": 92.292,
+        "bottom": 778.608
+      },
+      {
+        "text": "Trang 123",
+        "x0": 282.53,
+        "top": 793.992,
+        "x1": 327.05,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 146,
+    "images": [
+      {
+        "x0": 120.5,
+        "x1": 488.99,
+        "width": 368.49,
+        "height": 351.6,
+        "name": "Image675",
+        "top": 56.69999999999993,
+        "bottom": 408.29999999999995
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 6.8 Trang kết quả gồm nguy cơ, hướng xử trí và câu hỏi bổ sung, chụp ngày 27/11/2026 từ ứng",
+        "x0": 70.944,
+        "top": 415.95464,
+        "x1": 530.7158399999995,
+        "bottom": 426.99463999999995
+      },
+      {
+        "text": "dụng chạy cục bộ.",
+        "x0": 70.944,
+        "top": 428.67464,
+        "x1": 153.61151999999998,
+        "bottom": 439.71464
+      },
+      {
+        "text": "Trang 146",
+        "x0": 282.53,
+        "top": 793.992,
+        "x1": 327.05,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 147,
+    "images": [
+      {
+        "x0": 177.2,
+        "x1": 432.29999999999995,
+        "width": 255.09999999999997,
+        "height": 503.77000000000004,
+        "name": "Image677",
+        "top": 56.69999999999993,
+        "bottom": 560.47
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 6.9 Các đoạn bằng chứng và luật an toàn trên giao diện, chụp ngày 27/11/2026 từ ứng dụng",
+        "x0": 70.944,
+        "top": 568.13464,
+        "x1": 516.0547199999996,
+        "bottom": 579.17464
+      },
+      {
+        "text": "chạy cục bộ.",
+        "x0": 70.944,
+        "top": 580.9746399999999,
+        "x1": 127.54608,
+        "bottom": 592.01464
+      },
+      {
+        "text": "Trang 147",
+        "x0": 282.53,
+        "top": 793.992,
+        "x1": 327.05,
+        "bottom": 805.992
+      }
+    ]
+  },
+  {
+    "page": 148,
+    "images": [
+      {
+        "x0": 177.2,
+        "x1": 432.29999999999995,
+        "width": 255.09999999999997,
+        "height": 486.52000000000004,
+        "name": "Image679",
+        "top": 56.69999999999993,
+        "bottom": 543.22
+      }
+    ],
+    "lines": [
+      {
+        "text": "TIỂU LUẬN TỔNG HỢP — PHÁT TRIỂN CÁC HỆ THỐNG THÔNG MINH",
+        "x0": 281.09,
+        "top": 37.25663999999995,
+        "x1": 538.46116,
+        "bottom": 45.29663999999991
+      },
+      {
+        "text": "Hình 6.10 Dòng thời gian xử lý và thông tin mô hình, chụp ngày 27/11/2026 từ ứng dụng chạy cục bộ.",
+        "x0": 70.944,
+        "top": 551.09464,
+        "x1": 536.4345599999996,
+        "bottom": 562.13464
+      },
+      {
+        "text": "Ba hình trên được chụp ngày 27/11/2026 từ ứng dụng chạy cục bộ, với artifact screening-",
+        "x0": 70.944,
+        "top": 564.742,
+        "x1": 501.01599999999996,
+        "bottom": 576.742
+      },
+      {
+        "text": "20261126154435 (tổ hợp MLP–LightGBM), nhánh lối sống, không gọi LLM và KB đọc từ",
+        "x0": 70.944,
+        "top": 579.982,
+        "x1": 510.134,
+        "bottom": 591.982
+      },
+      {
+        "text": "Neo4j. Hồ sơ nhập là nữ 45 tuổi, cao 170 cm, nặng 82,4 kg, huyết áp tâm thu 130 mmHg; các",
+        "x0": 70.944,
+        "top": 595.102,
+        "x1": 520.572,
+        "bottom": 607.102
+      },
+      {
+        "text": "mục còn lại giữ giá trị mặc định của giao diện. Ảnh cho thấy xác suất 12%, mức Thấp với các",
+        "x0": 70.944,
+        "top": 610.372,
+        "x1": 521.4119999999998,
+        "bottom": 622.372
+      },
+      {
+        "text": "mốc 14% và 40%, khớp ngưỡng 0,14147 và 0,39742 ở mục 2.35.2; đây là hồ sơ khác A, B, C",
+        "x0": 70.944,
+        "top": 625.492,
+        "x1": 520.0319999999999,
+        "bottom": 637.492
+      },
+      {
+        "text": "nên không ghép xác suất hoặc thời gian của Bảng 6.17 vào những ảnh này. Thời gian 728 ms của",
+        "x0": 70.944,
+        "top": 640.732,
+        "x1": 537.724,
+        "bottom": 652.732
+      },
+      {
+        "text": "lượt xử lý trong Hình 6.10 được đo trên máy chủ phát triển, không dùng làm số đo độ trễ triển",
+        "x0": 70.944,
+        "top": 655.852,
+        "x1": 522.432,
+        "bottom": 667.852
+      },
+      {
+        "text": "khai.",
+        "x0": 70.944,
+        "top": 671.092,
+        "x1": 94.56,
+        "bottom": 683.092
+      },
+      {
+        "text": "6.6.5 Đánh giá độ tin cậy và giới hạn",
+        "x0": 70.944,
+        "top": 690.2919999999999,
+        "x1": 256.968,
+        "bottom": 702.2919999999999
+      },
+      {
+        "text": "Thành phần Bằng chứng hiện có Cần bổ sung",
+        "x0": 70.944,
+        "top": 708.6039999999999,
+        "x1": 430.765,
+        "bottom": 717.6039999999999
+      },
+      {
+        "text": "Dự báo Test và ma trận nhầm lẫn của hai Kiểm chứng ngoài, dữ liệu người Việt,",
+        "x0": 70.944,
+        "top": 721.444,
+        "x1": 522.502,
+        "bottom": 730.444
+      },
+      {
+        "text": "nhánh, CV lồng nhánh triệu chứng ở kiểm tra lệch quần thể; holdout triệu",
+        "x0": 226.85,
+        "top": 731.764,
+        "x1": 513.6099999999999,
+        "bottom": 740.764
+      },
+      {
+        "text": "2.35 chứng chỉ có 51 hồ sơ",
+        "x0": 226.85,
+        "top": 742.1999999999999,
+        "x1": 462.19300000000004,
+        "bottom": 751.1999999999999
+      },
+      {
+        "text": "Truy xuất Bộ 28 câu trong miền + 8 Bộ hỏi độc lập lớn hơn, mức hỗ trợ",
+        "x0": 70.944,
+        "top": 754.92,
+        "x1": 509.497,
+        "bottom": 767.328
+      },
+      {
+        "text": "từng phát biểu",
+        "x0": 382.75,
+        "top": 765.3599999999999,
+        "x1": 434.617,
+        "bottom": 774.3599999999999
+      },
+      {
+        "text": "ngoài miền ở 5.9.5",
+        "x0": 226.85,
+        "top": 769.1279999999999,
+        "x1": 316.85,
+        "bottom": 781.1279999999999
+      },
+      {
+        "text": "Trang 148",
+        "x0": 282.53,
+        "top": 793.992,
+        "x1": 327.05,
+        "bottom": 805.992
+      }
+    ]
+  }
+]
